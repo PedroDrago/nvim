@@ -43,5 +43,7 @@ vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
 
 vim.keymap.set('n', "<leader>c", ":lua vim.lsp.buf.code_action()<CR>")
 
+vim.keymap.set('n', "<leader>h", ":wincmd h<CR>")
 vim.keymap.set('n', "<leader>w", ":wincmd w<CR>")
-vim.keymap.set('n', "<leader>e", ":vsplit <CR>")
+vim.keymap.set('n', "<leader>l", ":wincmd l<CR>")
+vim.keymap.set('n', "<leader>a", ":vsplit <CR>")
