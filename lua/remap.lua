@@ -43,7 +43,14 @@ vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
 
 vim.keymap.set('n', "<leader>c", ":lua vim.lsp.buf.code_action()<CR>")
 
-vim.keymap.set('n', "<leader>h", ":wincmd h<CR>")
-vim.keymap.set('n', "<leader>w", ":wincmd w<CR>")
-vim.keymap.set('n', "<leader>l", ":wincmd l<CR>")
-vim.keymap.set('n', "<leader>a", ":vsplit <CR>")
+-- nvimtree
+vim.keymap.set('n', "<leader>e", ":NvimTreeToggle <CR>")
+
+-- Spliting remap
+vim.keymap.set('n', "<leader>h", ":wincmd h<CR>") --move to left
+vim.keymap.set('n', "<leader>w", ":wincmd w<CR>") --move to next
+vim.keymap.set('n', "<leader>l", ":wincmd l<CR>") -- move to left
+vim.keymap.set('n', "<leader>a", ":vsplit <CR>")  -- split vertically
+vim.keymap.set('n', "<leader>q", ":wincmd c<CR>") -- close currentwindow
+vim.keymap.set('n', "<leader>=", ":wincmd +<CR>") -- close currentwindow
+vim.keymap.set('n', "<leader>-", ":wincmd -<CR>") -- close currentwindow
