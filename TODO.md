@@ -1,2 +1,1 @@
-- Whatch video neovim from scratch to learn how to modulate my nvim dotfiles
-- Plugin for hopping around the code to specific words (flash.nvim does that but I couldn't make it work)
+- Discover proper way to separete each kind of config in a separate file: all lsp configs in lsp.lua, all alpha configs in alpha.lua etc..
