@@ -45,7 +45,6 @@ vim.keymap.set('n', "<leader>c", ":lua vim.lsp.buf.code_action()<CR>")
 
 -- nvimtree
 vim.keymap.set('n', "<leader>e", ":NvimTreeToggle <CR>")
-
 -- Spliting remap
 vim.keymap.set('n', "<leader>h", ":wincmd h<CR>") --move to left
 vim.keymap.set('n', "<leader>w", ":wincmd w<CR>") --move to next
