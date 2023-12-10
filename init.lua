@@ -32,9 +32,7 @@ require('lazy').setup({
       vim.o.timeout = true
       vim.o.timeoutlen = 500
     end,
-    opts = {
-
-    }
+    opts = {}
   },
   -- Plugin for surrounding text with () {} "", and more
   'tpope/vim-surround',
@@ -156,6 +154,14 @@ require('lazy').setup({
         component_separators = '|',
         section_separators = '',
       },
+      sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'buffers', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
     },
   },
 
