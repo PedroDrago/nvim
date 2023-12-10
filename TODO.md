@@ -1,1 +1,0 @@
-- Discover proper way to separete each kind of config in a separate file: all lsp configs in lsp.lua, all alpha configs in alpha.lua etc.. (watch video favorited)
