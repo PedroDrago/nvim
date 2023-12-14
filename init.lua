@@ -1,4 +1,3 @@
---asdasd
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.loader.enable()
@@ -281,7 +280,8 @@ vim.keymap.set('n', '<leader>b', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
-vim.keymap.set('n', '<leader>g', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
+-- vim.keymap.set('n', '<leader>g', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
+vim.keymap.set('n', '<leader>g', require('telescope.builtin').live_grep, { desc = 'Live Grep' })
 vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 --vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>n', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
