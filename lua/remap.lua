@@ -5,9 +5,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 --  B to enter visual block mode
 vim.keymap.set("n", "B", "<C-v>")
 
---auto transforms script into executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true ,  desc = 'Turn in executable' })
-
 -- center when navigating vertically
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -15,8 +12,8 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- delete without yanking
-vim.keymap.set("n", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
-vim.keymap.set("v", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
+-- vim.keymap.set("n", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
+-- vim.keymap.set("v", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
 
 -- Remove recording shit
 vim.keymap.set("n", "Q", "<nop>")
@@ -56,3 +53,8 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 -- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+--
+--
+-- Debugging
+vim.keymap.set('n', '<leader>db', function() require('dap').toggle_breakpoint() end)
+vim.keymap.set('n', '<leader>dc', function() require('dap').continue() end)
