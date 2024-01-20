@@ -38,7 +38,17 @@ vim.o.termguicolors = true
 -- MINE
 vim.wo.relativenumber = true
 vim.wo.scrolloff = 10
-vim.wo.sidescrolloff = 20
+vim.wo.sidescrolloff = 10
 vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.wrap = false
+
+-- highlight on_yank
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})

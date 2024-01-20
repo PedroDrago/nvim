@@ -1,11 +1,11 @@
-# Nvim Dotfiles
-My dotfiles for neovim is started with [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) and incremented from that point.
+# Nvim
 
----
+This are my neovim configurations files in lua. They started with [nvim kickstart](https://github.com/nvim-lua/kickstart.nvim), then modularized in several files.
 
-- [ ] Separate each plugin to its own config file
-    - https://www.youtube.com/watch?v=LCUCN69vw_Q (try to mimic this file structure on last chapter)
+If you want to learn how to create from scratch your own neovim configuration files watch [Typecraft](https://www.youtube.com/@typecraft_dev) videos about Neovim, they're great.
 
-- [ ] Read all telescope [pickers](https://github.com/nvim-telescope/telescope.nvim#pickers) and see what am I missing 
-- [ ] Make noice ui match onedark pastel tons
-- [ ] Change noice UI to a more minimal UI
+### Install 
+**Warning: This command will delete your current `/nvim` directory, be careful**
+```bash
+rm -rf ~/.config/nvim && git clone git@github.com:PedroDrago/nvim.git ~/.config/nvim
+```
