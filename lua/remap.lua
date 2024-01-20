@@ -12,8 +12,8 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- delete without yanking
--- vim.keymap.set("n", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
--- vim.keymap.set("v", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
+vim.keymap.set("n", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
+vim.keymap.set("v", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
 
 -- Remove recording shit
 vim.keymap.set("n", "Q", "<nop>")

@@ -1,5 +1,5 @@
 return {
-	 "folke/noice.nvim",
+    "folke/noice.nvim",
     event = "VeryLazy",
     opts ={},
     dependencies = {
