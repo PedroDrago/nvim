@@ -4,8 +4,6 @@ This are my neovim configurations files in lua. They started with [nvim kickstar
 
 If you want to learn how to create from scratch your own neovim configuration files watch this [Typecraft Playlist](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn) Neovim configuration, they're great.
 
-https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn
-
 ### Install 
 **Warning: This command will delete your current `/nvim` directory, be careful**
 ```bash
