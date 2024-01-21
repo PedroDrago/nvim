@@ -42,7 +42,7 @@ vim.wo.sidescrolloff = 10
 vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.wrap = false
-
+vim.o.swapfile = false
 -- highlight on_yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
