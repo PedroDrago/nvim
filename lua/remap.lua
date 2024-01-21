@@ -43,13 +43,3 @@ vim.keymap.set('n', "<leader>a", ":vsplit <CR>", { desc = 'Split' , silent = tru
 vim.keymap.set('n', "<leader>q", ":wincmd c<CR>", { desc = 'Close Buffer', silent = true })
 vim.keymap.set('n', "<leader>=", ":wincmd +<CR>")
 vim.keymap.set('n', "<leader>-", ":wincmd -<CR>")
-
---vim surround keymaps
-vim.api.nvim_set_keymap('n', '(', [[:execute "normal \<Plug>Ysurroundiw)"<CR>]], { noremap = true, silent = true , desc = 'Surround current word with ()'})
-vim.api.nvim_set_keymap('n', '{', [[:execute "normal \<Plug>Ysurroundiw}"<CR>]], { noremap = true, silent = true , desc = 'Surround current word with {}'})
-
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
--- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
--- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
