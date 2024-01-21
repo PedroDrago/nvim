@@ -18,7 +18,6 @@ return {
         rust_analyzer = {},
         tsserver = {},
         html = { filetypes = { 'html', 'erb', 'twig', 'hbs' } },
-
         lua_ls = {
           Lua = {
             workspace = { checkThirdParty = false },
