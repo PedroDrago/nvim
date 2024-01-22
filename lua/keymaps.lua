@@ -31,8 +31,11 @@ vim.keymap.set('n', "<leader>Q", ":qa!<CR>", { desc = 'Close All Buffers', silen
 vim.keymap.set('n', "<leader>q", ":q<CR>", { desc = 'Close Buffer', silent = true })
 
 -- Buffer Navigation
-vim.keymap.set('n', "<leader>h", ":wincmd h<CR>", { desc = 'Move to left', silent = true})
+vim.keymap.set('n', "<leader>h", ":wincmd h<CR>", { desc = 'Move to left', silent = true })
 vim.keymap.set('n', "<leader>w", ":wincmd w<CR>", { desc = 'Move to next', silent = true })
 vim.keymap.set('n', "<leader>l", ":wincmd l<CR>", { desc = 'Move to right', silent = true })
-vim.keymap.set('n', "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = 'Split' , silent = true})
-vim.keymap.set('n', "<leader>=", ":wincmd =<CR>", { desc = 'Equalize Buffers', silent = true})
+vim.keymap.set('n', "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = 'Split', silent = true })
+vim.keymap.set('n', "<leader>=", ":wincmd =<CR>", { desc = 'Equalize Buffers', silent = true })
+
+-- Format Buffer
+vim.keymap.set('n', "<leader>x", ":Format <CR>", { desc = 'Format Buffer', silent = true })
