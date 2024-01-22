@@ -14,11 +14,9 @@ return {
       "                                                     ",
       }
       dashboard.section.buttons.val = {
-        dashboard.button("n", "  > New file", ":ene <BAR> startinsert <CR>"),
-        dashboard.button("f", "  > Find file", ":cd $HOME | Telescope find_files<CR>"),
-        dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
         dashboard.button("d", "  > Dotfiles", ":cd ~/.config/nvim | :e init.lua<CR>"),
         dashboard.button("l", "󰒲  > Lazy", ":Lazy<CR>"),
+        dashboard.button("h", "✝  > Health", ":checkhealth<CR>"),
         dashboard.button("q", "󰗼  > Quit", ":q!<CR>"),
       }
       dashboard.section.header.opts.hl = "Function"
