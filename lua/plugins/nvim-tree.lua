@@ -8,4 +8,5 @@ return {
     config = function()
       require("nvim-tree").setup {}
     end,
+    vim.keymap.set('n', "<leader>e", ":NvimTreeToggle <CR>", { desc = 'Toggle Nvim-Tree', silent = true }),
 }

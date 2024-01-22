@@ -15,31 +15,21 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
 vim.keymap.set("v", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
 
--- Remove recording shit
+-- Remove macro recording shit
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "q", "<nop>")
 
 -- Keymaps for better default experience
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
--- Terminal
-vim.keymap.set("n", "<leader>t", ":ToggleTerm dir=pwd direction=float <CR>", { desc = 'Open Floating Terminal', silent = true })
-vim.keymap.set("n", "<leader>v", ":ToggleTerm size=100 dir=pwd direction=vertical <CR>", { desc = 'Open vertical Terminal', silent = true })
--- Exit terminal Mode
-vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
-vim.keymap.set('n', "<leader>c", ":lua vim.lsp.buf.code_action()<CR>", { desc = 'Code Action', silent = true })
 
--- nvimtree
-vim.keymap.set('n', "<leader>e", ":NvimTreeToggle <CR>", { desc = 'Toggle Nvim-Tree', silent = true })
--- Spliting remap
+-- Spliting remaps
 vim.keymap.set('n', "<leader>h", ":wincmd h<CR>", { desc = 'Move to left', silent = true})
 vim.keymap.set('n', "<leader>w", ":wincmd w<CR>", { desc = 'Move to next', silent = true })
 vim.keymap.set('n', "<leader>l", ":wincmd l<CR>", { desc = 'Move to right', silent = true })
-vim.keymap.set('n', "<leader>a", ":vsplit <CR>", { desc = 'Split' , silent = true})
-vim.keymap.set('n', "<leader>q", ":wincmd c<CR>", { desc = 'Close Buffer', silent = true })
-vim.keymap.set('n', "<leader>=", ":wincmd +<CR>")
-vim.keymap.set('n', "<leader>-", ":wincmd -<CR>")
+vim.keymap.set('n', "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = 'Split' , silent = true})
+vim.keymap.set('n', "<leader>q", ":q<CR>", { desc = 'Close Buffer', silent = true })
+vim.keymap.set('n', "<leader>=", ":wincmd =<CR>", { desc = 'Equalize Buffers', silent = true})

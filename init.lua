@@ -1,9 +1,9 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 vim.loader.enable()
-require("remap")
-require("set")
+-- Including other config files
+require("set") -- Vim settings
+require("keymaps") -- My keymaps
 
+-- Lazy bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -17,9 +17,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Load all plugins
 require("lazy").setup("plugins")
-require('neodev').setup()
+
+-- Post import configurations (i have not figured out where to put these witouth breaking)
 require("telescope").load_extension("ui-select")
+require('neodev').setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
