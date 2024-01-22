@@ -1,6 +1,6 @@
 # Nvim
 
-These are my neovim configurations files in lua. They started with [nvim kickstart](https://github.com/nvim-lua/kickstart.nvim). If you're too lazy to build a config file and don't want a bloated distribution like LunarVim or NvimChad I strongly recommend just using kickstart.
+These are my neovim configurations files in lua. They started with [nvim kickstart](https://github.com/nvim-lua/kickstart.nvim). If you're too lazy to build your configs from scratch and don't want a bloated distribution like LunarVim or NvimChad I strongly recommend just using kickstart.
 
 If you want to learn how to create from scratch your own neovim configuration files watch this [Typecraft Playlist](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn) Neovim configuration, they're great.
 
