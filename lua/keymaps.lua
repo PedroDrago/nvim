@@ -38,7 +38,9 @@ vim.keymap.set('n', "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = 'Split', 
 vim.keymap.set('n', "<leader>=", ":wincmd =<CR>", { desc = 'Equalize Buffers', silent = true })
 
 -- Format Buffer
-vim.keymap.set('n', "<leader>x", ":Format <CR>", { desc = 'Format Buffer', silent = true })
+-- vim.keymap.set('n', "<leader>x", ":Format <CR>", { desc = 'Format Buffer', silent = true })
 
+-- initialize global var to false -> nvim-cmp turned off per default
 
--- DAP
+-- initialize global var to false -> nvim-cmp turned off per default
+vim.keymap.set("n", "<leader>x", "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>", { desc = "toggle nvim-cmp", silent = true})
