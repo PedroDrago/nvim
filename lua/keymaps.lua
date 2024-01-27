@@ -42,5 +42,11 @@ vim.keymap.set('n', "<leader>=", ":wincmd =<CR>", { desc = 'Equalize Buffers', s
 
 -- initialize global var to false -> nvim-cmp turned off per default
 
--- initialize global var to false -> nvim-cmp turned off per default
+-- Toggle autocompletion on/off
 vim.keymap.set("n", "<leader>x", "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>", { desc = "toggle nvim-cmp", silent = true})
+
+
+-- Harpoon
+vim.keymap.set("n", "<leader>z", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "toggle nvim-cmp", silent = true})
+vim.keymap.set("n", "<leader>d", ":lua require('harpoon.mark').add_file()<CR>", { desc = "toggle nvim-cmp", silent = true})
+vim.keymap.set("n", "<leader><leader>", ":lua require('harpoon.ui').nav_next()<CR>", { desc = "toggle nvim-cmp", silent = true})

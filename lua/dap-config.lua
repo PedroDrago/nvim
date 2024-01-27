@@ -1,7 +1,7 @@
-vim.keymap.set('n', "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'Toggle Breakpoint', silent = true})
-vim.keymap.set('n', "<leader>dc", ":lua require'dap'.continue()<CR>", { desc = '', silent = true })
-vim.keymap.set('n', "<leader>ds", ":lua require'dap'.setp_into()<CR>", { desc = '', silent = true })
-vim.keymap.set('n', "<leader>du", ":lua require'dapui'.open()<CR>", { desc = '', silent = true })
+-- vim.keymap.set('n', "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = 'Toggle Breakpoint', silent = true})
+-- vim.keymap.set('n', "<leader>dc", ":lua require'dap'.continue()<CR>", { desc = '', silent = true })
+-- vim.keymap.set('n', "<leader>ds", ":lua require'dap'.setp_into()<CR>", { desc = '', silent = true })
+-- vim.keymap.set('n', "<leader>du", ":lua require'dapui'.open()<CR>", { desc = '', silent = true })
 
 require('neodev').setup({
   library = { plugins = { "nvim-dap-ui" }, types = true },
@@ -25,7 +25,7 @@ dap.configurations.cpp = {
     stopOnEntry = false,
     args = {},
 
-    -- 💀
+    -- 
     -- if you change `runInTerminal` to true, you might need to change the yama/ptrace_scope setting:
     --
     --    echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
