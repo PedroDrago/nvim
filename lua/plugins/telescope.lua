@@ -48,7 +48,7 @@ return {
             width = 0.8,
           },
         })
-      end, { desc = "Fuzzily search in current buffer" })
+      end, { desc = "Search in Buffer" })
     end,
     dependencies = {
       "nvim-lua/plenary.nvim",
