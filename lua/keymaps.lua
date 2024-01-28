@@ -38,29 +38,14 @@ vim.keymap.set("n", "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = "Split", 
 vim.keymap.set("n", "<leader>=", ":wincmd =<CR>", { desc = "Equalize Buffers", silent = true })
 
 -- Toggle autocompletion on/off
-vim.keymap.set(
-  "n",
-  "<leader>x",
-  "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>",
-  { desc = "cmp Toggle", silent = true }
-)
+vim.keymap.set("n", "<leader>x", "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>", { desc = "cmp Toggle", silent = true })
 
 -- Harpoon
-vim.keymap.set(
-  "n",
-  "<leader><leader>",
-  ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
-  { desc = "Harpoon Menu", silent = true }
-)
-vim.keymap.set(
-  "n",
-  "<leader>m",
-  ":lua require('harpoon.mark').add_file()<CR>",
-  { desc = "Harpoon Mark", silent = true }
-)
-vim.keymap.set(
-  "n",
-  "<leader><Tab>",
-  ":lua require('harpoon.ui').nav_next()<CR>",
-  { desc = "Harpoon Jump", silent = true }
-)
+vim.keymap.set( "n", "<leader><leader>", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "Harpoon Menu", silent = true })
+vim.keymap.set("n", "<leader>m", ":lua require('harpoon.mark').add_file()<CR>", { desc = "Harpoon Mark", silent = true } )
+vim.keymap.set( "n", "<leader><Tab>", ":lua require('harpoon.ui').nav_next()<CR>", { desc = "Harpoon Next", silent = true })
+vim.keymap.set( "n", "<leader><S-Tab>", ":lua require('harpoon.ui').nav_prev()<CR>", { desc = "Harpoon Next", silent = true })
+vim.keymap.set("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>", { desc = "Harpoon 1", silent = true })
+vim.keymap.set("n", "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>", { desc = "Harpoon 2", silent = true })
+vim.keymap.set("n", "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>", { desc = "Harpoon 3", silent = true })
+vim.keymap.set("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>", { desc = "Harpoon 4", silent = true })

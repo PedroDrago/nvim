@@ -5,9 +5,10 @@ vim.keymap.set(
   { desc = "Toggle Breakpoint", silent = true }
 )
 vim.keymap.set("n", "<leader>dc", ":lua require'dap'.continue()<CR>", { desc = "Continue", silent = true })
-vim.keymap.set("n", "<leader>dn", ":lua require'dap'.setp_into()<CR>", { desc = "Next", silent = true })
-vim.keymap.set("n", "<leader>ds", ":lua require'dap'.setp_into()<CR>", { desc = "Step In", silent = true })
-vim.keymap.set("n", "<leader>du", ":lua require'dapui'.open()<CR>", { desc = "UI", silent = true })
+vim.keymap.set("n", "<leader>dn", ":lua require'dap'.step_over()<CR>", { desc = "Next", silent = true })
+vim.keymap.set("n", "<leader>ds", ":lua require'dap'.step_into()<CR>", { desc = "Step In", silent = true })
+vim.keymap.set("n", "<leader>du", ":lua require'dapui'.toggle()<CR>", { desc = "UI", silent = true })
+
 
 require("neodev").setup({
   library = { plugins = { "nvim-dap-ui" }, types = true },
