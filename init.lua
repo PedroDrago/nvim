@@ -5,18 +5,19 @@ require("lazy").setup("plugins") -- Load all plugins
 
 -- Post import configurations (i have not figured out where to put these witouth breaking)
 require("telescope").load_extension("ui-select")
-require('neodev').setup()
+require("neodev").setup()
 require("lsp-config")
 require("dap-config")
 
 vim.g.cmptoggle = true
-local cmp = require('cmp')
-cmp.setup {
+local cmp = require("cmp")
+cmp.setup({
   enabled = function()
     return vim.g.cmptoggle
-  end
-}
+  end,
+})
 
-require("keymaps")               -- My keymaps
+require("whichkeyconfig")
+require("keymaps") -- My keymaps
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

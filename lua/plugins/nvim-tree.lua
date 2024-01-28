@@ -6,9 +6,9 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("nvim-tree").setup {
-      update_focused_file = { enable = true, update_cwd = true},
-    }
+    require("nvim-tree").setup({
+      update_focused_file = { enable = true, update_cwd = true },
+    })
   end,
-  vim.keymap.set('n', "<leader>e", ":NvimTreeToggle <CR>", { desc = 'Toggle Nvim-Tree', silent = true }),
+  vim.keymap.set("n", "<leader>e", ":NvimTreeToggle <CR>", { desc = "Nvim-Tree", silent = true }),
 }

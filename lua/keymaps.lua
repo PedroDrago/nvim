@@ -20,33 +20,47 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "q", "<nop>")
 
 -- Better default experience
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 --Dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Closing
-vim.keymap.set('n', "<leader>Q", ":qa!<CR>", { desc = 'Close All Buffers', silent = true })
-vim.keymap.set('n', "<leader>q", ":q<CR>", { desc = 'Close Buffer', silent = true })
+vim.keymap.set("n", "<leader>Q", ":qa!<CR>", { desc = "Close Nvim", silent = true })
+vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close Buffer", silent = true })
 
 -- Buffer Navigation
-vim.keymap.set('n', "<leader>h", ":wincmd h<CR>", { desc = 'Move to left', silent = true })
-vim.keymap.set('n', "<leader>w", ":wincmd w<CR>", { desc = 'Move to next', silent = true })
-vim.keymap.set('n', "<leader>l", ":wincmd l<CR>", { desc = 'Move to right', silent = true })
-vim.keymap.set('n', "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = 'Split', silent = true })
-vim.keymap.set('n', "<leader>=", ":wincmd =<CR>", { desc = 'Equalize Buffers', silent = true })
-
--- Format Buffer
--- vim.keymap.set('n', "<leader>x", ":Format <CR>", { desc = 'Format Buffer', silent = true })
-
--- initialize global var to false -> nvim-cmp turned off per default
+vim.keymap.set("n", "<leader>h", ":wincmd h<CR>", { desc = "Move to left", silent = true })
+vim.keymap.set("n", "<leader>w", ":wincmd w<CR>", { desc = "Move to next", silent = true })
+vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { desc = "Move to right", silent = true })
+vim.keymap.set("n", "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = "Split", silent = true })
+vim.keymap.set("n", "<leader>=", ":wincmd =<CR>", { desc = "Equalize Buffers", silent = true })
 
 -- Toggle autocompletion on/off
-vim.keymap.set("n", "<leader>x", "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>", { desc = "toggle nvim-cmp", silent = true})
-
+vim.keymap.set(
+  "n",
+  "<leader>x",
+  "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>",
+  { desc = "cmp Toggle", silent = true }
+)
 
 -- Harpoon
-vim.keymap.set("n", "<leader>z", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "toggle nvim-cmp", silent = true})
-vim.keymap.set("n", "<leader>d", ":lua require('harpoon.mark').add_file()<CR>", { desc = "toggle nvim-cmp", silent = true})
-vim.keymap.set("n", "<leader><leader>", ":lua require('harpoon.ui').nav_next()<CR>", { desc = "toggle nvim-cmp", silent = true})
+vim.keymap.set(
+  "n",
+  "<leader><leader>",
+  ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
+  { desc = "Harpoon Menu", silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<leader>m",
+  ":lua require('harpoon.mark').add_file()<CR>",
+  { desc = "Harpoon Mark", silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<leader><Tab>",
+  ":lua require('harpoon.ui').nav_next()<CR>",
+  { desc = "Harpoon Jump", silent = true }
+)

@@ -1,7 +1,7 @@
 return {
-  'goolord/alpha-nvim',
+  "goolord/alpha-nvim",
   config = function()
-    require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+    require("alpha").setup(require("alpha.themes.dashboard").config)
     local dashboard = require("alpha.themes.dashboard")
     dashboard.section.header.val = {
       "                                                     ",
@@ -25,5 +25,5 @@ return {
     vim.cmd([[
         autocmd FileType alpha setlocal nofoldenable
       ]])
-  end
+  end,
 }
