@@ -26,16 +26,38 @@ return {
 
       -- Enable telescope fzf native, if installed
       pcall(require('telescope').load_extension, 'fzf')
-      vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
+      -- vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
       -- vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = 'Find existing buffers' })
-      vim.keymap.set('n', '<leader>g', require('telescope.builtin').live_grep, { desc = 'Live Grep' })
-      vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files, { desc = 'Search Files' })
-      vim.keymap.set('n', '<leader>n', require('telescope.builtin').grep_string, { desc = 'Search current Word' })
-      vim.keymap.set('n', '<leader>b', function()
-        require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-          winblend = 20,
+      -- vim.keymap.set('n', '<leader>n', require('telescope.builtin').grep_string, { desc = 'Search current Word' })
+      vim.keymap.set('n', '<leader>?', require('telescope.builtin').builtin, { desc = 'Live Grep' })
+      vim.keymap.set('n', '<leader>g', function()
+        require('telescope.builtin').live_grep {
+          layout_config = {
+            height = 0.9,
+            width = 0.9,
+          }
+        }
+      end, { desc = 'Live Grep' })
+
+      vim.keymap.set('n', '<leader>f', function()
+        require('telescope.builtin').find_files {
           previewer = false,
-        })
+          layout_config = {
+            height = 0.5,
+            width = 0.4,
+          }
+        }
+      end, { desc = 'Search Files' })
+
+      vim.keymap.set('n', '<leader>b', function()
+        require('telescope.builtin').current_buffer_fuzzy_find{
+          winblend = 15,
+          previewer = true,
+          layout_config = {
+            height = 0.8,
+            width = 0.8
+          },
+        }
       end, { desc = 'Fuzzily search in current buffer' })
     end,
   },
