@@ -6,5 +6,6 @@ return {
   "42Paris/42header",
   "farmergreg/vim-lastplace",
   "tpope/vim-repeat",
+  "szw/vim-maximizer",
   { "numToStr/Comment.nvim", opts = {} },
 }

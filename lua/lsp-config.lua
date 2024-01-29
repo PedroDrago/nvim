@@ -1,22 +1,12 @@
 local on_attach = function(_, bufnr)
   local nmap = function(keys, func, desc)
-    -- if desc then
-    --   desc = "LSP: " .. desc
-    -- end
     vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
   end
   nmap("<leader>s", vim.lsp.buf.rename, "Rename")
   nmap("<leader>c", vim.lsp.buf.code_action, "Code Action")
-  -- nmap('gd', vim.lsp.buf.declaration , '[G]oto [D]eclaration')
   nmap("gd", vim.lsp.buf.definition, "Goto Definition")
-  --nmap('<leader>.....', vim.lsp.buf.type_definition, 'Type [D]efinition')
   nmap("<leader>r", require("telescope.builtin").lsp_references, "Goto References")
   nmap("K", vim.lsp.buf.hover, "Hover Documentation")
-  -- nmap('gd', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-  --nmap('<leader>......', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-  --nmap('<leader>......', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-  -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-  -- nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
   vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
     vim.lsp.buf.format()
@@ -107,8 +97,9 @@ cmp.setup({
   }),
   sources = {
     { name = "nvim_lsp" },
-    { name = "buffer", max_item_count = 5 },
+    -- { name = "buffer", max_item_count = 5 },
     { name = "path" },
     { name = "luasnip" },
+    { name = 'nvim_lsp_signature_help' },
   },
 })
