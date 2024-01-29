@@ -53,13 +53,23 @@ mason_lspconfig.setup_handlers({
 })
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local lspkind = require('lspkind')
 require("luasnip.loaders.from_vscode").lazy_load()
 luasnip.config.setup({})
 cmp.setup({
+  performance = { max_view_entries = 8},
+  formatting = {
+    expandable_indicator = true,
+    format = lspkind.cmp_format({
+      mode = "symbol_text",
+      max_width = 50,
+    }),
+  },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
+  experimental = { ghost_text = true, },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
@@ -97,6 +107,8 @@ cmp.setup({
   }),
   sources = {
     { name = "nvim_lsp" },
+    { name = "buffer", max_item_count = 5 },
+    { name = "path" },
     { name = "luasnip" },
   },
 })

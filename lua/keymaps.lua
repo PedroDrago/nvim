@@ -11,6 +11,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+vim.keymap.set("n", "L", "$")
+vim.keymap.set("n", "H", "^")
 -- Delete without yanking
 -- vim.keymap.set("n", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })
 -- vim.keymap.set("v", "<leader>d", "\"_d", { desc = 'Delete without yanking', silent = true })

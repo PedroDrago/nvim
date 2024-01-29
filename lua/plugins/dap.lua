@@ -1,5 +1,5 @@
 return {
-  "mfussenegger/nvim-dap",
-  "rcarriga/nvim-dap-ui",
-  "theHamsta/nvim-dap-virtual-text",
+  {"mfussenegger/nvim-dap", lazy = true},
+  {"rcarriga/nvim-dap-ui", lazy = true},
+  {"theHamsta/nvim-dap-virtual-text", lazy = true},
 }
