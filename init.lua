@@ -17,7 +17,6 @@ cmp.setup({
   end,
 })
 
-require("rotate_window")
 require("whichkeyconfig")
 require("keymaps") -- My keymaps
 -- The line beneath this is called `modeline`. See `:help modeline`
