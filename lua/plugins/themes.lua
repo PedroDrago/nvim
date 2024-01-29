@@ -1,4 +1,4 @@
-return {
+return {{
   -- Theme inspired by Atom
   "navarasu/onedark.nvim",
   lazy = false,
@@ -6,4 +6,8 @@ return {
   config = function()
     vim.cmd.colorscheme("onedark")
   end,
+},
+  {"sainnhe/gruvbox-material"},
+  {"nyoom-engineering/oxocarbon.nvim"},
+  {"sainnhe/edge"}
 }
