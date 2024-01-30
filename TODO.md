@@ -1,8 +1,7 @@
 # Todo
 
 - [ ] Consertar Go to Declaration/Go to Definition (ir para a propria função ao inves do header file)
-- [ ] Consider Oil.nvim instead of nvim tree
-- [ ] Vim.maximizer for split panels
+- [ ] `leader<s>`: Rename Symbol - Não tem funcionado muito bem project-wide.
 - [ ] Consider Spectre for global find n replace
 
 ```lua
