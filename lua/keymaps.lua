@@ -37,20 +37,45 @@ vim.keymap.set("n", "<leader>w", ":wincmd w<CR>", { desc = "Move to next", silen
 vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { desc = "Move to right", silent = true })
 vim.keymap.set("n", "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = "Split", silent = true })
 vim.keymap.set("n", "<leader>=", ":wincmd =<CR>", { desc = "Equalize Buffers", silent = true })
-vim.keymap.set("n", "<leader>j", "<C-w><C-r>", { desc = "Rotate Splits", silent = true})
+vim.keymap.set("n", "<leader>j", "<C-w><C-r>", { desc = "Rotate Splits", silent = true })
 -- Maximizer
 vim.keymap.set("n", "<leader>J", ":MaximizerToggle<CR>", { desc = "Maximize Buffer", silent = true })
 
 -- Toggle autocompletion on/off
-vim.keymap.set("n", "<leader>x", "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>", { desc = "cmp Toggle", silent = true })
+vim.keymap.set(
+  "n",
+  "<leader>x",
+  "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>",
+  { desc = "cmp Toggle", silent = true }
+)
 
 -- Harpoon
-vim.keymap.set( "n", "<leader><leader>", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { desc = "Harpoon Menu", silent = true })
-vim.keymap.set( "n", "<leader><Tab>", ":lua require('harpoon.ui').nav_next()<CR>", { desc = "Harpoon Next", silent = true })
-vim.keymap.set( "n", "<leader><S-Tab>", ":lua require('harpoon.ui').nav_prev()<CR>", { desc = "Harpoon Next", silent = true })
+vim.keymap.set(
+  "n",
+  "<leader><leader>",
+  ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
+  { desc = "Harpoon Menu", silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<leader><Tab>",
+  ":lua require('harpoon.ui').nav_next()<CR>",
+  { desc = "Harpoon Next", silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<leader><S-Tab>",
+  ":lua require('harpoon.ui').nav_prev()<CR>",
+  { desc = "Harpoon Next", silent = true }
+)
 vim.keymap.set("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>", { desc = "Harpoon 1", silent = true })
 vim.keymap.set("n", "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>", { desc = "Harpoon 2", silent = true })
 vim.keymap.set("n", "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>", { desc = "Harpoon 3", silent = true })
 vim.keymap.set("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>", { desc = "Harpoon 4", silent = true })
-vim.keymap.set("n", "<leader>m", function () vim.api.nvim_command('echo "File Marked"') require('harpoon.mark').add_file() end, { desc = "Harpoon Mark", silent = true})
+vim.keymap.set("n", "<leader>m", function()
+  vim.api.nvim_command('echo "File Marked"')
+  require("harpoon.mark").add_file()
+end)
+
 -- Git
+vim.keymap.set("n", "<leader>y", "nvim_echo('hello')", { desc = "Harpoon 4", silent = true })
