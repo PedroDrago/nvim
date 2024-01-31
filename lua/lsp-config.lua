@@ -98,9 +98,9 @@ cmp.setup({
   sources = {
     { name = "nvim_lsp" },
     -- { name = "buffer", max_item_count = 5 }, --max_item_count makes so that in the cmp menu only N items of thys category can show.
-    { name = "path" },
-    { name = "luasnip" },
+    -- { name = "path" },
+    -- { name = "luasnip" },
     { name = 'nvim_lsp_signature_help' },
-    { name = "cmdline" },
+    -- { name = "cmdline" },
   },
 })

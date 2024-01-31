@@ -21,7 +21,7 @@ return {
         "vimdoc",
         "vim",
       },
-      ignore_install = { "markdown", "markdown_inline" },
+      -- ignore_install = { "markdown", "markdown_inline" },
       modules = {},
       -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
       auto_install = true,
