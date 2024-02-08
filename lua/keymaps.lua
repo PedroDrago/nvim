@@ -39,7 +39,7 @@ vim.keymap.set("n", "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = "Split", 
 vim.keymap.set("n", "<leader>=", ":wincmd =<CR>", { desc = "Equalize Buffers", silent = true })
 vim.keymap.set("n", "<leader>j", "<C-w><C-r>", { desc = "Rotate Splits", silent = true })
 -- Maximizer
-vim.keymap.set("n", "<leader>J", ":MaximizerToggle<CR>", { desc = "Maximize Buffer", silent = true })
+vim.keymap.set("n", "<leader><CR>", ":MaximizerToggle<CR>", { desc = "Maximize Buffer", silent = true })
 
 -- Toggle autocompletion on/off
 vim.keymap.set(
