@@ -48,7 +48,6 @@ vim.keymap.set(
   "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>",
   { desc = "cmp Toggle", silent = true }
 )
-
 -- Harpoon
 vim.keymap.set(
   "n",
@@ -78,4 +77,4 @@ vim.keymap.set("n", "<leader>m", function()
 end)
 
 -- Git
-vim.keymap.set("n", "<leader>y", "nvim_echo('hello')", { desc = "Harpoon 4", silent = true })
+vim.keymap.set("n", "<leader>y", ":Gitsigns preview_hunk<CR>", { desc = "Harpoon 4", silent = true })
