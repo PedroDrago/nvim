@@ -3,8 +3,7 @@ return {
   opts = {
     options = {
       icons_enabled = true,
-      -- theme = "gruvbox-material",
-      theme = "onedark",
+      theme = "auto",
       component_separators = "|",
       section_separators = "",
     },

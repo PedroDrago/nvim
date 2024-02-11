@@ -8,6 +8,7 @@ return {
   config = function()
     require("nvim-tree").setup({
       update_focused_file = { enable = true, update_cwd = true },
+      git = { ignore = false },
     })
   end,
   vim.keymap.set("n", "<leader>e", ":NvimTreeToggle <CR>", { desc = "Nvim-Tree", silent = true }),

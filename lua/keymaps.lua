@@ -77,4 +77,9 @@ vim.keymap.set("n", "<leader>m", function()
 end)
 
 -- Git
-vim.keymap.set("n", "<leader>y", ":Gitsigns preview_hunk<CR>", { desc = "Harpoon 4", silent = true })
+vim.keymap.set("n", "<leader>y", ":Gitsigns preview_hunk<CR>", { desc = "Display Git Hunk", silent = true })
+
+
+
+-- Themery
+vim.keymap.set("n", "<F9>", ":Themery<CR>", { desc = "Theme Selection", silent = true })
