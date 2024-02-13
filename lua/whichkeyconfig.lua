@@ -29,6 +29,9 @@ which_key.register({
   d = {
     name = "debug",
   },
+    S = {
+        name = "Spectre"
+    },
   h = "which_key_ignore",
   l = "which_key_ignore",
   a = "which_key_ignore",
