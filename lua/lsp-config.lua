@@ -47,7 +47,7 @@ local lspkind = require('lspkind')
 require("luasnip.loaders.from_vscode").lazy_load()
 luasnip.config.setup({})
 cmp.setup({
-  performance = { max_view_entries = 15},
+  -- performance = { max_view_entries = 25},
   formatting = {
     expandable_indicator = true,
     format = lspkind.cmp_format({
