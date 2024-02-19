@@ -1,5 +1,6 @@
 # Todo
 
+- [ ] Try to adapt to oil.nvim
 - [ ] Consertar Go to Declaration/Go to Definition (ir para a propria função ao inves do header file)
 - [ ] `leader<s>`: Rename Symbol - Não tem funcionado muito bem project-wide.
 - [ ] Consider Spectre for global find n replace

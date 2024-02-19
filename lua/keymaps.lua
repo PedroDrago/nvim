@@ -16,12 +16,12 @@ vim.keymap.set("n", "L", "$")
 vim.keymap.set("n", "H", "^")
 
 -- Remove macro recording shit
-vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "q", "<nop>")
-vim.keymap.set("n", "<C-o>", "<nop>")
+  vim.keymap.set("n", "Q", "<nop>")
+  vim.keymap.set("n", "q", "<nop>")
+  vim.keymap.set("n", "<C-o>", "<nop>")
 
 -- Better default experience
-vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+  vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 --Dealing with word wrap
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -79,7 +79,16 @@ end)
 -- Git
 vim.keymap.set("n", "<leader>y", ":Gitsigns preview_hunk<CR>", { desc = "Display Git Hunk", silent = true })
 
+-- Oil
+vim.keymap.set("n", "<leader>o", function() require('oil').toggle_float() end, { desc = "Oil Float", silent = true })
 
 
--- Themery
-vim.keymap.set("n", "<F9>", ":Themery<CR>", { desc = "Theme Selection", silent = true })
+vim.keymap.set(
+  "n",
+  "<leader>n",
+  "oif err != nil {<CR>}<Esc>Oreturn err<Esc>",
+  { silent = true, desc = "err Golang" }
+)
+
+-- Lsp
+vim.keymap.set("n", "<leader>p", vim.lsp.buf.format, { silent = true, desc = "Format Buffer" })

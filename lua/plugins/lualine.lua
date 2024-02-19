@@ -6,9 +6,9 @@ return {
       theme = "auto",
       component_separators = "|",
       section_separators = "",
-      disabled_filetypes = { "NvimTree"},
-      ignore_focus = {"NvimTree"},
-      globalstatus = true,
+      disabled_filetypes = { "NvimTree, oil"},
+      ignore_focus = {"NvimTree, oil"},
+      -- globalstatus = true,
     },
     sections = {
       lualine_a = { "mode" },
