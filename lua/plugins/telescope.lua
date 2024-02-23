@@ -53,9 +53,11 @@ return {
           },
         })
       end, { desc = "Search in Buffer" })
+      require("telescope").load_extension("undo")
     end,
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "debugloop/telescope-undo.nvim",
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",

@@ -1,10 +1,10 @@
 # Todo
 
-- [ ] Try to adapt to oil.nvim
+- [ ] configure undotree (diff on the bottom)
+- [ ] Think of a better workflow for oil
+    - [ ] If possible to add git icons (modified, not commited etc) in oil, we can substitute the tree for it (folders folding would be interesting too)
 - [ ] Consertar Go to Declaration/Go to Definition (ir para a propria função ao inves do header file)
-- [ ] `leader<s>`: Rename Symbol - Não tem funcionado muito bem project-wide.
-- [ ] Consider Spectre for global find n replace
-- [ ] Additional Themes and a way to change dinamically with telescope with preview (maybe themery)
-    - [ ] [Kanagawa black](https://github.com/rebelot/kanagawa.nvim)
-    - [ ] [Gruvbox not materiap](https://github.com/sainnhe/gruvbox-material)
-    - [ ] [Edge](https://github.com/sainnhe/edge)
+
+
+# Kickstart
+When revamped kickstart release, revamp all my config (using the import and modularization tips from kickstart comments)

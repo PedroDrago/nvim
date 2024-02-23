@@ -92,3 +92,7 @@ vim.keymap.set(
 
 -- Lsp
 vim.keymap.set("n", "<leader>p", vim.lsp.buf.format, { silent = true, desc = "Format Buffer" })
+
+-- Undotree
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>")
