@@ -3,7 +3,6 @@ local on_attach = function(_, bufnr)
     vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
   end
   nmap("<leader>s", vim.lsp.buf.rename, "Rename")
-  nmap("<leader>c", vim.lsp.buf.code_action, "Code Action")
   nmap("gd", vim.lsp.buf.definition, "Goto Definition")
   nmap("<leader>r", require("telescope.builtin").lsp_references, "Goto References")
   nmap("K", vim.lsp.buf.hover, "Hover Documentation")

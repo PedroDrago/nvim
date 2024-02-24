@@ -20,6 +20,7 @@ vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.wrap = false     -- Remove line wrap
 vim.o.swapfile = false -- Disable swap files creation
+
 -- highlight on_yank
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {

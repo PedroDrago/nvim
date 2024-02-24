@@ -74,7 +74,7 @@ vim.keymap.set("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>", {
 vim.keymap.set("n", "<leader>m", function()
   vim.api.nvim_command('echo "File Marked"')
   require("harpoon.mark").add_file()
-end)
+end, { silent = true, desc = "Harpoon Mark"} )
 
 -- Git
 vim.keymap.set("n", "<leader>y", ":Gitsigns preview_hunk<CR>", { desc = "Display Git Hunk", silent = true })
@@ -94,5 +94,8 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>p", vim.lsp.buf.format, { silent = true, desc = "Format Buffer" })
 
 -- Undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
-vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>")
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { silent = true, desc = "Undo Tree"})
+vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>", { silent = true, desc = "Undo Tree Telescope"})
+
+-- Trouble
+vim.keymap.set("n", "<leader>z", function() require("trouble").toggle() end, { silent = true, desc = "Trouble"} )

@@ -26,9 +26,6 @@ local setup = {
 
 which_key.setup(setup)
 which_key.register({
-  d = {
-    name = "debug",
-  },
     S = {
         name = "Spectre"
     },
