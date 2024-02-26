@@ -10,3 +10,9 @@ return {
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false }, event = { 'BufReadPost', 'BufNewFile' } },
 }
+--NOTE: this is a note
+--FIX: this is a fix note
+--WARN: this is a warning note
+--HACK: this is a hack note
+--PERF: this is a perf note
+--TODO: this is a todo note

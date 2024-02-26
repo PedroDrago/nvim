@@ -8,5 +8,5 @@ return {
   },
   vim.keymap.set('n', '<leader>z', function()
     require('trouble').toggle()
-  end, { silent = true, desc = 'Trouble' }),
+  end, { silent = true, desc = 'Trouble workspace_diagnostics' }),
 }

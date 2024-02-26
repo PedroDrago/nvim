@@ -10,7 +10,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup 'plugins'
 
--- vim.cmd.colorscheme 'tokyonight-night'
+vim.cmd.colorscheme 'tokyonight-night'
 vim.cmd.colorscheme 'onedark'
 
 -- vim: ts=2 sts=2 sw=2 et

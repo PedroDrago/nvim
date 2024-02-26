@@ -13,6 +13,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
     { 'nvim-tree/nvim-web-devicons' },
+    { 'debugloop/telescope-undo.nvim' },
   },
   config = function()
     require('telescope').setup {
@@ -64,5 +65,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
     --   vim.keymap.set('n', '<leader>sn', function()
     --     builtin.find_files { cwd = vim.fn.stdpath 'config' }
     --   end, { desc = '[S]earch [N]eovim files' })
+    require('telescope').load_extension 'undo'
   end,
 }
