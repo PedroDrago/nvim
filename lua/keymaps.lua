@@ -1,4 +1,3 @@
-vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Expand Diagnostic' })
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
 vim.keymap.set('n', '<leader>a', ':vsplit <CR>', { desc = 'Split', silent = true })

@@ -21,7 +21,6 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.opt.cursorline = false
 vim.opt.termguicolors = true
-
 -- vim.opt.colorcolumn = "80"
 
 vim.api.nvim_create_autocmd('TextYankPost', {

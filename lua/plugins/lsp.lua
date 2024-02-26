@@ -7,6 +7,7 @@ return {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
+  vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Expand Diagnostic' }),
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
