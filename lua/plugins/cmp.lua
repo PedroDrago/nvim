@@ -18,14 +18,21 @@ return {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-cmdline',
+    'onsails/lspkind.nvim',
   },
   config = function()
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
+    local lspkind = require 'lspkind'
     luasnip.config.setup {}
 
     cmp.setup {
       -- experimental = { ghost_text = true },
+      formatting = {
+        format = lspkind.cmp_format {
+          mode = 'symbol_text',
+        },
+      },
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
