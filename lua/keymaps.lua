@@ -11,8 +11,19 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close', silent = true })
 
-vim.keymap.set('n', '<leader>t', ':vsplit<CR>:terminal<CR>a', { desc = 'Open Vertical Terminal', silent = true })
-vim.keymap.set('n', '<leader>T', ':split<CR>:terminal<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
+vim.keymap.set(
+  'n',
+  '<leader>t',
+  ':vsplit<CR>:terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a',
+  { desc = 'Open Vertical Terminal', silent = true }
+)
+
+vim.keymap.set(
+  'n',
+  '<leader>T',
+  ':split<CR>:terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a',
+  { desc = 'Open Vertical Terminal', silent = true }
+)
 
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line down', silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line up', silent = true })
