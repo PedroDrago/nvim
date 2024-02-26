@@ -8,10 +8,11 @@ if not vim.loop.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.diffViewOpen = 1
 require('lazy').setup 'plugins'
 
 vim.cmd.colorscheme 'onedark'
-vim.cmd.colorscheme 'tokyonight-night' --dark environments
 vim.cmd.colorscheme 'tokyonight-storm' --light environments
+vim.cmd.colorscheme 'tokyonight-night' --dark environments
 
 -- vim: ts=2 sts=2 sw=2 et

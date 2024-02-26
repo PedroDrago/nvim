@@ -3,9 +3,11 @@ return {
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
-    config = function()
-      vim.cmd.hi 'Comment gui=none'
-    end,
+    opts = {
+      styles = {
+        comments = { italic = false },
+      },
+    },
   },
   {
     'navarasu/onedark.nvim',
