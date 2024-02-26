@@ -14,8 +14,6 @@ return {
     config = function()
       require('onedark').setup {
         style = 'dark', -- dark, darker, cool, deep, warm, warmer, light
-        -- toggle_style_key = '<F9>',
-        -- toggle_style_list = { 'dark', 'warm', 'light' }, -- List of styles to toggle between
       }
     end,
   },

@@ -1,4 +1,4 @@
-return { -- Autoformat
+return {
   'stevearc/conform.nvim',
   opts = {
     notify_on_error = false,
@@ -8,7 +8,6 @@ return { -- Autoformat
     },
     formatters_by_ft = {
       lua = { 'stylua' },
-      -- Conform will run multiple formatters sequentially
       go = { 'goimports', 'gofmt' },
       python = { 'black' },
       c = {},

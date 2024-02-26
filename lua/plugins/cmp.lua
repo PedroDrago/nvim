@@ -1,4 +1,4 @@
-return { -- Autocompletion
+return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
@@ -18,7 +18,6 @@ return { -- Autocompletion
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-cmdline',
-    -- 'rafamadriz/friendly-snippets',
   },
   config = function()
     local cmp = require 'cmp'
@@ -34,26 +33,10 @@ return { -- Autocompletion
       },
       completion = { completeopt = 'menu,menuone,noinsert,noselect' },
       mapping = cmp.mapping.preset.insert {
-        -- Select the [n]ext item
         ['<Tab>'] = cmp.mapping.select_next_item(),
-        -- Select the [p]revious item
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-
         ['<CR>'] = cmp.mapping.confirm { select = false },
-
-        -- Manually trigger a completion from nvim-cmp.
-        --  Generally you don't need this, because nvim-cmp will display
-        --  completions whenever it has completion options available.
         ['<C-Space>'] = cmp.mapping.complete {},
-
-        -- Think of <c-l> as moving to the right of your snippet expansion.
-        --  So if you have a snippet that's like:
-        --  function $name($args)
-        --    $body
-        --  end
-        --
-        -- <c-l> will move you to the right of each of the expansion locations.
-        -- <c-h> is similar, except moving you backwards.
         ['<C-l>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
@@ -69,7 +52,7 @@ return { -- Autocompletion
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
-        { name = 'buffer' },
+        { name = 'buffer' }, --consider removing this shit
         { name = 'nvim_lsp_signature_help' },
       },
     }
@@ -91,7 +74,6 @@ return { -- Autocompletion
           },
         },
       }),
-      -- require('luasnip.loaders.from_vscode').lazy_load(), --comment to disable snippets
     })
   end,
 }

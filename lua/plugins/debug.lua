@@ -39,7 +39,6 @@ return {
       },
     }
 
-    -- Basic debugging keymaps, feel free to change to your liking!
     vim.keymap.set('n', '<F5>', dap.continue, { desc = 'Debug: Start/Continue' })
     vim.keymap.set('n', '<F8>', dap.step_into, { desc = 'Debug: Step Into' })
     vim.keymap.set('n', '<F7>', dap.step_over, { desc = 'Debug: Step Over' })
@@ -72,7 +71,6 @@ return {
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
-    -- Install golang specific config
     require('dap-go').setup()
     ---@diagnostic disable-next-line: missing-parameter
     require('nvim-dap-virtual-text').setup()
