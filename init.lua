@@ -14,5 +14,4 @@ vim.cmd.colorscheme 'onedark'
 vim.cmd.colorscheme 'tokyonight-night' --dark environments
 vim.cmd.colorscheme 'tokyonight-storm' --light environments
 
---a
 -- vim: ts=2 sts=2 sw=2 et
