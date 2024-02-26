@@ -1,29 +1,9 @@
-return {
+return { -- Adds git related signs to the gutter, as well as utilities for managing changes
   {
-    "lewis6991/gitsigns.nvim",
-    opts = {
-      -- See `:help gitsigns.txt`
-      signs = {
-        -- add = { text = "+" },
-        -- change = { text = "~" },
-        -- delete = { text = "_" },
-        -- topdelete = { text = "‾" },
-        -- changedelete = { text = "~" },
-      },
-    },
+    'lewis6991/gitsigns.nvim',
+    opts = {},
+    vim.keymap.set('n', '<leader>y', ':Gitsigns preview_hunk<CR>', { desc = 'Display Git Hunk', silent = true }),
   },
-  {
-    {
-      "NeogitOrg/neogit",
-      dependencies = {
-        "nvim-lua/plenary.nvim", -- required
-        "sindrets/diffview.nvim", -- optional - Diff integration
-
-        -- Only one of these is needed, not both.
-        "nvim-telescope/telescope.nvim", -- optional
-        "ibhagwan/fzf-lua",          -- optional
-      },
-      config = true,
-    },
-  },
+  { 'tpope/vim-fugitive' },
+  { 'sindrets/diffview.nvim' }, -- optional - Diff integration
 }

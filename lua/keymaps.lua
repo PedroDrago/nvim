@@ -1,105 +1,43 @@
---  Move a selected block up and down
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
---  Enter visual block mode
-vim.keymap.set("n", "B", "<C-v>")
+vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Expand Diagnostic' })
 
--- Center when navigating vertically
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-
--- Go to end or start of line still in normal mode
-vim.keymap.set("n", "L", "$")
-vim.keymap.set("n", "H", "^")
-
--- Remove macro recording shit
-  vim.keymap.set("n", "Q", "<nop>")
-  vim.keymap.set("n", "q", "<nop>")
-  vim.keymap.set("n", "<C-o>", "<nop>")
-
--- Better default experience
-  vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-
---Dealing with word wrap
-vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- Closing
-vim.keymap.set("n", "<leader>Q", ":qa!<CR>", { desc = "Close Nvim", silent = true })
-vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close Buffer", silent = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Buffer Navigation
+vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
+vim.keymap.set('n', '<leader>a', ':vsplit <CR>', { desc = 'Split', silent = true })
+vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', silent = true })
+vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits', silent = true })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set("n", "<leader>w", ":wincmd w<CR>", { desc = "Move focus to next window", silent = true })
-vim.keymap.set("n", "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = "Split", silent = true })
-vim.keymap.set("n", "<leader>=", ":wincmd =<CR>", { desc = "Equalize Buffers", silent = true })
-vim.keymap.set("n", "<leader>j", "<C-w><C-r>", { desc = "Rotate Splits", silent = true })
--- Maximizer
-vim.keymap.set("n", "<leader><CR>", ":MaximizerToggle<CR>", { desc = "Maximize Buffer", silent = true })
 
--- Toggle autocompletion on/off
-vim.keymap.set(
-  "n",
-  "<leader>x",
-  "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>",
-  { desc = "cmp Toggle", silent = true }
-)
--- Harpoon
-vim.keymap.set(
-  "n",
-  "<leader><leader>",
-  ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
-  { desc = "Harpoon Menu", silent = true }
-)
-vim.keymap.set(
-  "n",
-  "<leader><Tab>",
-  ":lua require('harpoon.ui').nav_next()<CR>",
-  { desc = "Harpoon Next", silent = true }
-)
-vim.keymap.set(
-  "n",
-  "<leader><S-Tab>",
-  ":lua require('harpoon.ui').nav_prev()<CR>",
-  { desc = "Harpoon Next", silent = true }
-)
-vim.keymap.set("n", "<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>", { desc = "Harpoon 1", silent = true })
-vim.keymap.set("n", "<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>", { desc = "Harpoon 2", silent = true })
-vim.keymap.set("n", "<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>", { desc = "Harpoon 3", silent = true })
-vim.keymap.set("n", "<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>", { desc = "Harpoon 4", silent = true })
-vim.keymap.set("n", "<leader>m", function()
-  vim.api.nvim_command('echo "File Marked"')
-  require("harpoon.mark").add_file()
-end, { silent = true, desc = "Harpoon Mark"} )
+--  Move a selected block up and down
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
 
--- Git
-vim.keymap.set("n", "<leader>y", ":Gitsigns preview_hunk<CR>", { desc = "Display Git Hunk", silent = true })
+--  Enter visual block mode
+vim.keymap.set('n', 'B', '<C-v>')
 
--- Oil
-vim.keymap.set("n", "<leader>o", function() require('oil').toggle_float() end, { desc = "Oil Float", silent = true })
+-- Center when navigating vertically
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
 
+-- Remove macro recording shit
+vim.keymap.set('n', 'Q', '<nop>')
+vim.keymap.set('n', 'q', '<nop>')
+vim.keymap.set('n', '<C-o>', '<nop>')
 
-vim.keymap.set(
-  "n",
-  "<leader>n",
-  "oif err != nil {<CR>}<Esc>Oreturn err<Esc>",
-  { silent = true, desc = "err Golang" }
-)
+vim.keymap.set('n', '<leader>q', ':q<CR>')
+-- Better default experience
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Lsp
-vim.keymap.set("n", "<leader>p", vim.lsp.buf.format, { silent = true, desc = "Format Buffer" })
+--Dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- Undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { silent = true, desc = "Undo Tree"})
-vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>", { silent = true, desc = "Undo Tree Telescope"})
-
--- Trouble
-vim.keymap.set("n", "<leader>z", function() require("trouble").toggle() end, { silent = true, desc = "Trouble"} )
-
-vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
+vim.keymap.set('n', '<leader>t', ':vsplit<CR>:terminal<CR>a', { desc = 'Open Vertical Terminal', silent = true })
