@@ -20,8 +20,6 @@ vim.opt.splitbelow = true
 vim.opt.inccommand = 'split'
 vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
-
--- Show which line your cursor is on
 vim.opt.cursorline = false
 
 vim.api.nvim_create_autocmd('TextYankPost', {
