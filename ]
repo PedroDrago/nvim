@@ -21,3 +21,4 @@ return {
     }
   end,
 }
+--TODO:Align whichkey entries by center
