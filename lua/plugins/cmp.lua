@@ -25,7 +25,6 @@ return {
     local luasnip = require 'luasnip'
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
-
     cmp.setup {
       -- experimental = { ghost_text = true },
       formatting = {
