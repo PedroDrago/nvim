@@ -32,9 +32,11 @@ vim.keymap.set("n", "<leader>Q", ":qa!<CR>", { desc = "Close Nvim", silent = tru
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close Buffer", silent = true })
 
 -- Buffer Navigation
-vim.keymap.set("n", "<leader>h", ":wincmd h<CR>", { desc = "Move to left", silent = true })
-vim.keymap.set("n", "<leader>w", ":wincmd w<CR>", { desc = "Move to next", silent = true })
-vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { desc = "Move to right", silent = true })
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set("n", "<leader>w", ":wincmd w<CR>", { desc = "Move focus to next window", silent = true })
 vim.keymap.set("n", "<leader>a", ":vsplit <CR>:wincmd w<CR>", { desc = "Split", silent = true })
 vim.keymap.set("n", "<leader>=", ":wincmd =<CR>", { desc = "Equalize Buffers", silent = true })
 vim.keymap.set("n", "<leader>j", "<C-w><C-r>", { desc = "Rotate Splits", silent = true })
@@ -99,3 +101,5 @@ vim.keymap.set("n", "<leader>U", "<cmd>Telescope undo<cr>", { silent = true, des
 
 -- Trouble
 vim.keymap.set("n", "<leader>z", function() require("trouble").toggle() end, { silent = true, desc = "Trouble"} )
+
+vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })

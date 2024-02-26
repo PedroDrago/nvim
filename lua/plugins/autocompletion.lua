@@ -15,3 +15,4 @@ return {
     -- "rafamadriz/friendly-snippets",
   },
 }
+

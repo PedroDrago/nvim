@@ -6,8 +6,8 @@ return {
       theme = "auto",
       component_separators = "|",
       section_separators = "",
-      disabled_filetypes = { "NvimTree, oil"},
-      ignore_focus = {"NvimTree, oil"},
+      disabled_filetypes = { "NvimTree", "oil"},
+      ignore_focus = {"NvimTree", "oil"},
       -- globalstatus = true,
     },
     sections = {
