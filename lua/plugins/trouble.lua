@@ -4,5 +4,5 @@ return {
   opts = {},
   vim.keymap.set('n', '<leader>z', function()
     require('trouble').toggle()
-  end, { silent = true, desc = 'Trouble workspace_diagnostics' }),
+  end, { silent = true, desc = 'Trouble Project' }),
 }
