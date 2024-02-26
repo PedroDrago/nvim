@@ -2,6 +2,10 @@
 
 These are my neovim Configs, they are my revamp on [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). 
 
+<p align="center">
+    <img src="./config_printscreen.png"/>
+</p>
+
 If you're too lazy to build your configs from scratch and don't want a bloated distribution like [LunarVim](https://www.lunarvim.org/) or [NvChad](https://nvchad.com/) I strongly recommend just using kickstart.
 
 If you want to learn how to create from scratch your own neovim configuration files I recommend 2 sources to learn:
