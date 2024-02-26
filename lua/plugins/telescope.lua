@@ -13,7 +13,6 @@ return {
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
     { 'nvim-tree/nvim-web-devicons' },
-    { 'debugloop/telescope-undo.nvim' },
   },
   config = function()
     require('telescope').setup {
@@ -45,6 +44,5 @@ return {
         previewer = false,
       })
     end, { desc = 'search in buffer' })
-    require('telescope').load_extension 'undo'
   end,
 }
