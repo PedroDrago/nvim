@@ -45,5 +45,24 @@ vim.keymap.set('n', '<C-o>', '<nop>', { desc = 'Disable Macro' })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-
---Theme selectio (themery)
+-- NOTE:Available leader keymaps
+-- <leader>h
+-- <leader>H
+-- <leader>k
+-- <leader>K
+-- <leader>l
+-- <leader>L
+-- <leader>i
+-- <leader>I
+-- <leader>p
+-- <leader>P
+-- <leader>x
+-- <leader>X
+-- <leader>v
+-- <leader>V
+-- <leader>n
+-- <leader>N
+-- <leader>[
+-- <leader>]
+-- <leader>{
+-- <leader>}

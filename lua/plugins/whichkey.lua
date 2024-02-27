@@ -25,3 +25,5 @@ return {
     }
   end,
 }
+--TODO:Try to organize which-key entries, for example
+--a column only with telescope keymaps
