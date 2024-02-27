@@ -3,4 +3,5 @@
     - [ ] main (for `golang` and `C`)
     - [ ] iferr (if err != nil `golang`)
     - [ ] ifnull (if !var `C`)
+    - [ ] [This Plugin](https://github.com/chrisgrieser/nvim-scissors) may help.
 - [ ] Organize better whichkey entries
