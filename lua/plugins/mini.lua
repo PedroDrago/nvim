@@ -6,8 +6,5 @@ return {
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     require('mini.surround').setup()
-
-    -- ... and there is more!
-    --  Check out: https://github.com/echasnovski/mini.nvim
   end,
 }
