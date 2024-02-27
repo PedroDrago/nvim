@@ -2,7 +2,11 @@ return {
   'folke/which-key.nvim',
   event = 'VeryLazy',
   config = function()
-    require('which-key').setup = {}
+    require('which-key').setup {
+      layout = {
+        align = 'center',
+      },
+    }
     require('which-key').register {
       ['<leader>a'] = 'which_key_ignore',
       ['<leader>e'] = 'which_key_ignore',
