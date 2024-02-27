@@ -6,6 +6,11 @@ vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits', silent 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 
+--TODO:make this work to increment/decrement number
+-- vim.keymap.set("n", "x", '"_x')
+-- vim.keymap.set('n', '+', '<C-a>')
+-- vim.keymap.set('n', '-', '<C-x>')
+
 vim.keymap.set('n', '<leader>q', ':q!<CR>', { desc = 'Close', silent = true })
 
 vim.keymap.set(
