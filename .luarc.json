@@ -5,6 +5,7 @@
     "diagnostics.disable": [
         "missing-fields",
         "undefined-field",
-        "assign-type-mismatch"
+        "assign-type-mismatch",
+        "redundant-parameter"
     ]
 }

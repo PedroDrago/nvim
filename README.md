@@ -3,7 +3,7 @@
 These are my neovim Configs
 
 <p align="center">
-    <img src="./config_printscreen.png"/>
+    <img src="./print.png"/>
 </p>
 
 This configuration is based on [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), but with my own tweaks and a lot of [extra plugins](./plugins.md).
