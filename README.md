@@ -19,3 +19,5 @@ If you want to learn how to create from scratch your own neovim configuration fi
 ```bash
 rm -rf ~/.config/nvim && git clone git@github.com:PedroDrago/nvim.git ~/.config/nvim
 ```
+
+**Obs: If you want to use my neovim config I recommend deleting all `which_key_ignore` entries in `nvim/lua/plugins/which-key.lua`. That will help you learning my keymaps. Just delete all lines that have `which_key_ignore`**
