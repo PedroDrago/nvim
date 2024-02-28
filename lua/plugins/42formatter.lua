@@ -1,6 +1,5 @@
 return {
   'cacharle/c_formatter_42.vim',
-  -- Define autocmd to run :CFormatter42 on BufWritePost for C files
   vim.api.nvim_exec2(
     [[
   augroup FormatCOnSave
