@@ -3,8 +3,6 @@ return {
     'lewis6991/gitsigns.nvim',
     opts = {},
     event = { 'BufReadPost', 'BufNewFile' },
-
-    vim.keymap.set('n', '<leader>y', ':Gitsigns preview_hunk<CR>', { desc = 'Git Hunk', silent = true }),
   },
   { 'tpope/vim-fugitive', event = { 'BufReadPost', 'BufNewFile' } },
   {

@@ -22,6 +22,7 @@ return {
       ['<leader><S-Tab>'] = 'which_key_ignore',
       ['<leader>u'] = 'which_key_ignore',
       ['<leader>q'] = 'which_key_ignore',
+      ['<leader>S'] = 'Spectre',
     }
   end,
 }

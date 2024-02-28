@@ -64,6 +64,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- <leader>P
 -- <leader>x
 -- <leader>X
+-- <leader>y
+-- <leader>Y
 -- <leader>v
 -- <leader>V
 -- <leader>n

@@ -16,14 +16,14 @@ return {
       },
     },
     event = { 'bufreadpost', 'bufnewfile' },
-    vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<cr><cmd>lua require("spectre").change_view()<CR>', {
-      desc = 'toggle spectre',
+    vim.keymap.set('n', '<leader>SS', '<cmd>lua require("spectre").toggle()<cr><cmd>lua require("spectre").change_view()<CR>', {
+      desc = 'Spectre',
     }),
-    vim.keymap.set('n', '<leader>W', '<cmd>lua require("spectre").open_visual({select_word=true})<CR><cmd>lua require("spectre").change_view()<CR>', {
-      desc = 'Search current word',
+    vim.keymap.set('n', '<leader>SW', '<cmd>lua require("spectre").open_visual({select_word=true})<CR><cmd>lua require("spectre").change_view()<CR>', {
+      desc = 'Spectre Word',
     }),
-    vim.keymap.set('v', '<leader>W', '<esc><cmd>lua require("spectre").open_visual()<CR><cmd>lua require("spectre").change_view()<CR>', {
-      desc = 'Search current word',
+    vim.keymap.set('v', '<leader>SW', '<esc><cmd>lua require("spectre").open_visual()<CR><cmd>lua require("spectre").change_view()<CR>', {
+      desc = 'Spectre Word',
     }),
   },
 }
