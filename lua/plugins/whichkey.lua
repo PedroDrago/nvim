@@ -22,6 +22,7 @@ return {
       ['<leader>g'] = 'which_key_ignore',
       ['<leader>m'] = 'which_key_ignore',
       ['<leader>s'] = 'which_key_ignore',
+      ['<leader>='] = 'which_key_ignore',
       ['<leader><leader>'] = 'which_key_ignore',
       ['<leader><Tab>'] = 'which_key_ignore',
       ['<leader><S-Tab>'] = 'which_key_ignore',

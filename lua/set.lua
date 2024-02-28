@@ -4,7 +4,7 @@ vim.g.maplocalleader = ' '
 
 vim.opt.swapfile = false
 vim.opt.number = true
-vim.o.wrap = false
+vim.opt.wrap = false
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
