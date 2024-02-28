@@ -2,12 +2,14 @@ return {
   {
     'lewis6991/gitsigns.nvim',
     opts = {},
+    event = { 'BufReadPost', 'BufNewFile' },
 
     vim.keymap.set('n', '<leader>y', ':Gitsigns preview_hunk<CR>', { desc = 'Git Hunk', silent = true }),
   },
-  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-fugitive', event = { 'BufReadPost', 'BufNewFile' } },
   {
     'sindrets/diffview.nvim',
+    event = { 'BufReadPost', 'BufNewFile' },
     opts = {},
     vim.keymap.set(
       'n',

@@ -1,5 +1,6 @@
 return {
   'nvim-pack/nvim-spectre',
+  event = 'VeryLazy',
   opts = {
     is_block_ui_break = true,
     mapping = {
