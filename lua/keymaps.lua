@@ -51,7 +51,6 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- NOTE:Available leader keymaps
 -- <leader>h
 -- <leader>H
--- <leader>k
 -- <leader>K
 -- <leader>l
 -- <leader>L

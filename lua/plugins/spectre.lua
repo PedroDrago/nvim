@@ -31,7 +31,7 @@ return {
       ['change_view_mode'] = {},
     },
     event = { 'bufreadpost', 'bufnewfile' },
-    vim.keymap.set('n', '<leader>s', '<cmd>lua require("spectre").toggle()<cr>', {
+    vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<cr>', {
       desc = 'toggle spectre',
     }),
   },
