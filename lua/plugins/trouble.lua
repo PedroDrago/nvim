@@ -17,5 +17,5 @@ return {
       end
     end, {})
   end,
-  vim.keymap.set('n', '<leader>z', ':ToggleTroubleWorkspace<CR>', { silent = true, desc = 'Trouble Project' }),
+  vim.keymap.set('n', '<leader>z', ':ToggleTroubleWorkspace<CR>', { silent = true, desc = 'Trouble' }),
 }
