@@ -34,7 +34,7 @@ return {
         map('<leader>s', vim.lsp.buf.rename, 'Rename')
         map('<leader>c', vim.lsp.buf.code_action, 'Code Action')
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
-        map('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)

@@ -3,8 +3,10 @@ vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next w
 vim.keymap.set('n', '<leader>a', ':vsplit <CR>', { desc = 'Split', silent = true })
 vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', silent = true })
 vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits', silent = true })
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 
 --TODO:make this work to increment/decrement number
 -- vim.keymap.set("n", "x", '"_x')
@@ -56,6 +58,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- <leader>L
 -- <leader>i
 -- <leader>I
+-- <leader>o
+-- <leader>O
 -- <leader>p
 -- <leader>P
 -- <leader>x
