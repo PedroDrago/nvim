@@ -21,6 +21,18 @@ return {
     'onsails/lspkind.nvim',
   },
   config = function()
+    local cmp_enabled = true
+    vim.api.nvim_create_user_command('ToggleAutoComplete', function()
+      if cmp_enabled then
+        require('cmp').setup.buffer { enabled = false }
+        cmp_enabled = false
+        vim.api.nvim_command 'echo "Autocomplete Off"'
+      else
+        require('cmp').setup.buffer { enabled = true }
+        cmp_enabled = true
+        vim.api.nvim_command 'echo "Autocomplete On"'
+      end
+    end, {})
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     local lspkind = require 'lspkind'

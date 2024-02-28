@@ -23,6 +23,7 @@ return {
       ['<leader>u'] = 'which_key_ignore',
       ['<leader>q'] = 'which_key_ignore',
       ['<leader>S'] = 'Spectre',
+      ['<leader>'] = '<Space>',
     }
   end,
 }
