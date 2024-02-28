@@ -35,6 +35,11 @@ return {
     end, {})
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
+    -- TODO:
+    -- Custom Luasnippets
+    -- https://www.youtube.com/watch?v=aNWx-ym7jjI&t=226s
+    -- https://sbulav.github.io/vim/neovim-setting-up-luasnip/
+    -- https://github.com/chrisgrieser/nvim-scissors
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
     cmp.setup {
