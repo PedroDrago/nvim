@@ -7,6 +7,7 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
+vim.keymap.set('n', '<leader>n', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>')
 
 vim.keymap.set('n', '<leader>q', ':q!<CR>', { desc = 'Close', silent = true })
 
@@ -55,7 +56,6 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- <leader>I
 -- <leader>o
 -- <leader>O
--- <leader>p
 -- <leader>P
 -- <leader>x
 -- <leader>X

@@ -11,4 +11,12 @@ return {
     event = { 'BufReadPost', 'BufNewFile' },
     vim.keymap.set('n', '<leader>k', ':MaximizerToggle!<CR>', { desc = 'Maximize Buffer', silent = true }),
   },
+  {
+    'windwp/nvim-ts-autotag',
+    event = 'VeryLazy',
+    opts = {},
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end,
+  },
 }

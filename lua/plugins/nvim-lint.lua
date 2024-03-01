@@ -1,0 +1,22 @@
+return {
+  -- 'mfussenegger/nvim-lint',
+  -- -- event = 'VeryLazy',
+  -- config = function()
+  --   require('lint').linters_by_ft = {
+  --     -- markdown = { 'vale' },
+  --     -- c = { 'cpplint' },
+  --     -- go = { 'golangci-lint' },
+  --     -- lua = { 'luacheck ' },
+  --   }
+  --   vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+  --     callback = function()
+  --       require('lint').try_lint()
+  --     end,
+  --   })
+  -- end,
+}
+--FIX:The automatic_installation setting ensures that all linters specified in the config of nvim-lint
+--are installed, so you need just specify linters in the nvim-lint. However, when the linter you need
+--is not available in the nvim-lint, then you can specify all required linters in the ensure_installed
+--in the mason's registry format, and then they will be installed from the registry. You fixed the error
+--by providing the linter name in the mason's registry format as it should be.
