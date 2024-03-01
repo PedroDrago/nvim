@@ -56,9 +56,8 @@ return {
       },
       completion = { completeopt = 'menu,menuone,noinsert' },
       mapping = cmp.mapping.preset.insert {
-        ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<C-p'] = cmp.mapping.select_prev_item(),
-        -- ['<CR>'] = cmp.mapping.confirm { select = false },
+        ['<C-j>'] = cmp.mapping.select_next_item(),
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-Enter>'] = cmp.mapping.confirm { select = true },
         ['<C-Space>'] = cmp.mapping.complete {},
         ['<C-l>'] = cmp.mapping(function()
