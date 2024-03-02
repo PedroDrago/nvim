@@ -80,7 +80,11 @@ return {
       },
     }
     cmp.setup.cmdline('/', {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline {
+        vim.keymap.set('c', '<C-j>', cmp.mapping.select_next_item(), { desc = 'Move down' }),
+        vim.keymap.set('c', '<C-k>', cmp.mapping.select_prev_item(), { desc = 'Move down' }),
+        vim.keymap.set('c', '<C-Enter>', cmp.mapping.confirm(), { desc = 'Move down' }),
+      },
       sources = {
         { name = 'buffer' },
       },
@@ -100,4 +104,3 @@ return {
     })
   end,
 }
---TODO: add <C-j> and <C-k> keymaps to cmdline cmp also
