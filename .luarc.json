@@ -6,6 +6,7 @@
         "missing-fields",
         "undefined-field",
         "assign-type-mismatch",
-        "redundant-parameter"
+        "redundant-parameter",
+        "cast-local-type"
     ]
 }
