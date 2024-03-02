@@ -99,3 +99,23 @@ return {
     }
   end,
 }
+
+--NOTE:
+--Mason LSP list:
+-- clang-format
+-- clangd
+-- cpplint
+-- delve
+-- emmet-language-server
+-- golangci-lint
+-- gopls
+-- html-lsp
+-- lua-language-server
+-- luacheck
+-- marksman
+-- pyright
+-- rust-analyzer
+-- sqlls
+-- sqls
+-- stylua
+-- typescript-language-server

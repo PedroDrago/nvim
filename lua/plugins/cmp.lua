@@ -100,3 +100,4 @@ return {
     })
   end,
 }
+--TODO: add <C-j> and <C-k> keymaps to cmdline cmp also
