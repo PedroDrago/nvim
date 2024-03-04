@@ -9,9 +9,10 @@ return {
     },
     formatters_by_ft = {
       lua = { 'stylua' },
-      go = { 'goimports', 'gofmt' },
+      go = { 'gofmt', 'goimports' },
       python = { 'black' },
       c = {},
+      sql = { 'sql-formatter' },
       javascript = { { 'prettierd', 'prettier' } },
     },
   },

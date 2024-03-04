@@ -25,7 +25,7 @@ return {
       '                                                     ',
     }
     dashboard.section.buttons.val = {
-      dashboard.button('d', '  > Dotfiles', ':cd ' .. vim.fn.stdpath 'config' .. ' | :e init.lua<CR>'),
+      dashboard.button('d', '  > Dotfiles', ':cd ' .. vim.fn.stdpath 'config' .. ' | :e init.lua<CR>'), --this could be :e $MYVIMRC
       dashboard.button('l', '󰒲  > Lazy', ':Lazy<CR>'),
       dashboard.button('h', '✚  > Health', ':checkhealth<CR>'),
       dashboard.button('q', '󰗼  > Quit', ':q!<CR>'),
