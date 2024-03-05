@@ -52,11 +52,6 @@ return {
     vim.keymap.set('n', '<leader>e', function()
       require('oil').toggle_float()
     end, { desc = 'Oil Float', silent = true }),
-
-    -- vim.keymap.set('n', '<leader>e', function()
-    --   vim.cmd 'vsplit | wincmd h | vertical resize -80'
-    --   require('oil').open()
-    -- end),
   },
   -- {
   --   'refractalize/oil-git-status.nvim',
@@ -68,6 +63,7 @@ return {
   --     show_ignored = false,
   --   },
   --   config = true,
+  --   default = true,
   -- },
   --FIX: Only use this plugin when fixed sign column color
 }

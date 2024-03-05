@@ -1,3 +1,5 @@
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
 --Splits
 vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
 vim.keymap.set('n', '<leader>a', ':vsplit <CR>', { desc = 'Split', silent = true })
@@ -33,7 +35,6 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Center when Scroll Page' })
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
 vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable Macro' })
 vim.keymap.set('n', 'q', '<nop>', { desc = 'Disable Macro' })
