@@ -4,7 +4,11 @@ return {
     opts = {},
     -- Optional dependencies
     config = function()
-      vim.api.nvim_set_hl(0, 'MySignColumnGroup', { bg = '#16161E' })
+      if vim.g.theme_id == 1 then
+        vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#16161E' })
+      elseif vim.g.theme_id == 2 then
+        vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#24283B' })
+      end
       require('oil').setup {
         win_options = {
           wrap = false,
@@ -15,7 +19,7 @@ return {
           list = false,
           conceallevel = 3,
           concealcursor = 'nvic',
-          winhl = 'SignColumn:MySignColumnGroup',
+          winhl = 'SignColumn:OilGitStatusSignColumnGroup',
         },
         float = {
           padding = 2,

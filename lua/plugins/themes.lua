@@ -11,18 +11,17 @@ return {
     },
   },
   {
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    lazy = false,
-    config = function()
-      require('onedark').setup {
-        style = 'dark', -- dark, darker, cool, deep, warm, warmer, light
-      }
-    end,
-  },
-  {
-    'catppuccin/nvim',
-    priority = 1000,
-    lazy = false,
+    {
+      'zaldih/themery.nvim',
+      event = 'VeryLazy',
+      config = function()
+        require('themery').setup {
+          themes = { 'tokyonight-night', 'tokyonight-storm' },
+          themeConfigFile = '~/.config/nvim/lua/colors.lua',
+          livePreview = true,
+        }
+      end,
+    },
   },
 }
+-- TODO:  Keybinding for persistent theme swap between night and storm

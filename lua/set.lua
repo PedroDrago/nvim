@@ -23,6 +23,7 @@ vim.opt.hlsearch = true
 vim.opt.cursorline = false
 vim.opt.termguicolors = true
 -- vim.opt.colorcolumn = '80'
+vim.g.maximizer_set_default_mapping = 0
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),

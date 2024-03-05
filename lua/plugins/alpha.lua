@@ -38,6 +38,3 @@ return {
       ]]
   end,
 }
-
--- TODO:replace alpha for dashboard.nvim: https://github.com/nvimdev/dashboard-nvim
---and use lazy.nvim configs as boilerplate: http://www.lazyvim.org/plugins/ui

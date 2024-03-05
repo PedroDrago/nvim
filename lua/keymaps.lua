@@ -63,6 +63,10 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line up', silent = t
 vim.keymap.set('n', 'B', '<C-v>', { desc = 'Visual Block' })
 vim.keymap.set('n', '<leader>q', ':q!<CR>', { desc = 'Close', silent = true })
 
+vim.keymap.set('n', '<F3>', '<Nop>', { silent = true })
+vim.keymap.set('n', '<F2>', '<Nop>', { silent = true })
+vim.keymap.set('n', '<F1>', '<Nop>', { silent = true })
+
 --[[
   NOTE:Available leader keymaps
   <leader>H

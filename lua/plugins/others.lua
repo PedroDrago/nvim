@@ -12,9 +12,15 @@ return {
   {
     'windwp/nvim-ts-autotag',
     event = 'VeryLazy',
-    opts = {},
+    opts = {
+      maximizer_set_default_mapping = 0,
+      set_default_mapping = 0,
+    },
     config = function()
-      require('nvim-ts-autotag').setup()
+      require('nvim-ts-autotag').setup {
+        maximizer_set_default_mapping = 0,
+        set_default_mapping = 0,
+      }
     end,
   },
 }
