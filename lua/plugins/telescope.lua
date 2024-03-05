@@ -51,7 +51,7 @@ return {
       builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
         previewer = false,
-        --TODO: Increase this telescope picker width
+        -- TODO: Increase this telescope picker width
       })
     end, { desc = 'search in buffer' })
   end,

@@ -15,7 +15,7 @@ return {
   --   })
   -- end,
 }
---FIX:The automatic_installation setting ensures that all linters specified in the config of nvim-lint
+-- FIX:The automatic_installation setting ensures that all linters specified in the config of nvim-lint
 --are installed, so you need just specify linters in the nvim-lint. However, when the linter you need
 --is not available in the nvim-lint, then you can specify all required linters in the ensure_installed
 --in the mason's registry format, and then they will be installed from the registry. You fixed the error

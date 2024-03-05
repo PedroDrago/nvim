@@ -75,4 +75,4 @@ return {
   --   require('nvim-dap-virtual-text').setup()
   -- end,
 }
---TODO:make this have a better experience, for now it is a few clunky to use
+-- TODO:make this have a better experience, for now it is a few clunky to use

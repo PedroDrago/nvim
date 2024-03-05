@@ -4,16 +4,18 @@ return {
     opts = {},
     -- Optional dependencies
     config = function()
+      vim.api.nvim_set_hl(0, 'MySignColumnGroup', { bg = '#16161E' })
       require('oil').setup {
         win_options = {
           wrap = false,
-          signcolumn = 'no',
+          signcolumn = 'yes:2',
           cursorcolumn = false,
           foldcolumn = '0',
           spell = false,
           list = false,
           conceallevel = 3,
           concealcursor = 'nvic',
+          winhl = 'SignColumn:MySignColumnGroup',
         },
         float = {
           padding = 2,
@@ -53,17 +55,16 @@ return {
       require('oil').toggle_float()
     end, { desc = 'Oil Float', silent = true }),
   },
-  -- {
-  --   'refractalize/oil-git-status.nvim',
-  --
-  --   dependencies = {
-  --     'stevearc/oil.nvim',
-  --   },
-  --   opts = {
-  --     show_ignored = false,
-  --   },
-  --   config = true,
-  --   default = true,
-  -- },
-  --FIX: Only use this plugin when fixed sign column color
+  {
+    'refractalize/oil-git-status.nvim',
+
+    dependencies = {
+      'stevearc/oil.nvim',
+    },
+    opts = {
+      show_ignored = false,
+    },
+    config = true,
+    default = true,
+  },
 }

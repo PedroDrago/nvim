@@ -101,7 +101,7 @@ return {
   end,
 }
 
---NOTE:
+-- NOTE:
 --Mason LSP list:
 -- clang-format
 -- clangd

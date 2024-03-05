@@ -25,13 +25,13 @@ return {
       '                                                     ',
     }
     dashboard.section.buttons.val = {
-      dashboard.button('d', '  > Dotfiles', ':cd ' .. vim.fn.stdpath 'config' .. ' | :e init.lua<CR>'), --this could be :e $MYVIMRC
+      dashboard.button('d', '  > Dotfiles', ':e $MYVIMRC | cd %:h<CR>'),
       dashboard.button('l', '󰒲  > Lazy', ':Lazy<CR>'),
       dashboard.button('h', '✚  > Health', ':checkhealth<CR>'),
       dashboard.button('q', '󰗼  > Quit', ':q!<CR>'),
     }
     dashboard.section.header.opts.hl = 'Function'
-    -- dashboard.section.footer.val = 'Pedro Drago'
+    dashboard.section.footer.val = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'Drago' }
 
     vim.cmd [[
         autocmd FileType alpha setlocal nofoldenable
@@ -39,5 +39,5 @@ return {
   end,
 }
 
---TODO:replace alpha for dashboard.nvim: https://github.com/nvimdev/dashboard-nvim
+-- TODO:replace alpha for dashboard.nvim: https://github.com/nvimdev/dashboard-nvim
 --and use lazy.nvim configs as boilerplate: http://www.lazyvim.org/plugins/ui
