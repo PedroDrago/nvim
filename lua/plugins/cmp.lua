@@ -2,23 +2,15 @@ return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
-    {
-      'L3MON4D3/LuaSnip',
-      build = (function()
-        if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
-          return
-        end
-        return 'make install_jsregexp'
-      end)(),
-    },
+    'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
-
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-cmdline',
     'onsails/lspkind.nvim',
+    -- 'rafamadriz/friendly-snippets',
   },
   config = function()
     local cmp_enabled = true
@@ -35,6 +27,7 @@ return {
     end, {})
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
+    -- require('luasnip.loaders.from_vscode').load {}
     -- TODO:
     -- Custom Luasnippets
     -- https://www.youtube.com/watch?v=aNWx-ym7jjI&t=226s
@@ -44,6 +37,10 @@ return {
     luasnip.config.setup {}
     cmp.setup {
       -- experimental = { ghost_text = true },
+      window = {
+        -- completion = cmp.config.window.bordered(),
+        -- documentation = cmp.config.window.bordered(),
+      },
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',
@@ -59,8 +56,8 @@ return {
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-Enter>'] = cmp.mapping.confirm { select = true },
-        ['<C-Space>'] = cmp.mapping.complete {},
-        ['<C-l>'] = cmp.mapping(function()
+        -- ['<C-Space>'] = cmp.mapping.complete {},
+        ['<C-Space>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           end

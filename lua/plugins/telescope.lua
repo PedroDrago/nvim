@@ -47,11 +47,11 @@ return {
     vim.keymap.set('n', '<leader>?', builtin.builtin, { desc = 'Search Pickers' })
     vim.keymap.set('n', '<leader>g', builtin.live_grep, { desc = 'Live Grep' })
 
-    vim.keymap.set('n', '<leader>b', function()
+    vim.keymap.set('n', '<leader>/', function()
       builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
         previewer = false,
-        -- TODO: Increase this telescope picker width
+        layout_config = { width = 0.8 },
       })
     end, { desc = 'search in buffer' })
   end,

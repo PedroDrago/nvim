@@ -71,6 +71,8 @@ vim.keymap.set('n', '<F1>', '<Nop>', { silent = true })
   NOTE:Available leader keymaps
   <leader>H
   <leader>K
+  <leader>b
+  <leader>B
   <leader>l
   <leader>L
   <leader>i

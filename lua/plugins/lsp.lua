@@ -17,7 +17,9 @@ return {
         end
 
         --  This is where a variable was first declared, or where a function is defined, etc. To jump back, press <C-T>.
-        map('gd', require('telescope.builtin').lsp_definitions, 'Go to Definition')
+        map('gd', function()
+          require('telescope.builtin').lsp_definitions { reuse_win = false }
+        end, 'Go to Definition')
 
         -- Find references for the word under your cursor.
         map('gr', require('telescope.builtin').lsp_references, 'References')
@@ -100,23 +102,3 @@ return {
     }
   end,
 }
-
--- NOTE:
---Mason LSP list:
--- clang-format
--- clangd
--- cpplint
--- delve
--- emmet-language-server
--- golangci-lint
--- gopls
--- html-lsp
--- lua-language-server
--- luacheck
--- marksman
--- pyright
--- rust-analyzer
--- sqlls
--- sqls
--- stylua
--- typescript-language-server

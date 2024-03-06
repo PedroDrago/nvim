@@ -71,4 +71,5 @@ return {
     config = true,
     default = true,
   },
+  -- TODO: change git icons in oil-git-status. I Don't quite like them.
 }
