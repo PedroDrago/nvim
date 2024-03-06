@@ -7,7 +7,7 @@ return {
       winblend = 0,
     },
   },
-  keys = { -- load the plugin only when using it's keybinding:
+  keys = {
     { '<leader>u', "<cmd>lua require('undotree').toggle()<cr>", desc = 'Undo Tree', silent = true },
   },
 }

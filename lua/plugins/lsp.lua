@@ -16,23 +16,13 @@ return {
           vim.keymap.set('n', keys, func, { buffer = event.buf, desc = desc })
         end
 
-        --  This is where a variable was first declared, or where a function is defined, etc. To jump back, press <C-T>.
         map('gd', function()
           require('telescope.builtin').lsp_definitions { reuse_win = false }
         end, 'Go to Definition')
 
-        -- Find references for the word under your cursor.
         map('gr', require('telescope.builtin').lsp_references, 'References')
-
-        -- Fuzzy find all the symbols in your current document.
-        --  Symbols are things like variables, functions, types, etc.
         map('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-
-        -- Fuzzy find all the symbols in your current workspace
-        --  Similar to document symbols, except searches over your whole project.
         map('gS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-
-        -- Rename the variable under your cursor
         map('<leader>s', vim.lsp.buf.rename, 'Rename')
         map('<leader>c', vim.lsp.buf.code_action, 'Code Action')
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
@@ -67,7 +57,6 @@ return {
         settings = {
           Lua = {
             runtime = { version = 'LuaJIT' },
-            -- completion = { callSnippet = 'Replace' },
             workspace = {
               checkThirdParty = false,
               library = {

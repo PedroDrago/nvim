@@ -29,7 +29,6 @@ return {
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
     cmp.setup {
-      -- experimental = { ghost_text = true },
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',

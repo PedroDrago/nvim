@@ -2,7 +2,6 @@ return {
   {
     'stevearc/oil.nvim',
     opts = {},
-    -- Optional dependencies
     config = function()
       if vim.g.theme_id == 1 then
         vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#16161E' })
@@ -70,5 +69,5 @@ return {
     config = true,
     default = true,
   },
-  -- TODO: change git icons in oil-git-status. I Don't quite like them.
 }
+-- TODO: change git icons in oil-git-status. I Don't quite like them.
