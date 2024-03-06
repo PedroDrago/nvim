@@ -10,7 +10,6 @@ return {
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-cmdline',
     'onsails/lspkind.nvim',
-    -- 'rafamadriz/friendly-snippets',
   },
   config = function()
     local cmp_enabled = true
@@ -27,20 +26,10 @@ return {
     end, {})
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
-    -- require('luasnip.loaders.from_vscode').load {}
-    -- TODO:
-    -- Custom Luasnippets
-    -- https://www.youtube.com/watch?v=aNWx-ym7jjI&t=226s
-    -- https://sbulav.github.io/vim/neovim-setting-up-luasnip/
-    -- https://github.com/chrisgrieser/nvim-scissors
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
     cmp.setup {
       -- experimental = { ghost_text = true },
-      window = {
-        -- completion = cmp.config.window.bordered(),
-        -- documentation = cmp.config.window.bordered(),
-      },
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',
@@ -72,7 +61,6 @@ return {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
-        { name = 'buffer' }, --consider removing this shit
         { name = 'nvim_lsp_signature_help' },
       },
     }
