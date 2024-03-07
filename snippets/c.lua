@@ -17,6 +17,17 @@ ls.add_snippets('c', { -- NOTE: main
     text { '', '}' },
   }),
 })
+ls.add_snippets('cpp', { -- NOTE: typedef struct
+  snipept('t', {
+    text 'typedef struct ',
+    insert(1, 'Name'),
+    text { '', '{', '\t' },
+    insert(3),
+    text { '', '} \t' },
+    insert(2, 'Type'),
+    text ';',
+  }),
+})
 ls.add_snippets('c', { -- NOTE: if !var return NULL
   snipept('ifnul', {
     text 'if (!',

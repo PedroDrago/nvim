@@ -37,11 +37,21 @@ ls.add_snippets('go', { -- NOTE: method
     text ') ',
     insert(2, 'Name'),
     text '(',
-    insert(3, 'Args'),
+    insert(3),
     text ') ',
-    insert(4, 'Return'),
+    insert(4),
     text { ' {', '\t' },
     insert(5),
     text { '', '}' },
+  }),
+})
+ls.add_snippets('go', { -- NOTE: Type Struct
+  snipept('t', {
+    text 'type ',
+    insert(1, 'Name'),
+    text { ' struct {', '\t' },
+    insert(2),
+    text { '', '}', '' },
+    insert(3),
   }),
 })
