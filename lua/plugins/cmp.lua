@@ -45,7 +45,7 @@ return {
         ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-Enter>'] = cmp.mapping.confirm { select = true },
         -- ['<C-Space>'] = cmp.mapping.complete {},
-        ['<C-Space>'] = cmp.mapping(function()
+        ['<C-l>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           end

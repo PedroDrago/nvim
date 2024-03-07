@@ -1,6 +1,6 @@
 return {
   'mfussenegger/nvim-dap',
-  event = 'VeryLazy',
+  event = 'InsertEnter',
   dependencies = {
     'rcarriga/nvim-dap-ui',
     'williamboman/mason.nvim',
