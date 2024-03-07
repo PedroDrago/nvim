@@ -5,7 +5,8 @@ local text = ls.text_node
 local insert = ls.insert_node
 local choice = ls.choice_node
 local func = ls.function_node
-ls.add_snippets('go', {
+
+ls.add_snippets('go', { -- NOTE: if err != nill
   snipept('ifer', {
     text 'if err != nil {',
     text { '', '\t' },
@@ -14,7 +15,7 @@ ls.add_snippets('go', {
     insert(2),
   }),
 })
-ls.add_snippets('go', {
+ls.add_snippets('go', { -- NOTE: function
   snipept('f', {
     text 'func ',
     insert(1, 'Name'),
@@ -28,7 +29,7 @@ ls.add_snippets('go', {
     text { '', '}' },
   }),
 })
-ls.add_snippets('go', {
+ls.add_snippets('go', { -- NOTE: method
   snipept('m', {
     text 'func ',
     text '(',

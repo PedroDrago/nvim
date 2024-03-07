@@ -8,7 +8,7 @@ local choice = ls.choice_node
 local func = ls.function_node
 local rep = extras.rep
 
-ls.add_snippets('c', {
+ls.add_snippets('c', { -- NOTE: main
   snipept('main', {
     text 'int main(int argc, char *argv[]){',
     text { '', '\t' },
@@ -17,7 +17,7 @@ ls.add_snippets('c', {
     text { '', '}' },
   }),
 })
-ls.add_snippets('c', {
+ls.add_snippets('c', { -- NOTE: if !var return NULL
   snipept('ifnul', {
     text 'if (!',
     insert(1, 'Expression'),
@@ -25,14 +25,14 @@ ls.add_snippets('c', {
     insert(2),
   }),
 })
-ls.add_snippets('c', {
+ls.add_snippets('c', { -- NOTE: (void) var;
   snipept('vd', {
     text '(void) ',
     insert(1, 'Variable'),
     text { ';' },
   }),
 })
-ls.add_snippets('c', {
+ls.add_snippets('c', { -- NOTE: while (array[index])
   snipept('ws', {
     text 'while(',
     insert(1, 'Array'),
@@ -44,7 +44,7 @@ ls.add_snippets('c', {
     text { '', '}' },
   }),
 })
-ls.add_snippets('c', {
+ls.add_snippets('c', { -- NOTE: while ()
   snipept('w', {
     text 'while(',
     insert(1, 'Condition'),
@@ -54,7 +54,7 @@ ls.add_snippets('c', {
     text { '', '}' },
   }),
 })
-ls.add_snippets('c', {
+ls.add_snippets('c', { -- NOTE: malloc
   snipept('m', {
     insert(1),
     text ' = ',
@@ -69,7 +69,7 @@ ls.add_snippets('c', {
     insert(4),
   }),
 })
-ls.add_snippets('c', {
+ls.add_snippets('c', { -- NOTE: ft_calloc
   snipept('c', {
     insert(1),
     text ' = ',
