@@ -8,7 +8,7 @@ local choice = ls.choice_node
 local func = ls.function_node
 local rep = extras.rep
 
-ls.add_snippets('c', { -- NOTE: main
+ls.add_snippets('c', {
   snipept('main', {
     text 'int main(int argc, char *argv[]){',
     text { '', '\t' },
@@ -17,7 +17,7 @@ ls.add_snippets('c', { -- NOTE: main
     text { '', '}' },
   }),
 })
-ls.add_snippets('cpp', { -- NOTE: typedef struct
+ls.add_snippets('cpp', {
   snipept('t', {
     text 'typedef struct ',
     insert(1, 'Name'),
@@ -28,7 +28,7 @@ ls.add_snippets('cpp', { -- NOTE: typedef struct
     text ';',
   }),
 })
-ls.add_snippets('c', { -- NOTE: if !var return NULL
+ls.add_snippets('c', {
   snipept('ifnul', {
     text 'if (!',
     insert(1, 'Expression'),
@@ -36,14 +36,14 @@ ls.add_snippets('c', { -- NOTE: if !var return NULL
     insert(2),
   }),
 })
-ls.add_snippets('c', { -- NOTE: (void) var;
+ls.add_snippets('c', {
   snipept('vd', {
     text '(void) ',
     insert(1, 'Variable'),
     text { ';' },
   }),
 })
-ls.add_snippets('c', { -- NOTE: while (array[index])
+ls.add_snippets('c', {
   snipept('ws', {
     text 'while(',
     insert(1, 'Array'),
@@ -55,7 +55,7 @@ ls.add_snippets('c', { -- NOTE: while (array[index])
     text { '', '}' },
   }),
 })
-ls.add_snippets('c', { -- NOTE: while ()
+ls.add_snippets('c', {
   snipept('w', {
     text 'while(',
     insert(1, 'Condition'),
@@ -65,7 +65,7 @@ ls.add_snippets('c', { -- NOTE: while ()
     text { '', '}' },
   }),
 })
-ls.add_snippets('c', { -- NOTE: malloc
+ls.add_snippets('c', {
   snipept('m', {
     insert(1),
     text ' = ',
@@ -80,7 +80,7 @@ ls.add_snippets('c', { -- NOTE: malloc
     insert(4),
   }),
 })
-ls.add_snippets('c', { -- NOTE: ft_calloc
+ls.add_snippets('c', {
   snipept('c', {
     insert(1),
     text ' = ',

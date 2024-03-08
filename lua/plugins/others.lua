@@ -1,7 +1,7 @@
 return {
   { 'tpope/vim-sleuth', event = { 'BufReadPost', 'BufNewFile' } },
   {
-    '42Paris/42header', -- TODO: When finished cube3d? idk
+    '42Paris/42header', -- TODO: Remove When finished cube3d? idk
     event = { 'BufReadPost', 'BufNewFile' },
     config = function()
       vim.api.nvim_del_keymap('n', '<F1>')
@@ -31,7 +31,7 @@ return {
   },
   {
     -- 'cacharle/c_formatter_42.vim',
-    'PedroDrago/c_formatter_42.vim', -- TODO: When finished cube3d
+    'PedroDrago/c_formatter_42.vim', -- TODO: Remove When finished cube3d
     vim.api.nvim_create_user_command('Norm', ':CFormatter42', {}),
   },
 }

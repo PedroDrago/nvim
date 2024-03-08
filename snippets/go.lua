@@ -6,7 +6,7 @@ local insert = ls.insert_node
 local choice = ls.choice_node
 local func = ls.function_node
 
-ls.add_snippets('go', { -- NOTE: if err != nill
+ls.add_snippets('go', {
   snipept('ifer', {
     text 'if err != nil {',
     text { '', '\t' },
@@ -15,7 +15,7 @@ ls.add_snippets('go', { -- NOTE: if err != nill
     insert(2),
   }),
 })
-ls.add_snippets('go', { -- NOTE: function
+ls.add_snippets('go', {
   snipept('f', {
     text 'func ',
     insert(1, 'Name'),
@@ -29,7 +29,7 @@ ls.add_snippets('go', { -- NOTE: function
     text { '', '}' },
   }),
 })
-ls.add_snippets('go', { -- NOTE: method
+ls.add_snippets('go', {
   snipept('m', {
     text 'func ',
     text '(',
@@ -45,7 +45,7 @@ ls.add_snippets('go', { -- NOTE: method
     text { '', '}' },
   }),
 })
-ls.add_snippets('go', { -- NOTE: Type Struct
+ls.add_snippets('go', {
   snipept('t', {
     text 'type ',
     insert(1, 'Name'),
