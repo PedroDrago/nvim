@@ -31,7 +31,7 @@ return {
       dashboard.button('q', '󰗼  > Quit', ':q!<CR>'),
     }
     dashboard.section.header.opts.hl = 'Function'
-    dashboard.section.footer.val = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'Drago' }
+    dashboard.section.footer.val = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'Drago' }
 
     vim.cmd [[
         autocmd FileType alpha setlocal nofoldenable

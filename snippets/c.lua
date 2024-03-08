@@ -22,9 +22,9 @@ ls.add_snippets('cpp', { -- NOTE: typedef struct
     text 'typedef struct ',
     insert(1, 'Name'),
     text { '', '{', '\t' },
-    insert(3),
+    insert(2),
     text { '', '} \t' },
-    insert(2, 'Type'),
+    rep(1),
     text ';',
   }),
 })

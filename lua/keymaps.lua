@@ -1,3 +1,6 @@
+--vim.api.nvim_del_keymap('n', '<F2>') --remove keymap from C_Formatter 42
+vim.api.nvim_set_keymap('n', '<F1>', '<Nop>', { noremap = true, silent = true })
+
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 --Splits
@@ -16,12 +19,7 @@ vim.keymap.set('n', '}', ']m', { desc = 'Previous Function', silent = true })
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set(
-  'n',
-  '<leader>t',
-  ':vsplit | vertical resize 70 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a',
-  { desc = 'Open Vertical Terminal', silent = true }
-)
+vim.keymap.set('n', '<leader>t', ':terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Vertical Terminal', silent = true })
 
 vim.keymap.set(
   'n',
@@ -72,7 +70,7 @@ vim.keymap.set('n', '<F1>', '<Nop>', { silent = true })
   <leader>H
   <leader>K
   <leader>b
-  <leader>B
+  <leader>b
   <leader>l
   <leader>L
   <leader>i

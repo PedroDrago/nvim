@@ -7,8 +7,8 @@ return {
       theme = 'auto',
       component_separators = '|',
       section_separators = '',
-      disabled_filetypes = { 'NvimTree', 'undotree', 'harpoon', '[Scratch]' },
-      ignore_focus = { 'NvimTree', 'undotree', 'harpoon', '[Scratch]' },
+      disabled_filetypes = { 'NvimTree', 'undotree', 'harpoon', '[Scratch]', 'alpha' },
+      ignore_focus = { 'NvimTree', 'undotree', 'harpoon', '[Scratch]', 'alpha' },
     },
 
     sections = {
