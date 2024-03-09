@@ -1,11 +1,9 @@
 return {
   { 'tpope/vim-sleuth', event = { 'BufReadPost', 'BufNewFile' } },
   {
-    '42Paris/42header', -- TODO: Remove When finished cube3d? idk
+    'PedroDrago/42header', -- TODO: Remove When finished cube3d? idk
     event = { 'BufReadPost', 'BufNewFile' },
-    config = function()
-      vim.api.nvim_del_keymap('n', '<F1>')
-    end,
+    vim.keymap.set('n', '<F10>', ':Stdheader<CR>', { desc = '42 Header', silent = true }),
   },
   { 'numToStr/Comment.nvim', opts = {}, event = { 'BufReadPost', 'BufNewFile' } },
   { 'farmergreg/vim-lastplace' },
@@ -30,7 +28,6 @@ return {
     end,
   },
   {
-    -- 'cacharle/c_formatter_42.vim',
     'PedroDrago/c_formatter_42.vim', -- TODO: Remove When finished cube3d
     vim.api.nvim_create_user_command('Norm', ':CFormatter42', {}),
   },

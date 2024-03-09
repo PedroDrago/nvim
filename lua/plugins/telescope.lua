@@ -49,3 +49,6 @@ return {
     end, { desc = 'search in buffer' })
   end,
 }
+
+-- NOTE: apparently fzf.lua by itself is very fastar than telescope, but maybe that can only be
+-- perceived in larger codebases.

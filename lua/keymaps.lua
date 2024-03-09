@@ -1,6 +1,3 @@
---vim.api.nvim_del_keymap('n', '<F2>') --remove keymap from C_Formatter 42
-vim.api.nvim_set_keymap('n', '<F1>', '<Nop>', { noremap = true, silent = true })
-
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 --Splits
@@ -60,10 +57,6 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line down', silent =
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line up', silent = true })
 vim.keymap.set('n', 'B', '<C-v>', { desc = 'Visual Block' })
 vim.keymap.set('n', '<leader>q', ':q!<CR>', { desc = 'Close', silent = true })
-
-vim.keymap.set('n', '<F3>', '<Nop>', { silent = true })
-vim.keymap.set('n', '<F2>', '<Nop>', { silent = true })
-vim.keymap.set('n', '<F1>', '<Nop>', { silent = true })
 
 --[[
   NOTE:Available leader keymaps

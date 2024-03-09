@@ -9,11 +9,15 @@ return {
     },
     formatters_by_ft = {
       lua = { 'stylua' },
-      go = { 'gofmt', 'goimports' },
+      go = { 'gofmt', 'goimports' }, --this is quite slow, may be disable for formating on save
       python = { 'black' },
       c = {},
       sql = { 'sql-formatter' },
       javascript = { { 'prettierd', 'prettier' } },
     },
   },
+  vim.api.nvim_create_user_command('Form', function()
+    require('conform').format {}
+  end, {}),
+  vim.keymap.set('n', '<leader>F', ':Form<CR>', { desc = 'Format', silent = true }),
 }

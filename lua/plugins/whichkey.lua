@@ -20,6 +20,7 @@ return {
       ['<leader>?'] = 'which_key_ignore',
       ['<leader>f'] = 'which_key_ignore',
       ['<leader>g'] = 'which_key_ignore',
+      -- ['<leader>l'] = 'which_key_ignore',
       ['<leader>m'] = 'which_key_ignore',
       ['<leader>s'] = 'which_key_ignore',
       ['<leader>='] = 'which_key_ignore',

@@ -1,19 +1,22 @@
 return {
-  -- 'mfussenegger/nvim-lint',
-  -- -- event = 'VeryLazy',
-  -- config = function()
-  --   require('lint').linters_by_ft = {
-  --     -- markdown = { 'vale' },
-  --     -- c = { 'cpplint' },
-  --     -- go = { 'golangci-lint' },
-  --     -- lua = { 'luacheck ' },
-  --   }
-  --   vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-  --     callback = function()
-  --       require('lint').try_lint()
-  --     end,
-  --   })
-  -- end,
+  'mfussenegger/nvim-lint',
+  -- event = 'VeryLazy',
+  config = function()
+    require('lint').linters_by_ft = {
+      -- markdown = { 'vale' },
+      -- c = { 'cpplint' },
+      go = { 'golangcilint' },
+      -- lua = { 'luacheck ' },
+    }
+    vim.keymap.set('n', '<leader>l', function()
+      require('lint').try_lint()
+    end, { desc = 'Lint', silent = true })
+    -- vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+    --   callback = function()
+    --     require('lint').try_lint()
+    --   end,
+    -- })
+  end,
 }
 -- FIX:The automatic_installation setting ensures that all linters specified in the config of nvim-lint
 --are installed, so you need just specify linters in the nvim-lint. However, when the linter you need
