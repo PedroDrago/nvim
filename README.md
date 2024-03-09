@@ -19,7 +19,6 @@ If you want to learn how to create from scratch your own neovim configuration fi
 </details>
 
 ### Install 
-**Warning: This command will delete your current `/nvim` directory, be careful**
 ```bash
 rm -rf ~/.config/nvim && git clone git@github.com:PedroDrago/nvim.git ~/.config/nvim
 ```
