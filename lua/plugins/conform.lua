@@ -14,6 +14,7 @@ return {
       c = {},
       sql = { 'sql-formatter' },
       javascript = { { 'prettierd', 'prettier' } },
+      ruby = { 'rubocop' },
     },
   },
   vim.api.nvim_create_user_command('Form', function()
