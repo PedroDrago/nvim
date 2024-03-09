@@ -6,13 +6,17 @@ These are my neovim Configs
     <img src="./print.png"/>
 </p>
 
-This configuration is based on [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), but with my own tweaks and a lot of [extra plugins](./lazy-lock.json).
+<details><summary><b>Make your Config</b></summary>
 
-If you're too lazy to build your configs from scratch and don't want a bloated distribution like [LunarVim](https://www.lunarvim.org/) or [NvChad](https://nvchad.com/) I strongly recommend just using kickstart.
+If you're too lazy to build your configs from scratch and don't want a bloated distribution like [LunarVim](https://www.lunarvim.org/) or [NvChad](https://nvchad.com/) I strongly recommend just using [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). Also watch [TeeJ video](https://www.youtube.com/watch?v=m8C0Cq9Uv9o) about Kickstart.
 
 If you want to learn how to create from scratch your own neovim configuration files I recommend 2 sources to learn:
+
 1. This [Typecraft Playlist](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn) will guide you to make a good modularized neovim config, but won't teach you much how neovim configuration really works.
-2. [Kickstart](https://github.com/nvim-lua/kickstart.nvim) has TONS of comments explaining each decision in the config, and they're all in a single file, which makes a lot easier to read, it is like reading a practical tutorial. In my opinion it is the best place to learn how neovim configurations are built.
+
+2. [Kickstart](https://github.com/nvim-lua/kickstart.nvim) `init.lua`. Reading the comments left there by TeeJ will teach you basically everything you need to know to start tweaking your configs.
+
+</details>
 
 ### Install 
 **Warning: This command will delete your current `/nvim` directory, be careful**
