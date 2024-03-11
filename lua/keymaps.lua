@@ -2,7 +2,7 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 --Splits
 vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
-vim.keymap.set('n', '<leader>a', ':vsplit <CR>', { desc = 'Split', silent = true })
+vim.keymap.set('n', '<leader>a', ':vnew <CR>', { desc = 'Split', silent = true })
 vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', silent = true })
 vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits', silent = true })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })

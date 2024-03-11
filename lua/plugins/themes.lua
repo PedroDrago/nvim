@@ -16,12 +16,17 @@ return {
       event = 'VeryLazy',
       config = function()
         require('themery').setup {
-          themes = { 'tokyonight-night', 'tokyonight-storm' },
+          themes = { 'tokyonight-night', 'tokyonight-storm', 'lunar' },
           themeConfigFile = '~/.config/nvim/lua/colors.lua',
           livePreview = true,
         }
       end,
     },
+  },
+  {
+    'LunarVim/lunar.nvim',
+    lazy = false,
+    priority = 1000,
   },
 }
 -- TODO:  Keybinding for persistent theme swap between night and storm
