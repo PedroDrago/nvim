@@ -10,6 +10,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 
+vim.keymap.set({ 'n', 'v', 't' }, 'L', '$', { silent = true })
+vim.keymap.set({ 'n', 'v', 't' }, 'H', '0', { silent = true })
+
 --Function Navigation
 vim.keymap.set('n', '{', '[m', { desc = 'Next Function', silent = true })
 vim.keymap.set('n', '}', ']m', { desc = 'Previous Function', silent = true })
