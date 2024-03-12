@@ -10,8 +10,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 
-vim.keymap.set({ 'n', 'v', 't' }, 'L', '$', { silent = true })
-vim.keymap.set({ 'n', 'v', 't' }, 'H', '0', { silent = true })
+vim.keymap.set({ 'n', 'v' }, 'L', '$', { silent = true })
+vim.keymap.set({ 'n', 'v' }, 'H', '0', { silent = true })
 
 --Function Navigation
 vim.keymap.set('n', '{', '[m', { desc = 'Next Function', silent = true })
@@ -50,11 +50,6 @@ vim.cmd 'cabbrev WQA wqa'
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
---Other
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 vim.keymap.set('n', '<leader>n', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>', { desc = 'iferr!=nil', silent = true })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line down', silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line up', silent = true })
