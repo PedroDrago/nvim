@@ -37,9 +37,12 @@ return {
     }
     local is_open = false
     vim.keymap.set('n', '<F1>', dap.step_over, { desc = 'Debug: Step Over' })
+    vim.keymap.set('n', '<M-n>', dap.step_over, { desc = 'Debug: Step Over' })
     vim.keymap.set('n', '<F2>', dap.step_into, { desc = 'Debug: Step Into' })
+    vim.keymap.set('n', '<M-s>', dap.step_into, { desc = 'Debug: Step Into' })
     vim.keymap.set('n', '<F4>', dap.toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
-    vim.keymap.set('n', '<F5>', function()
+    vim.keymap.set('n', '<M-b>', dap.toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
+    vim.keymap.set('n', '<M-r>', function()
       if is_open then
         require('dap').terminate()
         is_open = false
