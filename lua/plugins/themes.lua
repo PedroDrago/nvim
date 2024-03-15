@@ -23,10 +23,5 @@ return {
       end,
     },
   },
-  {
-    'LunarVim/lunar.nvim',
-    lazy = false,
-    priority = 1000,
-  },
 }
 -- TODO:  Keybinding for persistent theme swap between night and storm

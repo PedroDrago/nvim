@@ -1,26 +1,48 @@
 return {
-  'ThePrimeagen/harpoon',
-  lazy = true,
-  vim.keymap.set('n', '<leader><Tab>', function()
-    require('harpoon.ui').nav_next()
-  end, { desc = 'Harpoon next', silent = true }),
-  vim.keymap.set('n', '<leader><leader>', function()
-    require('harpoon.ui').toggle_quick_menu()
-  end, { desc = 'Harpoon Menu', silent = true }),
-  vim.keymap.set('n', '<leader>m', function()
-    vim.api.nvim_command 'echo "File Marked"'
-    require('harpoon.mark').add_file()
-  end, { desc = 'Harpoon Mark', silent = true }),
-  vim.keymap.set('n', '<leader>1', function()
-    require('harpoon.ui').nav_file(1)
-  end, { desc = 'Harpoon 1', silent = true }),
-  vim.keymap.set('n', '<leader>2', function()
-    require('harpoon.ui').nav_file(2)
-  end, { desc = 'Harpoon 2', silent = true }),
-  vim.keymap.set('n', '<leader>3', function()
-    require('harpoon.ui').nav_file(3)
-  end, { desc = 'Harpoon 3', silent = true }),
-  vim.keymap.set('n', '<leader>4', function()
-    require('harpoon.ui').nav_file(4)
-  end, { desc = 'Harpoon 4', silent = true }),
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      local harpoon = require 'harpoon'
+      local extensions = require 'harpoon.extensions'
+      harpoon:setup {
+        settings = {
+          save_on_toggle = true,
+          sync_on_ui_close = true,
+        },
+      }
+      harpoon:extend {
+        UI_CREATE = function(cx)
+          vim.keymap.set('n', '<C-x>', function()
+            harpoon.ui:select_menu_item { vsplit = true }
+          end, { buffer = cx.bufnr })
+        end,
+      }
+      -- harpoon:extend(extensions.builtins.command_on_nav ':echo "Navigated"')
+      vim.keymap.set('n', '<leader>m', function()
+        vim.api.nvim_command 'echo "File Marked"'
+        harpoon:list():append()
+      end)
+      vim.keymap.set('n', '<leader><leader>', function()
+        harpoon.ui:toggle_quick_menu(harpoon:list())
+      end)
+
+      vim.keymap.set('n', '<leader>1', function()
+        harpoon:list():select(1)
+      end)
+      vim.keymap.set('n', '<leader>2', function()
+        harpoon:list():select(2)
+      end)
+      vim.keymap.set('n', '<leader>3', function()
+        harpoon:list():select(3)
+      end)
+      vim.keymap.set('n', '<leader>4', function()
+        harpoon:list():select(4)
+      end)
+      vim.keymap.set('n', '<leader><Tab>', function()
+        harpoon:list():next { ui_nav_wrap = true }
+      end)
+    end,
+  },
 }
