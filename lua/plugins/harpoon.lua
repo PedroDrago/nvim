@@ -40,7 +40,10 @@ return {
       vim.keymap.set('n', '<leader>4', function()
         harpoon:list():select(4)
       end)
-      vim.keymap.set('n', '<leader><Tab>', function()
+      vim.keymap.set('n', '<leader>h', function()
+        harpoon:list():prev { ui_nav_wrap = true }
+      end)
+      vim.keymap.set('n', '<leader>l', function()
         harpoon:list():next { ui_nav_wrap = true }
       end)
     end,
