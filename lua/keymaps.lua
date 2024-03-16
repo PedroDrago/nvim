@@ -13,6 +13,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 vim.keymap.set({ 'n', 'v' }, 'L', '$', { silent = true })
 vim.keymap.set({ 'n', 'v' }, 'H', '0', { silent = true })
 
+vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Void Delete', silent = true })
 --Function Navigation
 vim.keymap.set('n', '{', '[m', { desc = 'Next Function', silent = true })
 vim.keymap.set('n', '}', ']m', { desc = 'Previous Function', silent = true })

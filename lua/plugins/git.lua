@@ -19,7 +19,7 @@ return {
         end
       end, {})
     end,
-    vim.keymap.set('n', '<leader>d', ':ToggleDiffView<CR>', { desc = 'Diffview', silent = true }),
+    vim.keymap.set('n', '<leader>D', ':ToggleDiffView<CR>', { desc = 'Diffview', silent = true }),
   },
 }
 -- TODO: Configure diffview layout. New changes to the left.
