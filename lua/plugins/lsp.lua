@@ -5,6 +5,7 @@ return {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
+    { 'folke/neodev.nvim', opts = {} },
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
   vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Expand Diagnostic' }),
