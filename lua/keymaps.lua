@@ -1,7 +1,7 @@
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 --Splits
-vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
+vim.keymap.set('n', '<C-w>', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
 vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Split', silent = true })
 vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', silent = true })
 vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits', silent = true })
@@ -56,30 +56,3 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move line down', silent =
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move line up', silent = true })
 vim.keymap.set('n', 'B', '<C-v>', { desc = 'Visual Block' })
 vim.keymap.set('n', '<leader>q', ':q!<CR>', { desc = 'Close', silent = true })
-
---[[
-  NOTE:Available leader keymaps
-  <leader>H
-  <leader>K
-  <leader>b
-  <leader>b
-  <leader>l
-  <leader>L
-  <leader>i
-  <leader>I
-  <leader>o
-  <leader>O
-  <leader>P
-  <leader>x
-  <leader>X
-  <leader>y
-  <leader>Y
-  <leader>v
-  <leader>V
-  <leader>n
-  <leader>N
-  <leader>[
-  <leader>]
-  <leader>{
-  <leader>}
-]]
