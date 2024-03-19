@@ -24,7 +24,7 @@ return {
         vim.api.nvim_command 'echo "File Marked"'
         harpoon:list():append()
       end)
-      vim.keymap.set('n', '<leader><leader>', function()
+      vim.keymap.set('n', '<leader>h', function()
         harpoon.ui:toggle_quick_menu(harpoon:list(), { ui_width_ratio = 0.3 })
       end)
 
@@ -40,10 +40,7 @@ return {
       vim.keymap.set('n', '<leader>4', function()
         harpoon:list():select(4)
       end)
-      vim.keymap.set('n', '<leader>h', function()
-        harpoon:list():prev { ui_nav_wrap = true }
-      end)
-      vim.keymap.set('n', '<leader>l', function()
+      vim.keymap.set('n', '<leader>w', function()
         harpoon:list():next { ui_nav_wrap = true }
       end)
     end,
