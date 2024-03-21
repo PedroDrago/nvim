@@ -10,6 +10,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 
+vim.keymap.set('v', '<Tab>', '>', { desc = 'Indent Right' })
+vim.keymap.set('v', '<S-Tab>', '<', { desc = 'Indent Left' })
+
 vim.keymap.set({ 'n', 'v' }, 'L', '$', { silent = true })
 vim.keymap.set({ 'n', 'v' }, 'H', '0', { silent = true })
 
