@@ -1,1 +1,4 @@
 - [ ] `cmp` bug where completion window stays open sometimes
+- [ ] Set proper events for every plugin
+    - [ ] Study events (I believe a keymap event is always the best choice, when possible)
+- [ ] Get better at a little more advanced moves (`ci`/`ca`, better copy/paste moves like `yi`/`ya`,`P`) and some basic ones like `e`, `ge`, 

@@ -17,7 +17,7 @@ return {
         lualine_c = { 'filename' },
         lualine_x = {
           { 'harpoon2', icon = '', indicators = { '1', '2', '3', '4' }, active_indicators = { '■', '■', '■', '■' }, separator = ' ' },
-          'filetype',
+          { 'filetype' },
         },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
