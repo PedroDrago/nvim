@@ -2,13 +2,13 @@ return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
-    'L3MON4D3/LuaSnip',
-    'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-cmdline',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind.nvim',
   },
   config = function()
@@ -32,6 +32,13 @@ return {
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',
+          menu = {
+            nvim_lsp = '',
+            luasnip = '',
+            nvim_lsp_signature_help = '',
+            path = '',
+            buffer = '',
+          },
         },
       },
       snippet = {
@@ -39,6 +46,7 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
+      mode = 'symbol_text',
       completion = { completeopt = 'menu,menuone,noinsert' },
       preselect = cmp.PreselectMode.None,
       mapping = cmp.mapping.preset.insert {

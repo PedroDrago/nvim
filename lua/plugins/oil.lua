@@ -59,7 +59,7 @@ return {
     end, { desc = 'Oil Float', silent = true }),
   },
   {
-    'pedrodrago/oil-git-status.nvim', -- TODO: When plugin author provide a way to disable error message delete fork and come back to original
+    'refractalize/oil-git-status.nvim',
     dependencies = {
       'stevearc/oil.nvim',
     },
