@@ -19,8 +19,8 @@ return {
       ruby = { 'rubocop' },
     },
   },
-  vim.api.nvim_create_user_command('Form', function()
+  vim.api.nvim_create_user_command('Format', function()
     require('conform').format {}
   end, {}),
-  vim.keymap.set('n', '<leader>F', ':Form<CR>', { desc = 'Format', silent = true }),
+  vim.keymap.set('n', '<leader>p', ':Format<CR>', { desc = 'Format', silent = true }),
 }

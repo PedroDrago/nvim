@@ -15,22 +15,9 @@ return {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = { 'filename' },
-        lualine_x = {
-          { 'harpoon2', icon = '', indicators = { '1', '2', '3', '4' }, active_indicators = { '■', '■', '■', '■' }, separator = ' ' },
-          { 'filetype' },
-        },
+        lualine_x = { 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
-      },
-    },
-  },
-  {
-    'letieu/harpoon-lualine',
-    dependencies = {
-      'nvim-lualine/lualine.nvim',
-      {
-        'ThePrimeagen/harpoon',
-        branch = 'harpoon2',
       },
     },
   },
