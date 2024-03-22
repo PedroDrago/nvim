@@ -18,12 +18,6 @@ If you want to learn how to create from scratch your own neovim configuration fi
 
 </details>
 
-<details><summary><b>Plugins</b></summary>
-
-<details><summary><b>   Navigation</b></summary>
-- Telescope
-</details>
-
 ### Install 
 ```bash
 rm -rf ~/.config/nvim && git clone git@github.com:PedroDrago/nvim.git ~/.config/nvim
