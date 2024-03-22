@@ -10,13 +10,29 @@ local rep = extras.rep
 
 ls.add_snippets('c', {
   snipept('main', {
-    text 'int main(int argc, char *argv[]){',
+    text { 'int main(int argc, char *argv[])', '{' },
     text { '', '\t' },
     insert(1),
-    text { '', '', '\treturn 0;' },
+    text { '', '\treturn 0;' },
     text { '', '}' },
   }),
 })
+
+ls.add_snippets('c', {
+  snipept('f', {
+    insert(1),
+    text '(',
+    insert(2),
+    text ')',
+    text { '', '{', '\t' },
+    insert(3),
+    text { '', '\treturn (' },
+    insert(4),
+    text ');',
+    text { '', '}' },
+  }),
+})
+
 ls.add_snippets('cpp', {
   snipept('t', {
     text 'typedef struct ',
@@ -28,6 +44,7 @@ ls.add_snippets('cpp', {
     text ';',
   }),
 })
+
 ls.add_snippets('c', {
   snipept('ifnul', {
     text 'if (!',
@@ -36,6 +53,7 @@ ls.add_snippets('c', {
     insert(2),
   }),
 })
+
 ls.add_snippets('c', {
   snipept('vd', {
     text '(void) ',
@@ -43,28 +61,31 @@ ls.add_snippets('c', {
     text { ';' },
   }),
 })
+
 ls.add_snippets('c', {
   snipept('ws', {
     text 'while(',
     insert(1, 'Array'),
     text '[',
     insert(2, 'Index'),
-    text ']) {',
+    text { '])', '{' },
     text { '', '\t' },
     insert(3),
     text { '', '}' },
   }),
 })
+
 ls.add_snippets('c', {
   snipept('w', {
     text 'while(',
     insert(1, 'Condition'),
-    text ') {',
+    text { ')', '{' },
     text { '', '\t' },
     insert(2),
     text { '', '}' },
   }),
 })
+
 ls.add_snippets('c', {
   snipept('e', {
     text 'exit(',
@@ -73,6 +94,7 @@ ls.add_snippets('c', {
     insert(1),
   }),
 })
+
 ls.add_snippets('c', {
   snipept('m', {
     insert(1),
@@ -88,6 +110,7 @@ ls.add_snippets('c', {
     insert(4),
   }),
 })
+
 ls.add_snippets('c', {
   snipept('c', {
     insert(1),

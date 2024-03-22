@@ -1,0 +1,1 @@
+- [ ] `cmp` bug where completion window stays open sometimes

@@ -1,7 +1,6 @@
 return {
   'mfussenegger/nvim-dap',
-  -- event = 'InsertEnter',
-  event = { 'BufReadPost', 'BufNewFile' },
+  event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
     'rcarriga/nvim-dap-ui',
     'williamboman/mason.nvim',

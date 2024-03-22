@@ -15,6 +15,7 @@ ls.add_snippets('go', {
     insert(2),
   }),
 })
+
 ls.add_snippets('go', {
   snipept('f', {
     text 'func ',
@@ -29,6 +30,7 @@ ls.add_snippets('go', {
     text { '', '}' },
   }),
 })
+
 ls.add_snippets('go', {
   snipept('m', {
     text 'func ',
@@ -45,6 +47,7 @@ ls.add_snippets('go', {
     text { '', '}' },
   }),
 })
+
 ls.add_snippets('go', {
   snipept('t', {
     text 'type ',

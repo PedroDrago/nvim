@@ -1,9 +1,9 @@
 return {
-  { 'lewis6991/gitsigns.nvim', opts = {}, event = { 'BufReadPost', 'BufNewFile' } },
-  { 'tpope/vim-fugitive', event = { 'BufReadPost', 'BufNewFile' } },
+  { 'lewis6991/gitsigns.nvim', opts = {}, event = { 'BufReadPre', 'BufNewFile' } },
+  { 'tpope/vim-fugitive', event = { 'BufReadPre', 'BufNewFile' } },
   {
     'sindrets/diffview.nvim',
-    event = { 'BufReadPost', 'BufNewFile' },
+    event = { 'BufReadPre', 'BufNewFile' },
     opts = {},
     config = function()
       local diffViewEnable = false

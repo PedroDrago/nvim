@@ -1,6 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
-  event = 'VeryLazy',
+  event = { 'BufReadPre', 'BufNewFile' },
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',

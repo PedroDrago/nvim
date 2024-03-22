@@ -15,7 +15,7 @@ return {
   },
   {
     'windwp/nvim-ts-autotag',
-    event = 'VeryLazy',
+    event = { 'BufReadPre', 'BufNewFile' },
     opts = {
       maximizer_set_default_mapping = 0,
       set_default_mapping = 0,
@@ -29,6 +29,7 @@ return {
   },
   {
     'PedroDrago/c_formatter_42.vim', -- TODO: Remove When finished cube3d
+    event = { 'BufReadPre', 'BufNewFile' },
     vim.api.nvim_create_user_command('Norm', ':CFormatter42', {}),
   },
 }

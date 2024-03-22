@@ -1,7 +1,6 @@
 return {
   {
     'nvim-lualine/lualine.nvim',
-    event = 'VeryLazy',
     opts = {
       options = {
         icons_enabled = true,
@@ -27,7 +26,6 @@ return {
   },
   {
     'letieu/harpoon-lualine',
-    event = 'VeryLazy',
     dependencies = {
       'nvim-lualine/lualine.nvim',
       {
