@@ -35,4 +35,5 @@ return {
     end, { desc = 'Harpoon Next' })
   end,
 }
--- FIX: nav_wrap not working on first list():next, only on second call.
+-- TODO: nav_wrap not working on first list():next, only on second call.
+-- Only load harpoon with keymaps

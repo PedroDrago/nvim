@@ -1,6 +1,5 @@
 return {
   'folke/trouble.nvim',
-  event = { 'BufReadPre', 'BufNewFile' },
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     mode = 'workspace_diagnostics',
@@ -17,5 +16,5 @@ return {
       end
     end, {})
   end,
-  vim.keymap.set('n', '<leader>z', ':ToggleTroubleWorkspace<CR>', { silent = true, desc = 'Trouble' }),
+  keys = { { '<leader>z', ':ToggleTroubleWorkspace<CR>', silent = true, desc = 'Trouble' } },
 }

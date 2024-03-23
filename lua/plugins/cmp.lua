@@ -13,7 +13,7 @@ return {
   },
   config = function()
     local cmp_enabled = true
-    vim.api.nvim_create_user_command('ToggleAutoComplete', function()
+    vim.api.nvim_create_user_command('CmpToggle', function()
       if cmp_enabled then
         require('cmp').setup.buffer { enabled = false }
         cmp_enabled = false

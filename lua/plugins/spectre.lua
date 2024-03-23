@@ -1,6 +1,9 @@
 return {
   'nvim-pack/nvim-spectre',
-  event = { 'BufReadPre', 'BufNewFile' },
+  keys = {
+    { '<leader>SS', '<cmd>lua require("spectre").toggle()<cr><cmd>lua require("spectre").change_view()<CR>', desc = 'Spectre', silent = true },
+    { '<leader>SW', '<cmd>lua require("spectre").open_visual({select_word=true})<CR><cmd>lua require("spectre").change_view()<CR>', desc = 'Spectre Word', silent = true },
+  },
   opts = {
     is_block_ui_break = true,
     mapping = {
@@ -15,15 +18,8 @@ return {
         desc = 'replace all',
       },
     },
-    event = { 'bufreadpost', 'bufnewfile' },
-    vim.keymap.set('n', '<leader>SS', '<cmd>lua require("spectre").toggle()<cr><cmd>lua require("spectre").change_view()<CR>', {
-      desc = 'Spectre',
-    }),
-    vim.keymap.set('n', '<leader>SW', '<cmd>lua require("spectre").open_visual({select_word=true})<CR><cmd>lua require("spectre").change_view()<CR>', {
-      desc = 'Spectre Word',
-    }),
-    vim.keymap.set('v', '<leader>SW', '<esc><cmd>lua require("spectre").open_visual()<CR><cmd>lua require("spectre").change_view()<CR>', {
-      desc = 'Spectre Word',
-    }),
+    -- vim.keymap.set('v', '<leader>SW', '<esc><cmd>lua require("spectre").open_visual()<CR><cmd>lua require("spectre").change_view()<CR>', {
+    --   desc = 'Spectre Word',
+    -- }),
   },
 }

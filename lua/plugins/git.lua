@@ -3,7 +3,6 @@ return {
   { 'tpope/vim-fugitive', event = { 'BufReadPre', 'BufNewFile' } },
   {
     'sindrets/diffview.nvim',
-    event = { 'BufReadPre', 'BufNewFile' },
     opts = {},
     config = function()
       local diffViewEnable = false
@@ -19,7 +18,7 @@ return {
         end
       end, {})
     end,
-    vim.keymap.set('n', '<leader>D', ':ToggleDiffView<CR>', { desc = 'Diffview', silent = true }),
+    keys = { { '<leader>D', ':ToggleDiffView<CR>', desc = 'Diffview', silent = true } },
   },
 }
 -- TODO: Configure diffview layout. New changes to the left.
