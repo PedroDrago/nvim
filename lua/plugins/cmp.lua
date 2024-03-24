@@ -96,3 +96,4 @@ return {
     })
   end,
 }
+-- NOTE: apparently coq is very faster than cmp
