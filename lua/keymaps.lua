@@ -3,10 +3,10 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selection down', sil
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selection up', silent = true })
 vim.keymap.set('n', 'B', '<C-v>', { desc = 'Visual Block' })
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close', silent = true })
-vim.keymap.set('n', '<leader>Q', ':qa!<CR>', { desc = 'Force Close All', silent = true })
+-- vim.keymap.set('n', '<leader>Q', ':qa!<CR>', { desc = 'Force Close All', silent = true })
 
 -- Splits
-vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
+-- vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
 vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Split', silent = true })
 vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', silent = true })
 vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits' })
@@ -18,7 +18,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<leader>t', ':terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Vertical Terminal', silent = true })
-vim.keymap.set('n', '<leader>T', ':split | res 9 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
+vim.keymap.set('n', '<leader>T', ':split | res 11 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
+-- NOTE: Maybe set leader>t to default Horizontal split terminal. It seems alot more confortable
 
 -- Better default experience
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })

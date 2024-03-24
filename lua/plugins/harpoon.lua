@@ -19,7 +19,7 @@ return {
       desc = 'Harpoon Menu',
     },
     {
-      '<leader>k',
+      '<leader>w',
       function()
         require('harpoon'):list():next { ui_nav_wrap = true }
       end,
