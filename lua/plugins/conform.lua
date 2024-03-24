@@ -13,10 +13,6 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       go = { 'gofmt', 'goimports' }, --this is quite slow, may be disable for formating on save
-      python = { 'black' },
-      sql = { 'sql-formatter' },
-      javascript = { { 'prettierd', 'prettier' } },
-      ruby = { 'rubocop' },
     },
   },
   vim.api.nvim_create_user_command('Format', function()
