@@ -1,12 +1,11 @@
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>')
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selection down', silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selection up', silent = true })
 vim.keymap.set('n', 'B', '<C-v>', { desc = 'Visual Block' })
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = 'Close', silent = true })
--- vim.keymap.set('n', '<leader>Q', ':qa!<CR>', { desc = 'Force Close All', silent = true })
 
 -- Splits
--- vim.keymap.set('n', '<leader>w', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
+vim.keymap.set('n', '<C-w>', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
 vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Split', silent = true })
 vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', silent = true })
 vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits' })
