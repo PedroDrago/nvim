@@ -18,7 +18,10 @@ return {
     local actions = require 'telescope.actions'
     require('telescope').setup {
       defaults = {
-        prompt_prefix = '  ',
+        -- prompt_prefix = '  ',
+        selection_caret = ' ',
+        entry_prefix = ' ',
+        prompt_prefix = '',
         mappings = {
           i = {
             ['<C-j>'] = actions.move_selection_next,
