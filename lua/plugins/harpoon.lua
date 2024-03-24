@@ -12,7 +12,7 @@ return {
       desc = 'Harpoon Mark',
     },
     {
-      '<leader>h',
+      '<leader><Tab>',
       function()
         require('harpoon').ui:toggle_quick_menu(require('harpoon'):list(), { ui_width_ratio = 0.3, ui_nav_wrap = true })
       end,
