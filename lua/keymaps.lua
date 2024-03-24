@@ -36,7 +36,7 @@ vim.keymap.set({ 'n', 'v' }, 'H', '0', { desc = 'Move to end of Line' })
 vim.keymap.set('v', '<Tab>', '>', { desc = 'Indent Right' })
 vim.keymap.set('v', '<S-Tab>', '<', { desc = 'Indent Left' })
 
--- Allow specific typos
+-- Aliases
 vim.cmd 'cabbrev Q q'
 vim.cmd 'cabbrev Qa qa'
 vim.cmd 'cabbrev W w'

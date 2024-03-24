@@ -1,27 +1,26 @@
-vim.loader.enable()
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.loader.enable() -- Enable experimental neovim loader (may have better startup time)
+vim.g.mapleader = ' ' -- Set space as leader key
+vim.g.maplocalleader = ' ' -- Set space as leader key
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.wrap = false
-vim.opt.mouse = 'a'
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.undofile = true
-vim.opt.swapfile = false
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.signcolumn = 'yes'
-vim.opt.updatetime = 500
-vim.opt.timeoutlen = 300
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.inccommand = 'nosplit'
-vim.opt.scrolloff = 10
-vim.opt.hlsearch = true
-vim.opt.termguicolors = true
+vim.opt.number = true --Line Numbers
+vim.opt.relativenumber = true -- Relative line Numbers
+vim.opt.wrap = false -- Wraps long lines
+vim.opt.mouse = 'a' -- Enables mouse on all modes
+vim.opt.clipboard = 'unnamedplus' -- Shares clipboard with OS
+vim.opt.undofile = true -- Enable undo files
+vim.opt.swapfile = false -- Disable swap files
+vim.opt.ignorecase = true -- Ignore case in patterns
+vim.opt.smartcase = true -- No ignore case if pattern has uppercase
+vim.opt.signcolumn = 'yes' -- Enable the column where gitsigns resides
+vim.opt.timeoutlen = 500 -- ms to timeout command sequence
+vim.opt.splitright = true -- Vertical split opens by default to the right
+vim.opt.splitbelow = true -- Horizontal split opens by default below
+vim.opt.inccommand = 'nosplit' -- Real time update on buffer when substituting text
+vim.opt.scrolloff = 10 -- Numbers of lines that the screen starts to scroll vertically
+vim.opt.hlsearch = true -- Enable Highlight for previous search
+vim.opt.termguicolors = true -- Enable 24-bit color in TUI
 
-vim.api.nvim_create_autocmd('TextYankPost', {
+vim.api.nvim_create_autocmd('TextYankPost', { -- Highlights yanked region
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
     vim.highlight.on_yank()
