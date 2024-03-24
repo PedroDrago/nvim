@@ -2,14 +2,13 @@ vim.loader.enable()
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.opt.swapfile = false
 vim.opt.number = true
-vim.opt.wrap = false
 vim.opt.relativenumber = true
+vim.opt.wrap = false
 vim.opt.mouse = 'a'
-vim.opt.showmode = false
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.undofile = true
+vim.opt.swapfile = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
@@ -20,9 +19,7 @@ vim.opt.splitbelow = true
 vim.opt.inccommand = 'nosplit'
 vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
-vim.opt.cursorline = false
 vim.opt.termguicolors = true
-vim.g.maximizer_set_default_mapping = 0
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
