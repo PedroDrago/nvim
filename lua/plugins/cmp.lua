@@ -5,7 +5,6 @@ return {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-cmdline',
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind.nvim',
@@ -51,9 +50,9 @@ return {
       mapping = cmp.mapping.preset.insert {
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
-        ['<C-Enter>'] = cmp.mapping.confirm { select = true },
-        ['<C-i>'] = cmp.mapping.confirm { select = true },
-        -- ['<C-Space>'] = cmp.mapping.complete {},
+        ['<C-Enter>'] = cmp.mapping.confirm { select = true }, --NOTE: Multiple mappings for multiple terminals, systems etc
+        ['<C-CR>'] = cmp.mapping.confirm { select = true }, --NOTE:    Multiple mappings for multiple terminals, systems etc
+        ['<C-M>'] = cmp.mapping.confirm { select = true }, --NOTE:     Multiple mappings for multiple terminals, systems etc
         ['<C-l>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
@@ -71,29 +70,6 @@ return {
         { name = 'path' },
       },
     }
-    cmp.setup.cmdline('/', {
-      mapping = cmp.mapping.preset.cmdline {
-        vim.keymap.set('c', '<C-j>', cmp.mapping.select_next_item(), { desc = 'Move down' }),
-        vim.keymap.set('c', '<C-k>', cmp.mapping.select_prev_item(), { desc = 'Move down' }),
-        vim.keymap.set('c', '<C-Enter>', cmp.mapping.confirm(), { desc = 'Move down' }),
-      },
-      sources = {
-        { name = 'buffer' },
-      },
-    })
-    cmp.setup.cmdline(':', {
-      mapping = cmp.mapping.preset.cmdline(),
-      sources = cmp.config.sources({
-        { name = 'path' },
-      }, {
-        {
-          name = 'cmdline',
-          option = {
-            ignore_cmds = { 'Man', '!' },
-          },
-        },
-      }),
-    })
   end,
 }
 -- NOTE: apparently coq is very faster than cmp
