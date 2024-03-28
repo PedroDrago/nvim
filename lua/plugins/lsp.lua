@@ -11,10 +11,14 @@ return {
   vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Expand Diagnostic' }),
   config = function()
     local signs = {
-      Error = ' ',
-      Warn = ' ',
-      Hint = ' ',
-      Info = ' ',
+      Error = ' ',
+      Warn = ' ',
+      Hint = ' ',
+      Info = ' ',
+      -- Error = ' ',
+      -- Warn = ' ',
+      -- Hint = ' ',
+      -- Info = ' ',
     }
     for type, icon in pairs(signs) do
       local hl = 'DiagnosticSign' .. type
@@ -77,7 +81,6 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua',
     })
-
     require('mason').setup()
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
     require('mason-lspconfig').setup {
