@@ -33,4 +33,7 @@ return {
     keys = { { '<leader>D', ':ToggleDiffView<CR>', desc = 'Diffview', silent = true } },
   },
 }
--- TODO: Configure diffview layout. New changes to the left.
+-- TODO: Configure diffview layout.
+-- [ ] New changes to the left.
+-- [ ] More readability: Less width to the filetree
+-- [ ] Change diff type, maybe diff 3?

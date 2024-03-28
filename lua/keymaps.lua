@@ -7,12 +7,14 @@ vim.keymap.set('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
 
 -- Splits
 vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Split', silent = true })
-vim.keymap.set('n', '<C-w>', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
+vim.keymap.set('n', '<C-w>', ':wincmd w<CR>', { desc = 'Move focus to next window', silent = true })
 vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Splits' })
+vim.keymap.set('n', '<leader>v', '<C-w>t<C-w>H', { desc = 'Verticalize Splits' })
+vim.keymap.set('n', '<leader>h', '<C-w>t<C-w>K', { desc = 'Horizontalize Splits' })
 vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', silent = true })
 
 -- Terminal

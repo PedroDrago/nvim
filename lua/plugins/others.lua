@@ -12,18 +12,4 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     vim.api.nvim_create_user_command('Norm', ':CFormatter42', {}),
   },
-  -- {
-  --   'windwp/nvim-ts-autotag',
-  --   event = { 'BufReadPre', 'BufNewFile' },
-  --   opts = {
-  --     maximizer_set_default_mapping = 0,
-  --     set_default_mapping = 0,
-  --   },
-  --   config = function()
-  --     require('nvim-ts-autotag').setup {
-  --       maximizer_set_default_mapping = 0,
-  --       set_default_mapping = 0,
-  --     }
-  --   end,
-  -- },
 }

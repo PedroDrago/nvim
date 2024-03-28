@@ -65,4 +65,3 @@ return {
   end,
 }
 -- TODO: nav_wrap not working on first list():next, only on second call.
--- Only load harpoon with keymaps
