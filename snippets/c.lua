@@ -87,15 +87,6 @@ ls.add_snippets('c', {
 })
 
 ls.add_snippets('c', {
-  snipept('e', {
-    text 'exit(',
-    insert(2, '0'),
-    text { ');', '' },
-    insert(1),
-  }),
-})
-
-ls.add_snippets('c', {
   snipept('m', {
     insert(1),
     text ' = ',
