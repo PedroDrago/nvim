@@ -28,6 +28,11 @@ return {
           },
         },
       },
+      pickers = {
+        find_files = {
+          find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
+        },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
@@ -43,9 +48,6 @@ return {
     vim.keymap.set('n', '<leader>g', builtin.grep_string, { desc = 'Live Grep' })
     vim.keymap.set('n', '<leader>/', builtin.live_grep, { desc = 'Live Grep' })
     vim.keymap.set('n', '<leader>?', builtin.builtin, { desc = 'Search Pickers' })
-
-    -- vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = 'none' })
-    -- vim.api.nvim_set_hl(0, 'TelescopeBorder', { bg = 'none', fg = '#27A1B9' })
   end,
 }
 
