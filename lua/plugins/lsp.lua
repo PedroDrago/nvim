@@ -8,22 +8,46 @@ return {
     { 'folke/neodev.nvim', opts = {} },
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
-  vim.keymap.set('n', 'J', vim.diagnostic.open_float, { desc = 'Expand Diagnostic' }),
+  keys = {
+    { 'J', vim.diagnostic.open_float, desc = 'Expand Diagnostic' },
+  },
   config = function()
-    local signs = {
-      Error = ' ',
-      Warn = ' ',
-      Hint = ' ',
-      Info = ' ',
-      -- Error = ' ',
-      -- Warn = ' ',
-      -- Hint = ' ',
-      -- Info = ' ',
-    }
-    for type, icon in pairs(signs) do
-      local hl = 'DiagnosticSign' .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-    end
+    vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+      underline = true,
+      update_in_insert = false,
+      virtual_text = {
+        spacing = 4,
+        source = false, --'if_many'
+        prefix = function(diagnostic)
+          if diagnostic.severity == vim.diagnostic.severity.ERROR then
+            return ' '
+          elseif diagnostic.severity == vim.diagnostic.severity.WARN then
+            return ' '
+          elseif diagnostic.severity == vim.diagnostic.severity.INFO then
+            return ' '
+          else
+            return ' '
+          end
+        end,
+      },
+      severity_sort = true,
+      inlay_hints = { enabled = true },
+      codelens = { enabled = true },
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = '', --'',
+          [vim.diagnostic.severity.WARN] = '', --'',
+          [vim.diagnostic.severity.HINT] = '', --'',
+          [vim.diagnostic.severity.INFO] = '', --'',
+        },
+        numhl = {
+          [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+          [vim.diagnostic.severity.WARN] = 'WarningMsg',
+          [vim.diagnostic.severity.HINT] = 'HintMsg', -- NOTE: Not working. idk why
+          [vim.diagnostic.severity.INFO] = 'InfoMsg', -- NOTE: Not working. idk why
+        },
+      },
+    })
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
