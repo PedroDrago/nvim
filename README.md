@@ -1,7 +1,5 @@
 # Nvim
 
-These are my neovim Configs
-
 <p align="center">
     <img src="./assets/cmp.png"/>
 </p>
