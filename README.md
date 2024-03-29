@@ -3,15 +3,15 @@
 These are my neovim Configs
 
 <p align="center">
-    <img src="./print.png"/>
+    <img src="./assets/print.png"/>
 </p>
 
 
 <p float="left">
-  <img src="./print2.png" width="412" />
-  <img src="./print3.png" width="412" /> 
-  <img src="./print4.png" width="412" />
-  <img src="./print5.png" width="412" />
+  <img src="./assets/print2.png" width="412" />
+  <img src="./assets/print3.png" width="412" /> 
+  <img src="./assets/print4.png" width="412" />
+  <img src="./assets/print5.png" width="412" />
 </p>
 
 
