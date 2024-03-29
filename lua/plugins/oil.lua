@@ -37,27 +37,4 @@ return {
       require('oil').toggle_float()
     end, { desc = 'Oil Float', silent = true }),
   },
-  {
-    'refractalize/oil-git-status.nvim',
-    dependencies = {
-      'stevearc/oil.nvim',
-    },
-    config = function()
-      require('oil-git-status').setup {
-        show_ignored = false,
-      }
-    end,
-    default = true,
-  },
 }
--- TODO: change git icons in oil-git-status. I Don't quite like them.
--- Variable = 
--- LineAdded = 
--- LineModified = 
--- LineRemoved = 
--- FileDeleted = 
--- FileIgnored = ◌
--- FileRenamed = 
--- FileStaged = S
--- FileUnmerged = 
--- FileUnstaged = 
