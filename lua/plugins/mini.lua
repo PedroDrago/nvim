@@ -3,10 +3,6 @@ return {
     'echasnovski/mini.nvim',
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
-      -- NOTE: Remove tokyonight highlight for the minidiff git signs in signcolumn
-      vim.api.nvim_set_hl(0, 'MiniDiffSignAdd', { fg = '' })
-      vim.api.nvim_set_hl(0, 'MiniDiffSignDelete', { fg = '' })
-      vim.api.nvim_set_hl(0, 'MiniDiffSignChange', { fg = '' })
       require('mini.ai').setup { n_lines = 500 }
       require('mini.surround').setup()
       require('mini.diff').setup {

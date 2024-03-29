@@ -16,6 +16,10 @@ return {
     },
     init = function()
       vim.cmd 'colorscheme tokyonight-night'
+      -- Remove tokyonight highlight for minidiff git signs in signcolumn
+      vim.api.nvim_set_hl(0, 'MiniDiffSignAdd', { fg = '' })
+      vim.api.nvim_set_hl(0, 'MiniDiffSignDelete', { fg = '' })
+      vim.api.nvim_set_hl(0, 'MiniDiffSignChange', { fg = '' })
     end,
   },
 }
