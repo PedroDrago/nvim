@@ -5,10 +5,14 @@ return {
   config = function()
     ---@diagnostic disable-next-line: missing-fields
     require('nvim-treesitter.configs').setup {
-      ensure_installed = { 'bash', 'c', 'cpp', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'go', 'javascript', 'typescript', 'rust', 'ruby' },
       auto_install = true,
+      ensure_installed = { 'bash', 'c', 'cpp', 'html', 'lua', 'markdown', 'markdown_inline', 'vim', 'vimdoc', 'go', 'javascript', 'typescript', 'rust', 'ruby' },
       highlight = { enable = true },
-      indent = { enable = true },
+      indent = {
+        enable = true,
+        disable = { --[[ 'ruby' ]]
+        },
+      },
       autotag = { enable = true },
     }
   end,
