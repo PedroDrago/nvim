@@ -1,14 +1,20 @@
 return {
   'lukas-reineke/indent-blankline.nvim',
-  event = { 'BufReadPre', 'BufNewFile' },
+  keys = {
+    {
+      '<leader>i',
+      function()
+        require('ibl').setup {
+          require('ibl').setup_buffer(0, {
+            enabled = not require('ibl.config').get_config(0).enabled,
+          }),
+        }
+      end,
+    },
+  },
   config = function()
     require('ibl').setup {
       enabled = false,
-      vim.keymap.set('n', '<leader>i', function()
-        require('ibl').setup_buffer(0, {
-          enabled = not require('ibl.config').get_config(0).enabled,
-        })
-      end, { desc = 'asd', silent = true }),
       indent = {
         char = '│',
         tab_char = '│',
