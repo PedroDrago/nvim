@@ -13,6 +13,14 @@ These are my neovim Configs
 ![](./print.png)  |  ![](./print.png)
 
 
+
+<p float="left">
+  <img src="./print.png" width="100" />
+  <img src="./print.png" width="100" /> 
+  <img src="./print.png" width="100" />
+</p>
+
+
 <details><summary><b>Make your Config</b></summary>
 
 If you're too lazy to build your configs from scratch and don't want a bloated distribution like [LunarVim](https://www.lunarvim.org/), [NvChad](https://nvchad.com/) or [LazyVim](http://www.lazyvim.org/) I strongly recommend just using [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). Kickstart is a concise, well configured, single file configuration with only a few selected plugins. For more info on Kickstart watch [TJ video](https://www.youtube.com/watch?v=m8C0Cq9Uv9o).
