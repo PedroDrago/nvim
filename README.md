@@ -8,10 +8,10 @@ These are my neovim Configs
 
 
 <p float="left">
-  <img src="./print.png" width="430" />
-  <img src="./print.png" width="430" /> 
-  <img src="./print.png" width="430" />
-  <img src="./print.png" width="430" />
+  <img src="./print.png" width="420" />
+  <img src="./print.png" width="420" /> 
+  <img src="./print.png" width="420" />
+  <img src="./print.png" width="420" />
 </p>
 
 
