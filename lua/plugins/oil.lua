@@ -1,14 +1,12 @@
 return {
   {
     'stevearc/oil.nvim',
-    opts = {},
     config = function()
       -- vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#16161E' })
       -- vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#24283B' })
       require('oil').setup {
         win_options = {
           wrap = false,
-          signcolumn = 'yes:2',
           cursorcolumn = false,
           foldcolumn = '0',
           spell = false,
@@ -19,8 +17,8 @@ return {
         },
         float = {
           padding = 2,
-          max_width = 100,
-          max_height = 40,
+          max_width = 80,
+          max_height = 35,
           border = 'rounded',
           win_options = {
             winblend = 0,

@@ -85,10 +85,19 @@ return {
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
     local servers = {
+      gopls = {
+        settings = {
+          gopls = {
+            hints = { enabled = true },
+            codelenses = { enabled = true },
+          },
+        },
+      },
       lua_ls = {
         settings = {
           Lua = {
             runtime = { version = 'LuaJIT' },
+            codelens = { enabled = true },
             workspace = {
               checkThirdParty = false,
               library = {
