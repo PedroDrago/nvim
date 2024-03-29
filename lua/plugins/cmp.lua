@@ -27,6 +27,11 @@ return {
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
     cmp.setup {
+      -- performance = {
+      --   trigger_debounce_time = 500,
+      --   throttle = 550,
+      --   fetching_timeout = 80,
+      -- },
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',
@@ -66,9 +71,16 @@ return {
         end, { 'i', 's' }),
       },
       sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'path' },
+        {
+          name = 'nvim_lsp',
+          max_item_count = 30,
+        },
+        {
+          name = 'luasnip', --[[ max_item_count = 5 ]]
+        },
+        {
+          name = 'path', --[[ max_item_count = 20 ]]
+        },
       },
     }
   end,
