@@ -62,6 +62,6 @@ return {
         sync_on_ui_close = true,
       },
     }
-  end,
+  end, -- TODO: nav_wrap not working on first list():next, only on second call.
+  -- TODO: Also change colors i guess
 }
--- TODO: nav_wrap not working on first list():next, only on second call.
