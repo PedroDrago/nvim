@@ -4,7 +4,6 @@ vim.g.maplocalleader = ' ' -- Set space as leader key
 
 vim.opt.number = true --Line Numbers
 vim.opt.relativenumber = true -- Relative line Numbers
-vim.opt.wrap = false -- Wraps long lines
 vim.opt.mouse = 'a' -- Enables mouse on all modes
 vim.opt.showmode = false -- Hide mode since I have a status line
 vim.opt.clipboard = 'unnamedplus' -- Shares clipboard with OS
@@ -23,6 +22,7 @@ vim.opt.scrolloff = 10 -- Numbers of lines that the screen starts to scroll vert
 vim.opt.hlsearch = true -- Enable Highlight for previous search
 vim.opt.termguicolors = true -- Enable 24-bit color in TUI
 vim.opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
+vim.opt.breakindent = true -- Indent wraped line segment
 
 vim.api.nvim_create_autocmd('TextYankPost', { -- Highlights yanked region
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
