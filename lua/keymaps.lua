@@ -19,7 +19,7 @@ vim.keymap.set('n', '<leader>=', ':wincmd =<CR>', { desc = 'Equalize Buffers', s
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
--- vim.keymap.set('n', '<leader>t', ':terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Vertical Terminal', silent = true })
+vim.keymap.set('n', '<C-t>', ':terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Vertical Terminal', silent = true })
 vim.keymap.set('n', '<leader>t', ':split | res 11 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
 
 -- Misc
