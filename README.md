@@ -11,6 +11,7 @@ These are my neovim Configs
   <img src="./print.png" width="300" />
   <img src="./print.png" width="300" /> 
   <img src="./print.png" width="300" />
+  <img src="./print.png" width="300" />
 </p>
 
 
