@@ -49,5 +49,6 @@ return {
     vim.keymap.set('n', '<leader>e', function()
       require('oil').toggle_float()
     end, { desc = 'Oil Float', silent = true }),
+    vim.keymap.set('n', '<leader>E', '<CMD>Oil<CR>', { desc = 'Oil Buffer', silent = true }),
   },
 }

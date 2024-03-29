@@ -12,12 +12,13 @@ return {
     { 'J', vim.diagnostic.open_float, desc = 'Expand Diagnostic' },
   },
   config = function()
-    vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {})
+    vim.diagnostic.config { -- :h vim.diagnostic.config
       underline = true,
       update_in_insert = false,
       virtual_text = {
         spacing = 4,
-        source = false, --'if_many'
+        source = false, --use 'if_many' when linting
         prefix = function(diagnostic)
           if diagnostic.severity == vim.diagnostic.severity.ERROR then
             return ' '
@@ -25,10 +26,13 @@ return {
             return ' '
           elseif diagnostic.severity == vim.diagnostic.severity.INFO then
             return ' '
-          else
+          else -- diagnostic.severity == vim.diagnostic.severity.HINT then
             return ' '
           end
         end,
+        -- suffix = function(diagnostic)
+        --   return '[' .. diagnostic.code .. ']'
+        -- end,
       },
       severity_sort = true,
       inlay_hints = { enabled = true },
@@ -47,7 +51,7 @@ return {
           [vim.diagnostic.severity.INFO] = 'InfoMsg', -- NOTE: Not working. idk why
         },
       },
-    })
+    }
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
