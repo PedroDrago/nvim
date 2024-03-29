@@ -7,13 +7,6 @@ These are my neovim Configs
 </p>
 
 
-. |   .
-:-------------------------:|:-------------------------:
-![](./print.png)  |  ![](./print.png)
-![](./print.png)  |  ![](./print.png)
-
-
-
 <p float="left">
   <img src="./print.png" width="100" />
   <img src="./print.png" width="100" /> 
