@@ -3,11 +3,8 @@ return {
     'stevearc/oil.nvim',
     opts = {},
     config = function()
-      if vim.g.theme_id == 1 then
-        vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#16161E' })
-      elseif vim.g.theme_id == 2 then
-        vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#24283B' })
-      end
+      -- vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#16161E' })
+      -- vim.api.nvim_set_hl(0, 'OilGitStatusSignColumnGroup', { bg = '#24283B' })
       require('oil').setup {
         win_options = {
           wrap = false,
@@ -30,24 +27,6 @@ return {
           },
         },
         skip_confirm_for_simple_edits = true,
-        keymaps = {
-          ['g?'] = 'actions.show_help',
-          ['<CR>'] = 'actions.select',
-          ['<C-s>'] = 'actions.select_vsplit',
-          ['<C-h>'] = '<C-w><C-h>',
-          ['<C-t>'] = 'actions.select_tab',
-          ['<C-p>'] = 'actions.preview',
-          ['<C-c>'] = 'actions.close',
-          ['<C-l>'] = 'actions.refresh',
-          ['-'] = 'actions.parent',
-          ['_'] = 'actions.open_cwd',
-          ['`'] = 'actions.cd',
-          ['~'] = 'actions.tcd',
-          ['gs'] = 'actions.change_sort',
-          ['gx'] = 'actions.open_external',
-          ['g.'] = 'actions.toggle_hidden',
-          ['g\\'] = 'actions.toggle_trash',
-        },
         view_options = {
           show_hidden = true,
         },
@@ -63,11 +42,22 @@ return {
     dependencies = {
       'stevearc/oil.nvim',
     },
-    opts = {
-      show_ignored = false,
-    },
-    config = true,
+    config = function()
+      require('oil-git-status').setup {
+        show_ignored = false,
+      }
+    end,
     default = true,
   },
 }
 -- TODO: change git icons in oil-git-status. I Don't quite like them.
+-- Variable = 
+-- LineAdded = 
+-- LineModified = 
+-- LineRemoved = 
+-- FileDeleted = 
+-- FileIgnored = ◌
+-- FileRenamed = 
+-- FileStaged = S
+-- FileUnmerged = 
+-- FileUnstaged = 
