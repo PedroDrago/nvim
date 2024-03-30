@@ -26,15 +26,21 @@ return {
         showcmd = false,
         laststatus = 0, -- turn off the statusline in zen mode
       },
-      twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+      twilight = { enabled = false }, -- enable to start Twilight when zen mode opens
       alacritty = {
         enabled = false,
         font = '14', -- font size
       },
     },
     -- callback where you can add custom code when the Zen window opens
-    on_open = function(win) end,
+    on_open = function(win)
+      vim.diagnostic.disable()
+      require('cmp').setup.buffer { enabled = false }
+    end,
     -- callback where you can add custom code when the Zen window closes
-    on_close = function() end,
+    on_close = function()
+      vim.diagnostic.enable()
+      require('cmp').setup.buffer { enabled = true }
+    end,
   },
 }
