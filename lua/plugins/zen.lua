@@ -1,7 +1,22 @@
 return {
   {
     'folke/zen-mode.nvim',
-    dependencies = {},
+    dependencies = {
+      {
+        'folke/twilight.nvim',
+        cmd = 'Twilight',
+        opts = {
+          expand = {
+            'function_definition',
+            -- 'function',
+            -- 'method',
+            -- 'table',
+            -- 'if_statement',
+          },
+          exclude = {}, -- exclude these filetypes
+        },
+      },
+    },
     keys = { { '<leader>z', ':ZenMode<CR>', desc = 'Zen Mode', silent = true } },
     opts = {
       plugins = {
@@ -24,20 +39,6 @@ return {
         vim.api.nvim_command 'TwilightDisable'
         require('cmp').setup.buffer { enabled = true }
       end,
-    },
-  },
-  {
-    'folke/twilight.nvim',
-    cmd = 'Twilight',
-    opts = {
-      expand = {
-        'function_definition',
-        -- 'function',
-        -- 'method',
-        -- 'table',
-        -- 'if_statement',
-      },
-      exclude = {}, -- exclude these filetypes
     },
   },
 }
