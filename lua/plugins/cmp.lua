@@ -21,7 +21,7 @@ return {
         cmp_enabled = true
         vim.api.nvim_command 'echo "Autocomplete On"'
       end
-    end, {})
+    end, { desc = 'Toggle Autocompletion On/Off' })
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     local lspkind = require 'lspkind'
