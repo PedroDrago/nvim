@@ -6,10 +6,10 @@
 
 
 <p float="left">
-  <img src="./assets/telescope.png" width="412" />
-  <img src="./assets/git.png" width="412" /> 
-  <img src="./assets/zen.png" width="412" />
-  <img src="./assets/lsp.png" width="412" />
+  <img src="./assets/print_telescope.png" width="412" />
+  <img src="./assets/print_git.png" width="412" /> 
+  <img src="./assets/print_zen.png" width="412" />
+  <img src="./assets/print_lsp.png" width="412" />
 </p>
 
 
