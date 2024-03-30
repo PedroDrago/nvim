@@ -1,7 +1,7 @@
 # Nvim
 
 <p align="center">
-    <img src="./assets/cmp.png"/>
+    <img src="./assets/print_cmp.png"/>
 </p>
 
 
