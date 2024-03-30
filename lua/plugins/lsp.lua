@@ -12,6 +12,18 @@ return {
     { 'J', vim.diagnostic.open_float, desc = 'Expand Diagnostic' },
   },
   config = function()
+    local diagnostics_enabled = true
+    vim.api.nvim_create_user_command('DiagnosticsToggle', function()
+      if diagnostics_enabled then
+        vim.diagnostic.disable()
+        diagnostics_enabled = false
+        vim.api.nvim_command 'echo "Diagnostics Off"'
+      else
+        vim.diagnostic.enable()
+        diagnostics_enabled = true
+        vim.api.nvim_command 'echo "Diagnostics On"'
+      end
+    end, { desc = 'Toggle LSP Diagnostics On/Off' })
     -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {})
     vim.diagnostic.config { -- :h vim.diagnostic.config
       underline = true,
@@ -30,9 +42,6 @@ return {
             return ' '
           end
         end,
-        -- suffix = function(diagnostic)
-        --   return '[' .. diagnostic.code .. ']'
-        -- end,
       },
       severity_sort = true,
       inlay_hints = { enabled = true },
