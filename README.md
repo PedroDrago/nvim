@@ -1,7 +1,7 @@
 # Nvim
 
 <p align="center">
-    <img src="./assets/png"/>
+    <img src="./assets/print.png"/>
 </p>
 
 <details><summary><b>Make your Config</b></summary>
