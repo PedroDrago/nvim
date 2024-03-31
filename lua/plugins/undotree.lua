@@ -3,7 +3,7 @@ return {
   keys = {
     { '<leader>u', ':UndotreeToggle<CR>', desc = 'Undo Tree', silent = true },
   },
-  config = function()
+  init = function()
     vim.g.undotree_WindowLayout = 2
     vim.g.undotree_SplitWidth = 40
     vim.g.undotree_DiffpanelHeight = 15

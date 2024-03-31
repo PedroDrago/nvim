@@ -5,22 +5,23 @@ return {
       notify_on_error = false,
       formatters_by_ft = {
         lua = { 'stylua' },
+        -- c = { 'clang-format' },
         -- go = { 'gofmt', 'goimports' },
+        -- rs = { 'rustfmt' },
       },
     }
     vim.api.nvim_create_autocmd('BufWritePre', {
       pattern = '*',
       callback = function(args)
-        if vim.bo.filetype == 'c' then -- Disable format on save
+        if vim.bo.filetype == '' then -- Disable format on save per filetype
           return
         end
-        local disable_filetypes = { c = true, cpp = true } -- Disable lsp_fallback
+        local disable_filetypes = { c = true, cpp = true } -- Disable lsp_fallback per filetype
         require('conform').format { bufnr = args.buf, lsp_fallback = not disable_filetypes[vim.bo[args.buf].filetype] }
       end,
     })
-    vim.api.nvim_create_user_command('Format', function()
-      require('conform').format {}
-    end, {})
-    vim.keymap.set('n', '<leader>p', ':Format<CR>', { desc = 'Format', silent = true })
+    vim.keymap.set('n', '<leader>p', function()
+      require('conform').format { async = true, lsp_fallback = true }
+    end, { desc = 'Format', silent = true })
   end,
 }
