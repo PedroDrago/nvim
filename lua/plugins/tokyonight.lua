@@ -5,12 +5,11 @@ return {
     priority = 1000,
     opts = {
       styles = {
-        comments = { italic = false }, -- fg | bg | sp | blend | | bold | standout | underline | undercurl | underdouble | underdoted | underdashed | strikethrough | italic | reverse | nocombine | link | default | ctermfg | ctermbg | cterm | set | map | force
+        comments = { italic = false }, -- any attr-list value for :help nvim_set_hl
         keywords = { italic = false },
         functions = {},
         variables = {},
-        -- Background styles. Can be "dark", "transparent" or "normal"
-        sidebars = 'dark',
+        sidebars = 'dark', -- dark, transparent or normal
         floats = 'dark',
       },
       sidebars = { 'help' },
@@ -25,11 +24,11 @@ return {
         -- colors.error = '#ff0000'
       end,
       ---@param hl Highlights
-      ---@param c ColorScheme
-      on_highlights = function(hl, c) -- Change highlights
+      ---@param colors ColorScheme
+      on_highlights = function(hl, colors) -- Change highlights
         hl.MiniDiffSignAdd = {
-          bg = '', -- c.bg_dark
-          fg = '', -- c.fg_drak
+          bg = '',
+          fg = '',
         }
         hl.MiniDiffSignDelete = {
           bg = '',
