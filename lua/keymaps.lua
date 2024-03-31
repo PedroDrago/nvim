@@ -5,7 +5,7 @@ vim.keymap.set('n', 'q', '<nop>', { desc = 'Disable Macro' })
 vim.keymap.set('n', '<C-o>', '<nop>', { desc = 'Disable jump list' })
 vim.keymap.set('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
 
--- Splits
+-- Panels
 vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Split', silent = true })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
