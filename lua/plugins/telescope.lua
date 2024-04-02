@@ -32,6 +32,13 @@ return {
         find_files = {
           find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
         },
+        buffers = {
+          mappings = {
+            i = {
+              ['<c-d>'] = actions.delete_buffer,
+            },
+          },
+        },
       },
       extensions = {
         ['ui-select'] = {
@@ -45,9 +52,20 @@ return {
 
     local builtin = require 'telescope.builtin'
     vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Search Files' })
-    vim.keymap.set('n', '<leader>g', builtin.grep_string, { desc = 'Live Grep' })
-    vim.keymap.set('n', '<leader>/', builtin.live_grep, { desc = 'Live Grep' })
+    vim.keymap.set('n', '<leader>g', builtin.grep_string, { desc = 'Search Word' })
     vim.keymap.set('n', '<leader>?', builtin.builtin, { desc = 'Search Pickers' })
+    vim.keymap.set('n', '<leader>/', function()
+      builtin.live_grep {
+        grep_open_files = true,
+        prompt_title = 'Grep',
+      }
+    end, { desc = 'Live Grep' })
+    vim.keymap.set('n', '<leader>b', function()
+      builtin.buffers(require('telescope.themes').get_dropdown {
+        -- winblend = 10,
+        previewer = false,
+      })
+    end, { desc = 'Search Buffers' })
   end,
 }
 
