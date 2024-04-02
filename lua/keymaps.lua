@@ -4,6 +4,7 @@ vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable Macro' })
 vim.keymap.set('n', 'q', '<nop>', { desc = 'Disable Macro' })
 vim.keymap.set('n', '<C-o>', '<nop>', { desc = 'Disable jump list' })
 vim.keymap.set('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
+vim.keymap.set('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keymap' })
 
 -- Panels
 vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Split', silent = true })
