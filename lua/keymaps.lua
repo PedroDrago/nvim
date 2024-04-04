@@ -21,8 +21,8 @@ vim.keymap.set('n', '<leader>=', '<C-w><C-=>', { desc = 'Equalize Panels' })
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>T', ':terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Vertical Terminal', silent = true })
-vim.keymap.set('n', '<leader>t', ':split | res 11 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
+vim.keymap.set('n', '<leader>t', ':vsplit<CR>:terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Vertical Terminal', silent = true })
+vim.keymap.set('n', '<leader>T', ':split | res 11 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
 
 -- Misc
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
