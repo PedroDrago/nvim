@@ -56,7 +56,6 @@ return {
     vim.keymap.set('n', '<leader>?', builtin.builtin, { desc = 'Search Pickers' })
     vim.keymap.set('n', '<leader>/', function()
       builtin.live_grep {
-        grep_open_files = true,
         prompt_title = 'Grep',
       }
     end, { desc = 'Live Grep' })

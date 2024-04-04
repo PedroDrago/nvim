@@ -55,10 +55,11 @@ return {
       mapping = cmp.mapping.preset.insert {
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-i>'] = cmp.mapping.confirm { select = true }, --  Multiple mappings for multiple terminals, systems etc
         ['<C-Enter>'] = cmp.mapping.confirm { select = true }, --  Multiple mappings for multiple terminals, systems etc
         ['<C-CR>'] = cmp.mapping.confirm { select = true }, --     Multiple mappings for multiple terminals, systems etc
-        -- ['<C-M>'] = cmp.mapping.confirm { select = true }, --      Multiple mappings for multiple terminals, systems etc (This one is weird, work as normal enter without ctrl presseed)
         ['<C-Return>'] = cmp.mapping.confirm { select = true }, -- Multiple mappings for multiple terminals, systems etc
+        -- ['<C-M>'] = cmp.mapping.confirm { select = true }, --      Multiple mappings for multiple terminals, systems etc (This one is weird, work as normal enter without ctrl presseed)
         ['<C-l>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
