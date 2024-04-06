@@ -1,22 +1,6 @@
 return {
   {
     'folke/zen-mode.nvim',
-    dependencies = {
-      {
-        'folke/twilight.nvim',
-        cmd = 'Twilight',
-        opts = {
-          expand = {
-            'function_definition',
-            -- 'function',
-            -- 'method',
-            -- 'table',
-            -- 'if_statement',
-          },
-          exclude = {}, -- exclude these filetypes
-        },
-      },
-    },
     keys = { { '<leader>z', ':ZenMode<CR>', desc = 'Zen Mode', silent = true } },
     opts = {
       plugins = {
@@ -31,12 +15,11 @@ return {
         },
       },
       on_open = function(win)
-        vim.api.nvim_command 'LspStop'
+        vim.diagnostic.disable()
         require('cmp').setup.buffer { enabled = false }
       end,
       on_close = function()
-        vim.api.nvim_command 'LspStart'
-        vim.api.nvim_command 'TwilightDisable'
+        vim.diagnostic.enable()
         require('cmp').setup.buffer { enabled = true }
       end,
     },
