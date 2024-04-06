@@ -27,8 +27,8 @@ vim.keymap.set('n', '<leader>T', ':split | res 11 | terminal<CR>:set nonumber<CR
 -- Misc
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
-vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Center when Scroll Page' })
-vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Center when Scroll Page' })
+-- vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Center when Scroll Page' })
+-- vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selection down', silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selection up', silent = true })
