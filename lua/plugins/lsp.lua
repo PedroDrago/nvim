@@ -17,11 +17,11 @@ return {
       if diagnostics_enabled then
         vim.diagnostic.disable()
         diagnostics_enabled = false
-        vim.api.nvim_command 'echo "Diagnostics Off"'
+        vim.cmd 'echo "Diagnostics Off"'
       else
         vim.diagnostic.enable()
         diagnostics_enabled = true
-        vim.api.nvim_command 'echo "Diagnostics On"'
+        vim.cmd 'echo "Diagnostics On"'
       end
     end, { desc = 'Toggle LSP Diagnostics On/Off' })
     -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {})

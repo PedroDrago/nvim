@@ -6,7 +6,7 @@ return {
     {
       '<leader>m',
       function()
-        vim.api.nvim_command 'echo "File Marked"'
+        vim.cmd 'echo "File Marked"'
         require('harpoon'):list():append()
       end,
       desc = 'Harpoon Mark',

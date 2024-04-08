@@ -15,11 +15,11 @@ return {
       if cmp_enabled then
         require('cmp').setup.buffer { enabled = false }
         cmp_enabled = false
-        vim.api.nvim_command 'echo "Autocomplete Off"'
+        vim.cmd 'echo "Autocomplete Off"'
       else
         require('cmp').setup.buffer { enabled = true }
         cmp_enabled = true
-        vim.api.nvim_command 'echo "Autocomplete On"'
+        vim.cmd 'echo "Autocomplete On"'
       end
     end, { desc = 'Toggle Autocompletion On/Off' })
     local cmp = require 'cmp'
@@ -31,6 +31,9 @@ return {
       --   trigger_debounce_time = 500,
       --   throttle = 550,
       --   fetching_timeout = 80,
+      -- },
+      -- experimental = {
+      --   ghost_text = true,
       -- },
       formatting = {
         format = lspkind.cmp_format {
