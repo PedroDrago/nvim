@@ -7,7 +7,8 @@ vim.keymap.set('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
 vim.keymap.set('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keymap' })
 
 -- Panels
-vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Split', silent = true })
+vim.keymap.set('n', '<leader>a', ':vnew <CR>:set rnu<CR>', { desc = 'Vertical Split', silent = true })
+vim.keymap.set('n', '<leader>A', ':new <CR>:set rnu<CR>', { desc = 'Horizontal Split', silent = true })
 vim.keymap.set('n', '<leader>q', '<C-w><C-c>', { desc = 'Close Panel' })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
@@ -21,15 +22,12 @@ vim.keymap.set('n', '<leader>=', '<C-w><C-=>', { desc = 'Equalize Panels' })
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>t', ':vsplit<CR>:terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Vertical Terminal', silent = true })
-vim.keymap.set('n', '<leader>T', ':split | res 11 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
+vim.keymap.set('n', '<leader>t', ':terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Terminal', silent = true })
+-- vim.keymap.set('n', '<leader>T', ':split | res 11 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
 
 -- Misc
--- TODO: Wait until this issue is patched.
--- vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
--- vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
-vim.keymap.set('n', '<C-d>', '<C-d>M', { desc = 'Center when Scroll Page' })
-vim.keymap.set('n', '<C-u>', '<C-u>M', { desc = 'Center when Scroll Page' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selection down', silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selection up', silent = true })
