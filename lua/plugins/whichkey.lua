@@ -14,6 +14,7 @@ return {
       ['<leader>4'] = 'which_key_ignore',
       ['<leader>='] = 'which_key_ignore',
       ['<leader>a'] = 'which_key_ignore',
+      ['<leader>A'] = 'which_key_ignore',
       ['<leader>d'] = 'which_key_ignore',
       ['<leader>j'] = 'which_key_ignore',
       ['<leader>Q'] = 'which_key_ignore',
