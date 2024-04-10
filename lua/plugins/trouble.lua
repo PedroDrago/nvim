@@ -6,6 +6,12 @@ return {
   },
   opts = {
     auto_fold = true,
-    use_diagnostic_signs = true,
+    signs = {
+      error = '',
+      warning = '',
+      hint = '',
+      information = '',
+      other = '',
+    },
   },
 }
