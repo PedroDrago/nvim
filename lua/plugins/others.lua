@@ -7,10 +7,10 @@ return {
   {
     'PedroDrago/c_formatter_42.vim', -- TODO: Remove When finished cube3d
     event = { 'BufReadPre', 'BufNewFile' },
-    vim.api.nvim_create_user_command('Norm', ':CFormatter42', {}),
+    vim.api.nvim_create_user_command('Norm', '<cmd>CFormatter42', {}),
   },
   {
     'PedroDrago/42header', -- TODO: Remove When finished cube3d? idk
-    keys = { { '<F10>', ':Stdheader<CR>', desc = '42 Header', silent = true } },
+    keys = { { '<F10>', '<cmd>Stdheader<CR>', desc = '42 Header' } },
   },
 }

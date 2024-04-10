@@ -9,7 +9,7 @@ return {
     'theHamsta/nvim-dap-virtual-text',
   },
   keys = {
-    { '<M-b>', ":lua require'dap'.toggle_breakpoint()<CR>", desc = 'Debug: Toggle Breakpoint', silent = true },
+    { '<M-b>', "<cmd>lua require'dap'.toggle_breakpoint()<CR>", desc = 'Debug: Toggle Breakpoint' },
   },
   config = function()
     local dap = require 'dap'

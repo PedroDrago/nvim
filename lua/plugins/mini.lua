@@ -16,7 +16,7 @@ return {
       }
       vim.keymap.set('n', '<leader>df', function()
         MiniDiff.toggle_overlay(0)
-      end, { desc = 'Diff View', silent = true })
+      end, { desc = 'Diff View' })
     end,
   },
 }

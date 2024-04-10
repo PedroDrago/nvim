@@ -48,7 +48,7 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     vim.keymap.set('n', '<leader>e', function()
       require('oil').toggle_float()
-    end, { desc = 'Oil Float', silent = true }),
-    vim.keymap.set('n', '<leader>E', '<CMD>Oil<CR>', { desc = 'Oil Buffer', silent = true }),
+    end, { desc = 'Oil Float' }),
+    vim.keymap.set('n', '<leader>E', '<CMD>Oil<CR>', { desc = 'Oil Buffer' }),
   },
 }

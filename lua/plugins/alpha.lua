@@ -32,10 +32,10 @@ return {
       '                                                     ',
     }
     dashboard.section.buttons.val = {
-      dashboard.button('d', '  > Config', ':e $MYVIMRC | cd %:h<CR>'),
-      dashboard.button('r', '  > Recent', ":lua require'telescope.builtin'.oldfiles()<CR>"),
-      dashboard.button('l', '󰒲  > Lazy', ':Lazy<CR>'),
-      dashboard.button('q', '󰗼  > Quit', ':q!<CR>'),
+      dashboard.button('d', '  > Config', '<cmd>e $MYVIMRC | cd %:h<CR>'),
+      dashboard.button('r', '  > Recent', "<cmd>lua require'telescope.builtin'.oldfiles()<CR>"),
+      dashboard.button('l', '󰒲  > Lazy', '<cmd>Lazy<CR>'),
+      dashboard.button('q', '󰗼  > Quit', '<cmd>q!<CR>'),
     }
     dashboard.section.header.opts.hl = 'Function'
     dashboard.section.footer.val = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'Drago' }

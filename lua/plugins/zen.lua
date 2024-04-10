@@ -1,7 +1,7 @@
 return {
   {
     'folke/zen-mode.nvim',
-    keys = { { '<leader>z', ':ZenMode<CR>', desc = 'Zen Mode', silent = true } },
+    keys = { { '<leader>z', '<cmd>ZenMode<CR>', desc = 'Zen Mode' } },
     opts = {
       plugins = {
         twilight = { enabled = false },

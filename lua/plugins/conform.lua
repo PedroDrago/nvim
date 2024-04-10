@@ -21,6 +21,6 @@ return {
     })
     vim.keymap.set('n', '<leader>p', function()
       require('conform').format { async = true, lsp_fallback = true }
-    end, { desc = 'Format', silent = true })
+    end, { desc = 'Format' })
   end,
 }
