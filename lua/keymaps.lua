@@ -19,11 +19,14 @@ vim.keymap.set('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Panels' })
 vim.keymap.set('n', '<leader>v', '<C-w>t<C-w>H', { desc = 'Verticalize Panels' })
 vim.keymap.set('n', '<leader>h', '<C-w>t<C-w>K', { desc = 'Horizontalize Panels' })
 vim.keymap.set('n', '<leader>=', '<C-w><C-=>', { desc = 'Equalize Panels' })
+vim.keymap.set('n', '<left>', ':vertical resize +5<cr>', { desc = 'Increase Vertical Split size', silent = true })
+vim.keymap.set('n', '<right>', '<cmd>vertical resize -5<cr>', { desc = 'Decrease Vertical Split size', silent = true })
+vim.keymap.set('n', '<up>', ':horizontal resize +2<cr>', { desc = 'Increase Horizontal Split size', silent = true })
+vim.keymap.set('n', '<down>', ':horizontal resize -2<cr>', { desc = 'Decrease Horizontal Split size', silent = true })
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<leader>t', ':terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Terminal', silent = true })
--- vim.keymap.set('n', '<leader>T', ':split | res 11 | terminal<CR>:set nonumber<CR>:set norelativenumber<CR>:set scl=no<CR>a', { desc = 'Open Horizontal Terminal', silent = true })
 
 -- Misc
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
