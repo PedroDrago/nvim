@@ -58,7 +58,7 @@ return {
       mapping = cmp.mapping.preset.insert {
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
-        ['<C-i>'] = cmp.mapping.confirm { select = true }, --  Multiple mappings for multiple terminals, systems etc
+        ['<C-y>'] = cmp.mapping.confirm { select = true }, --  Multiple mappings for multiple terminals, systems etc
         ['<C-Enter>'] = cmp.mapping.confirm { select = true }, --  Multiple mappings for multiple terminals, systems etc
         ['<C-CR>'] = cmp.mapping.confirm { select = true }, --     Multiple mappings for multiple terminals, systems etc
         ['<C-Return>'] = cmp.mapping.confirm { select = true }, -- Multiple mappings for multiple terminals, systems etc
