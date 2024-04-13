@@ -1,6 +1,5 @@
 return {
   { 'tpope/vim-sleuth', event = { 'BufReadPost', 'BufNewFile' } },
-  { 'numToStr/Comment.nvim', opts = {}, event = { 'BufReadPre', 'BufNewFile' } },
   { 'farmergreg/vim-lastplace' },
   { 'tpope/vim-fugitive', event = { 'BufReadPre', 'BufNewFile' } },
   { 'folke/todo-comments.nvim', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false }, event = { 'BufReadPre', 'BufNewFile' } },
