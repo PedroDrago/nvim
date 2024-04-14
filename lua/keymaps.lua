@@ -32,12 +32,12 @@ vim.keymap.set('n', '<leader>t', '<cmd>terminal<CR><cmd>set nonumber<CR><cmd>set
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
-vim.keymap.set('v', 'J', "<cmd>m '>+1<CR>gv=gv", { desc = 'Move Selection down' })
-vim.keymap.set('v', 'K', "<cmd>m '<-2<CR>gv=gv", { desc = 'Move Selection up' })
+-- vim.keymap.set('v', 'J', "<cmd>m '>+1<CR>gv=gv", { desc = 'Move Selection down' }) NOTE: currnt experimenting mini.move, because this keymap sometimes bug indenting. If mini.move also bug with indenting, just delete it and go back to use only keymap
+-- vim.keymap.set('v', 'K', "<cmd>m '<-2<CR>gv=gv", { desc = 'Move Selection up' })
+-- vim.keymap.set({ 'n', 'v' }, 'L', '$', { desc = 'Move to end of Line' })
+-- vim.keymap.set({ 'n', 'v' }, 'H', '0', { desc = 'Move to end of Line' })
 vim.keymap.set('n', 'B', '<C-v>', { desc = 'Visual Block' })
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Void Delete' })
-vim.keymap.set({ 'n', 'v' }, 'L', '$', { desc = 'Move to end of Line' })
-vim.keymap.set({ 'n', 'v' }, 'H', '0', { desc = 'Move to end of Line' })
 vim.keymap.set('v', '<Tab>', '>', { desc = 'Indent Right' })
 vim.keymap.set('v', '<S-Tab>', '<', { desc = 'Indent Left' })
 
