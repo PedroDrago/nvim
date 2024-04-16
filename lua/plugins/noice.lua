@@ -6,6 +6,13 @@ return {
   },
   config = function()
     require('noice').setup {
+      routes = {
+        { filter = {
+          event = 'msg_show',
+          kind = '',
+          find = 'written',
+        }, opts = { skip = true } },
+      },
       cmdline = {
         enabled = true,
         view = 'cmdline_popup',
