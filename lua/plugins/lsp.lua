@@ -8,9 +8,6 @@ return {
     { 'folke/neodev.nvim', opts = {} },
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
-  keys = {
-    { 'J', vim.diagnostic.open_float, desc = 'Expand Diagnostic' },
-  },
   config = function()
     local diagnostics_enabled = true
     vim.api.nvim_create_user_command('DiagnosticsToggle', function()
@@ -68,6 +65,9 @@ return {
           vim.keymap.set('n', keys, func, { buffer = event.buf, desc = desc })
         end
 
+        local vmap = function(keys, func, desc)
+          vim.keymap.set({ 'n', 'v' }, keys, func, { buffer = event.buf, desc = desc })
+        end
         map('gd', function()
           require('telescope.builtin').lsp_definitions { reuse_win = false }
         end, 'Go to Definition')
@@ -76,8 +76,9 @@ return {
         map('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
         map('gS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
         map('<leader>s', vim.lsp.buf.rename, 'Rename')
-        map('<leader>c', vim.lsp.buf.code_action, 'Code Action')
+        vmap('<leader>c', vim.lsp.buf.code_action, 'Code Action')
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
+        map('J', vim.diagnostic.open_float, 'Expand Diagnostic')
         map('<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
