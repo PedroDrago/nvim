@@ -1,6 +1,6 @@
 -- Disables
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
-vim.keymap.set('n', 'q', '<nop>', { desc = 'Disable Default Macro' })
+vim.keymap.set('n', 'q', '<nop>', { desc = 'Disable Default Macro Recording' })
 vim.keymap.set('n', '<C-o>', '<nop>', { desc = 'Disable jump list' })
 vim.keymap.set('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
 vim.keymap.set('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keymap' })
@@ -28,7 +28,7 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<leader>t', '<cmd>terminal<CR><cmd>set nonumber<CR><cmd>set norelativenumber<CR><cmd>set scl=no<CR>a', { desc = 'Terminal' })
 
 -- Misc
-vim.keymap.set('n', 'qq', 'q', { desc = 'Remap Macro Recording' })
+vim.keymap.set('n', 'qq', 'q', { desc = 'Macro Recording' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
