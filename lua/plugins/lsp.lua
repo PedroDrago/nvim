@@ -64,14 +64,12 @@ return {
         local map = function(keys, func, desc)
           vim.keymap.set('n', keys, func, { buffer = event.buf, desc = desc })
         end
-
         local vmap = function(keys, func, desc)
           vim.keymap.set({ 'n', 'v' }, keys, func, { buffer = event.buf, desc = desc })
         end
         map('gd', function()
           require('telescope.builtin').lsp_definitions { reuse_win = false }
         end, 'Go to Definition')
-
         map('gr', require('telescope.builtin').lsp_references, 'References')
         map('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
         map('gS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
@@ -79,7 +77,7 @@ return {
         vmap('<leader>c', vim.lsp.buf.code_action, 'Code Action')
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
         map('J', vim.diagnostic.open_float, 'Expand Diagnostic')
-        map('<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('L', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
@@ -99,17 +97,21 @@ return {
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
     local servers = {
+      clangd = {},
       gopls = {
         settings = {
           gopls = {
             hints = { enabled = true },
-            codelenses = { enabled = true },
+            analyses = { unusedparams = true },
+            staticcheck = true,
+            gofumpt = true,
           },
         },
       },
       lua_ls = {
         settings = {
           Lua = {
+            hint = { enabled = true },
             runtime = { version = 'LuaJIT' },
             codelens = { enabled = true },
             workspace = {
@@ -132,6 +134,7 @@ return {
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
     require('mason-lspconfig').setup {
       handlers = {
+        -- ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'double' }),
         function(server_name)
           local server = servers[server_name] or {}
           require('lspconfig')[server_name].setup {

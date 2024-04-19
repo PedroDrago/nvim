@@ -74,6 +74,17 @@ return {
           end
         end, { 'i', 's' }),
       },
+      -- sorting = {
+      --   comparators = {
+      --     cmp.config.compare.recently_used,
+      --     cmp.config.compare.kind,
+      --     cmp.config.compare.offset,
+      --     cmp.config.compare.exact,
+      --     cmp.config.compare.length,
+      --     cmp.config.compare.order,
+      --     cmp.config.compare.sort_text,
+      --   },
+      -- },
       sources = {
         {
           name = 'nvim_lsp',
