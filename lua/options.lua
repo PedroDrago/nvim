@@ -2,6 +2,7 @@ vim.loader.enable() -- Enable experimental neovim loader (may have better startu
 vim.g.mapleader = ' ' -- Set space as leader key
 vim.g.maplocalleader = ' ' -- Set space as leader key
 
+vim.opt.linebreak = true
 vim.opt.number = true --Line Numbers
 vim.opt.relativenumber = true -- Relative line Numbers
 vim.opt.mouse = 'a' -- Enables mouse on all modes
