@@ -55,10 +55,9 @@ ls.add_snippets('c', {
 })
 
 ls.add_snippets('c', {
-  snipept('vd', {
+  snipept('v', {
     text '(void) ',
     insert(1, 'Variable'),
-    text { ';' },
   }),
 })
 
