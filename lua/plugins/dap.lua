@@ -46,6 +46,7 @@ return {
         is_open = false
       else
         require('dap').continue()
+
         is_open = true
       end
     end, { desc = 'Toggle Dap', silent = true })
@@ -67,7 +68,16 @@ return {
       -- },
     }
 
-    dap.listeners.after.event_initialized['dapui_config'] = dapui.open
+    dap.listeners.after.event_initialized['dapui_config'] = function()
+      dapui.open()
+      vim.cmd 'wincmd h'
+      vim.cmd 'wincmd j'
+      vim.cmd 'q'
+      vim.cmd 'wincmd j'
+      vim.cmd 'q'
+      vim.cmd 'wincmd j'
+      vim.cmd 'q'
+    end
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
