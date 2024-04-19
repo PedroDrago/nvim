@@ -18,6 +18,7 @@ return {
     local actions = require 'telescope.actions'
     require('telescope').setup {
       defaults = {
+        file_ignore_patterns = { '.git/', '.cache', '%.o', '%.a', '%.out', '%.pdf', '%.mkv', '%.mp4', '%.zip' },
         selection_caret = ' ',
         entry_prefix = ' ',
         prompt_prefix = '',
