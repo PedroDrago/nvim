@@ -53,8 +53,8 @@ return {
         numhl = {
           [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
           [vim.diagnostic.severity.WARN] = 'WarningMsg',
-          [vim.diagnostic.severity.HINT] = 'HintMsg', -- NOTE: Not working. idk why
-          [vim.diagnostic.severity.INFO] = 'InfoMsg', -- NOTE: Not working. idk why
+          [vim.diagnostic.severity.HINT] = 'HintMsg', -- FIX: Not working
+          [vim.diagnostic.severity.INFO] = 'InfoMsg', -- FIX: Not working
         },
       },
     }
@@ -77,9 +77,7 @@ return {
         map('gS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
         map('<leader>s', vim.lsp.buf.rename, 'Rename')
         vmap('<leader>c', vim.lsp.buf.code_action, 'Code Action')
-        map('K', function()
-          vim.lsp.buf.hover { focusable = false }
-        end, 'Hover Documentation')
+        map('K', vim.lsp.buf.hover, 'Hover Documentation')
         map('J', vim.diagnostic.open_float, 'Expand Diagnostic')
         map('<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('gD', vim.lsp.buf.declaration, 'Goto Declaration')

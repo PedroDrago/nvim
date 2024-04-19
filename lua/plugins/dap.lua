@@ -86,8 +86,3 @@ return {
     require('nvim-dap-virtual-text').setup()
   end,
 }
---[[
- TODO:make this have a better experience, for now it is a few clunky to use because:
- - UI Buttons with TokyoNight have weird appearece specially when used with the commented setup above
-
-]]

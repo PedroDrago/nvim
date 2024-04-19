@@ -68,6 +68,3 @@ return {
     end, { desc = 'Search Buffers' })
   end,
 }
-
--- NOTE: apparently fzf.lua by itself is very faster than telescope, but maybe that can only be
--- perceived in larger codebases.

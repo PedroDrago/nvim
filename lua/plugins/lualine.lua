@@ -2,27 +2,19 @@ return {
   'nvim-lualine/lualine.nvim',
   opts = {},
   config = function()
-    local ignored = {
-      'undotree',
-      'harpoon',
-      '[Scratch]',
-      'alpha',
-      'grapple',
-      'dapui_watches',
-      'dapui_breakpoints',
-      'dapui_scopes',
-      'dapui_console',
-      'dapui_stacks',
-      'dap-repl',
-    }
     require('lualine').setup {
       options = {
         icons_enabled = true,
         theme = 'auto',
         component_separators = '|',
         section_separators = '',
-        disabled_filetypes = ignored,
-        ignore_focus = ignored,
+        disabled_filetypes = { 'alpha' },
+        ignore_focus = { 'oil', 'grapple', 'TelescopePrompt' },
+        refresh = {
+          statusline = 1000,
+          tabline = 1000,
+          winbar = 1000,
+        },
       },
       sections = {
         lualine_a = { 'mode' },

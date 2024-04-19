@@ -9,12 +9,12 @@ return {
         mappings = {
           left = '<Nop>',
           right = '<Nop>',
-          down = 'J', -- NOTE: May want to enable only line_up and line_down
+          down = 'J',
           up = 'K',
           line_left = '<Nop>',
           line_right = '<Nop>',
-          line_down = 'J',
-          line_up = 'K',
+          line_down = '<Nop>',
+          line_up = '<Nop>',
         },
       }
       require('mini.diff').setup {

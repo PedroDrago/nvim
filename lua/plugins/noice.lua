@@ -54,6 +54,7 @@ return {
           silent = false,
           view = nil,
           opts = {},
+          -- TODO: Try to apply focusable = false to noice hover. Maybe someday we'll have an answer in this [issue](https://github.com/folke/noice.nvim/issues/698)
         },
         signature = {
           enabled = false,
