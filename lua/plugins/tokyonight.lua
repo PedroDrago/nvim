@@ -10,7 +10,7 @@ return {
         functions = {},
         variables = {},
         sidebars = 'dark', -- dark, transparent or normal
-        floats = 'dark',
+        floats = 'normal', -- dark, transparent or normal
       },
       sidebars = { 'help' },
       day_brightness = 0.5,
