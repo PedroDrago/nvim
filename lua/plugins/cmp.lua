@@ -27,14 +27,9 @@ return {
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
     cmp.setup {
-      -- performance = {
-      --   trigger_debounce_time = 500,
-      --   throttle = 550,
-      --   fetching_timeout = 80,
-      -- },
-      -- experimental = {
-      --   ghost_text = true,
-      -- },
+      experimental = {
+        ghost_text = false,
+      },
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',
@@ -56,13 +51,14 @@ return {
       completion = { completeopt = 'menu,menuone,noinsert' },
       preselect = cmp.PreselectMode.None,
       mapping = cmp.mapping.preset.insert {
+        -- TODO: Find ideal mapping for confirming completion (confortable on any setup/keyboard and works on every terminal existent)
+        ['<C-y>'] = cmp.mapping.confirm { select = true },
+        ['<C-Enter>'] = cmp.mapping.confirm { select = true },
+        ['<C-CR>'] = cmp.mapping.confirm { select = true },
+        ['<C-Return>'] = cmp.mapping.confirm { select = true },
+
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
-        ['<C-y>'] = cmp.mapping.confirm { select = true }, --  Multiple mappings for multiple terminals, systems etc
-        ['<C-Enter>'] = cmp.mapping.confirm { select = true }, --  Multiple mappings for multiple terminals, systems etc
-        ['<C-CR>'] = cmp.mapping.confirm { select = true }, --     Multiple mappings for multiple terminals, systems etc
-        ['<C-Return>'] = cmp.mapping.confirm { select = true }, -- Multiple mappings for multiple terminals, systems etc
-        -- ['<C-M>'] = cmp.mapping.confirm { select = true }, --      Multiple mappings for multiple terminals, systems etc (This one is weird, work as normal enter without ctrl presseed)
         ['<C-l>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
@@ -74,28 +70,10 @@ return {
           end
         end, { 'i', 's' }),
       },
-      -- sorting = {
-      --   comparators = {
-      --     cmp.config.compare.recently_used,
-      --     cmp.config.compare.kind,
-      --     cmp.config.compare.offset,
-      --     cmp.config.compare.exact,
-      --     cmp.config.compare.length,
-      --     cmp.config.compare.order,
-      --     cmp.config.compare.sort_text,
-      --   },
-      -- },
       sources = {
-        {
-          name = 'nvim_lsp',
-          max_item_count = 30,
-        },
-        {
-          name = 'luasnip', --[[ max_item_count = 5 ]]
-        },
-        {
-          name = 'path', --[[ max_item_count = 20 ]]
-        },
+        { name = 'nvim_lsp', max_item_count = 30 },
+        { name = 'luasnip' },
+        { name = 'path' },
       },
     }
   end,
