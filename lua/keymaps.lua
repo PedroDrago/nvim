@@ -25,7 +25,7 @@ vim.keymap.set('n', '<down>', '<cmd>horizontal resize -2<cr>', { desc = 'Decreas
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>t', '<cmd>terminal<CR><cmd>set nonumber<CR><cmd>set norelativenumber<CR><cmd>set scl=no<CR>a', { desc = 'Terminal' })
+vim.keymap.set('n', '<leader>t', '<cmd>vnew<CR><cmd>terminal<CR><cmd>set nonumber<CR><cmd>set norelativenumber<CR><cmd>set scl=no<CR>a', { desc = 'Terminal' })
 
 -- Misc
 vim.keymap.set('n', 'qq', 'q', { desc = 'Macro Recording' })
