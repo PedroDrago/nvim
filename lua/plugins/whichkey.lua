@@ -3,6 +3,10 @@ return {
   event = 'VeryLazy',
   config = function()
     require('which-key').setup {
+      plugins = {
+        marks = false,
+        registers = false,
+      },
       layout = {
         align = 'center',
       },
