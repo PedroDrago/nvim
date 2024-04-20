@@ -134,7 +134,6 @@ return {
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
     require('mason-lspconfig').setup {
       handlers = {
-        -- ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'double' }),
         function(server_name)
           local server = servers[server_name] or {}
           require('lspconfig')[server_name].setup {
