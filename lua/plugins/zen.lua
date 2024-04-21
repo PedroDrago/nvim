@@ -7,6 +7,7 @@ return {
         twilight = { enabled = false },
       },
       window = {
+        backdrop = 1,
         options = {
           signcolumn = 'no',
           number = false,
@@ -17,7 +18,7 @@ return {
       on_open = function(win)
         vim.diagnostic.disable()
         require('cmp').setup.buffer { enabled = false }
-        vim.cmd 'highlight ZenBg guibg=guidfg' -- TODO: Remove this when bg color issue is plugin is patched
+        vim.cmd 'highlight ZenBg guibg=guidfg' -- BUG: Remove when [Issue](https://github.com/folke/zen-mode.nvim/issues/115) has been resolved.
       end,
       on_close = function()
         vim.diagnostic.enable()
