@@ -75,7 +75,7 @@ return {
         map('gr', require('telescope.builtin').lsp_references, 'References')
         map('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
         map('gS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-        map('<leader>s', vim.lsp.buf.rename, 'Rename')
+        map('<leader>s', vim.lsp.buf.rename, 'Rename') -- vim.cmd '[[:%s/<C-r><C-w>//g<Left><Left>]]' NOTE: Regex alternative.
         vmap('<leader>c', vim.lsp.buf.code_action, 'Code Action')
         map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
