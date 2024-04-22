@@ -8,7 +8,8 @@ vim.keymap.set('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keyma
 -- Panels
 vim.keymap.set('n', '<leader>a', '<cmd>vsplit <CR><cmd>set rnu<CR>', { desc = 'Vertical Split' })
 vim.keymap.set('n', '<leader>A', '<cmd>new <CR><cmd>set rnu<CR>', { desc = 'Horizontal Split' })
-vim.keymap.set('n', '<leader>q', '<C-w><C-c>', { desc = 'Close Panel' })
+-- vim.keymap.set('n', '<leader>q', '<C-w><C-c>', { desc = 'Close Panel' })
+vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Close Panel' })
 vim.keymap.set('n', '<leader>Q', '<cmd>q<CR>', { desc = 'Close Panel' })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
@@ -25,7 +26,8 @@ vim.keymap.set('n', '<down>', '<cmd>horizontal resize -2<cr>', { desc = 'Decreas
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>t', '<cmd>vnew<CR><cmd>terminal<CR><cmd>set nonumber<CR><cmd>set norelativenumber<CR><cmd>set scl=no<CR>a', { desc = 'Terminal' })
+vim.keymap.set('n', '<leader>t', '<cmd>vsplit | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Vertical Terminal' })
+vim.keymap.set('n', '<leader>T', '<cmd>botright split | horizontal resize -10 | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Horizontal Terminal' })
 
 -- Misc
 vim.keymap.set('n', 'qq', 'q', { desc = 'Macro Recording' })
