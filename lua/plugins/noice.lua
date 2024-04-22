@@ -64,6 +64,8 @@ return {
             luasnip = false, -- Will open signature help when jumping to Luasnip insert nodes
             throttle = 50, -- Debounce lsp signature help request by 50ms
           },
+          view = nil, -- when nil, use defaults from documentation
+          ---@type NoiceViewOptions
         },
       },
     }

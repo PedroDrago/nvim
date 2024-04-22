@@ -19,24 +19,25 @@ return {
       lualine_bold = false,
       -----------------------------------
       ---@param colors ColorScheme
-      on_colors = function(colors) -- Change colors
-        -- colors.hint = colors.orange
-        -- colors.error = '#ff0000'
+      on_colors = function(colors)
+        colors.gitSigns.add = '#B3F6C0'
+        colors.gitSigns.change = '#8CF8F7'
+        colors.gitSigns.delete = '#FFC0B9'
       end,
       ---@param hl Highlights
       ---@param colors ColorScheme
-      on_highlights = function(hl, colors) -- Change highlights
+      on_highlights = function(hl, colors)
         hl.MiniDiffSignAdd = {
+          fg = colors.gitSigns.add,
           bg = '',
-          fg = '',
-        }
-        hl.MiniDiffSignDelete = {
-          bg = '',
-          fg = '',
         }
         hl.MiniDiffSignChange = {
+          fg = colors.gitSigns.change,
           bg = '',
-          fg = '',
+        }
+        hl.MiniDiffSignDelete = {
+          fg = colors.gitSigns.delete,
+          bg = '',
         }
       end,
     },
