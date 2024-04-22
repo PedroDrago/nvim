@@ -27,19 +27,6 @@ return {
     local lspkind = require 'lspkind'
     luasnip.config.setup {}
     cmp.setup {
-      window = {
-        documentation = cmp.config.window.bordered {
-          -- border = 'single',
-          -- border = 'none',
-          -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
-        },
-        completion = cmp.config.window.bordered {
-          -- border = 'single',
-          -- border = 'none',
-          -- winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu',
-          scrollbar = false,
-        },
-      },
       experimental = {
         ghost_text = false,
       },

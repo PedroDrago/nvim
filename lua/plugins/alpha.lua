@@ -41,8 +41,8 @@ return {
     dashboard.section.footer.val = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'Drago' }
 
     vim.cmd [[
-        autocmd FileType alpha setlocal nofoldenable
-      ]]
+       autocmd FileType alpha setlocal nofoldenable
+     ]]
   end,
 }
 --[[
