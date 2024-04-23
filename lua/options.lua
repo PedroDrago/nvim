@@ -1,6 +1,6 @@
 vim.loader.enable() -- Enable experimental neovim loader (may have better startup time)
-vim.g.mapleader = ' ' -- Set space as leader key
-vim.g.maplocalleader = ' ' -- Set space as leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 vim.g.linting = false
 vim.g.tokyonight = false
 vim.g.gruvbox = false
