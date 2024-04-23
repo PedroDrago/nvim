@@ -1,6 +1,6 @@
 return {
   'navarasu/onedark.nvim',
-  cond = false,
+  cond = vim.g.onedark,
   priority = 1000,
   config = function()
     require('onedark').setup {
@@ -39,8 +39,21 @@ return {
         background = true, -- use background color for virtual text
       },
     }
+    local colors = {
+      border = 'rounded',
+    }
+    local cmp = require 'cmp'
+    cmp.setup {
+      window = {
+        documentation = cmp.config.window.bordered { border = colors.border },
+        scrollbar = false,
+      },
+    }
   end,
   init = function()
-    vim.cmd 'colorscheme onedark'
+    vim.cmd.colorscheme 'onedark'
+    vim.cmd [[hi FloatBorder guibg = Normal]]
+    vim.cmd [[hi NormalFloat guibg = Normal]]
+    vim.cmd [[hi FloatTitle guibg = Normal]]
   end,
 }

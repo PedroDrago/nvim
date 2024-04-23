@@ -1,4 +1,5 @@
 require 'options'
+vim.g.tokyonight = true
 require 'keymaps'
 require 'lazyvim'
 require 'lsp'

@@ -2,7 +2,14 @@ vim.loader.enable() -- Enable experimental neovim loader (may have better startu
 vim.g.mapleader = ' ' -- Set space as leader key
 vim.g.maplocalleader = ' ' -- Set space as leader key
 vim.g.linting = false
+vim.g.tokyonight = false
+vim.g.gruvbox = false
+vim.g.catppuccin = false
+vim.g.rosepine = false
+vim.g.onedark = false
+vim.g.oxocarbon = false
 
+vim.opt.background = 'dark'
 vim.opt.linebreak = true
 vim.opt.number = true --Line Numbers
 vim.opt.relativenumber = true -- Relative line Numbers
@@ -25,7 +32,6 @@ vim.opt.hlsearch = true -- Enable Highlight for previous search
 vim.opt.termguicolors = true -- Enable 24-bit color in TUI
 vim.opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 vim.opt.breakindent = true -- Indent wraped line segment
--- vim.opt.smoothscroll = true
 
 vim.api.nvim_create_autocmd('TextYankPost', { -- Highlights yanked region
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),

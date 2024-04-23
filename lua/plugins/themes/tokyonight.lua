@@ -1,6 +1,6 @@
 return {
   'folke/tokyonight.nvim',
-  cond = true,
+  cond = vim.g.tokyonight,
   lazy = false,
   priority = 1000,
   config = function()
@@ -60,11 +60,12 @@ return {
         completion = cmp.config.window.bordered {
           border = colors.border,
           winhighlight = colors.winhighlight,
+          scrollbar = false,
         },
       },
     }
   end,
   init = function()
-    vim.cmd 'colorscheme tokyonight-night'
+    vim.cmd.colorscheme 'tokyonight-night'
   end,
 }

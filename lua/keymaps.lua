@@ -6,11 +6,9 @@ vim.keymap.set('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
 vim.keymap.set('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keymap' })
 
 -- Panels
--- vim.keymap.set('n', '<leader>q', '<C-w><C-c>', { desc = 'Close Panel' })
--- vim.keymap.set('n', '<leader>Q', '<cmd>q<CR>', { desc = 'Close Panel' })
 vim.keymap.set('n', '<leader>a', '<cmd>vsplit <CR><cmd>set rnu<CR>', { desc = 'Vertical Split' })
 vim.keymap.set('n', '<leader>A', '<cmd>split <CR><cmd>set rnu<CR>', { desc = 'Horizontal Split' })
-vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Close Panel' })
+vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Close Buffer' })
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })

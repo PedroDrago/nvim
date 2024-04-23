@@ -3,6 +3,9 @@ return {
   opts = {
     scope = 'git', -- also try out "git_branch"
     status = false,
+    win_opts = {
+      border = 'rounded',
+    },
   },
   cmd = 'Grapple',
   keys = {

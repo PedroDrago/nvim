@@ -1,6 +1,6 @@
 return {
   'sainnhe/gruvbox-material',
-  cond = false,
+  cond = vim.g.gruvbox,
   priority = 1000,
   config = true,
   opts = function()
@@ -8,6 +8,7 @@ return {
     vim.g.gruvbox_material_background = 'medium' -- hard, medium, soft
     vim.g.gruvbox_material_ui_contrast = 'high' -- low, high
     vim.g.gruvbox_material_diagnostic_virtual_text = 'highlighted' -- grey, colored, highlighted
+    vim.g.gruvbox_material_show_eob = '0' -- '0', '1'
     -- vim.g.gruvbox_material_float_style = 'dim' -- 'bright', 'dim'
     -- vim.g.gruvbox_material_colors_override = {}
     -- vim.g.gruvbox_material_better_performance = '0' -- '0', '1'
@@ -17,7 +18,6 @@ return {
     -- vim.g.gruvbox_material_current_word = 'grey background' -- ''grey background', 'bold', 'underline', 'italic'
     -- vim.g.gruvbox_material_diagnostic_line_highlight = '0' -- '0', '1'
     -- vim.g.gruvbox_material_diagnostic_text_highlight = '0' -- '0', '1'
-    -- vim.g.gruvbox_material_show_eob = '1' -- '0', '1'
     -- vim.g.gruvbox_material_spell_foreground = 'none' -- 'none', 'colored'
     -- vim.g.gruvbox_material_sign_column_background = 'nono -- 'none', 'grey'
     -- vim.g.gruvbox_material_menu_selection_background = 'grey' -- 'grey', 'red', 'orange', 'yellow', 'green',
@@ -52,9 +52,14 @@ return {
     }
   end,
   init = function()
-    vim.cmd 'colorscheme gruvbox-material'
-    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '' })
-    vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '' })
-    vim.api.nvim_set_hl(0, 'FloatTitle', { bg = '' })
+    vim.cmd.colorscheme 'gruvbox-material'
+    -- TODO: The foreground is reseting. Learn to change only bg for hilight group instad of whole group
+    -- vim.cmd [[hi NormalFloat bg = '']]
+    vim.cmd [[hi FloatBorder guibg = Normal]]
+    vim.cmd [[hi NormalFloat guibg = Normal]]
+    vim.cmd [[hi FloatTitle guibg = Normal]]
+    -- vim.api.nvim_set_hl(0, 'NormalFloat', {})
+    -- vim.api.nvim_set_hl(0, 'FloatBorder', {})
+    -- vim.api.nvim_set_hl(0, 'FloatTitle', {})
   end,
 }

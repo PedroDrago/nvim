@@ -1,6 +1,6 @@
 return {
   'catppuccin/nvim',
-  cond = false,
+  cond = vim.g.catppuccin,
   name = 'catppuccin',
   priority = 1000,
   config = function()
@@ -52,8 +52,21 @@ return {
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
       },
     }
+    local colors = {
+      border = 'rounded', --  NOTE: thin border | bg equal to bg.
+    }
+    local cmp = require 'cmp'
+    cmp.setup {
+      window = {
+        documentation = cmp.config.window.bordered { border = colors.border },
+        scrollbar = false,
+      },
+    }
   end,
   init = function()
-    vim.cmd 'colorscheme catppuccin'
+    vim.cmd.colorscheme 'catppuccin'
+    vim.cmd [[hi FloatBorder guibg = Normal]]
+    vim.cmd [[hi NormalFloat guibg = Normal]]
+    vim.cmd [[hi FloatTitle guibg = Normal]]
   end,
 }
