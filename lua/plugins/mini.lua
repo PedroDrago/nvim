@@ -1,6 +1,7 @@
 return {
   {
     'echasnovski/mini.nvim',
+    cond = true,
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       require('mini.ai').setup { n_lines = 500 }

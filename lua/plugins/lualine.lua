@@ -1,5 +1,6 @@
 return {
   'nvim-lualine/lualine.nvim',
+  cond = true,
   opts = {},
   config = function()
     require('lualine').setup {

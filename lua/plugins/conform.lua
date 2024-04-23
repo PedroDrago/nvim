@@ -1,5 +1,6 @@
 return {
   'stevearc/conform.nvim',
+  cond = true,
   config = function()
     require('conform').setup {
       notify_on_error = false,

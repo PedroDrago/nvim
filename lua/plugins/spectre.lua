@@ -1,5 +1,6 @@
 return {
   'nvim-pack/nvim-spectre',
+  cond = true,
   keys = {
     { '<leader>S', '<cmd>lua require("spectre").toggle()<cr><cmd>lua require("spectre").change_view()<CR>', desc = 'Spectre' },
     -- { '<leader>SW', '<cmd>lua require("spectre").open_visual({select_word=true})<CR><cmd>lua require("spectre").change_view()<CR>', desc = 'Spectre Word', silent = true },

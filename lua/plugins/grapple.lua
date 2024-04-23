@@ -1,5 +1,6 @@
 return {
   'cbochs/grapple.nvim',
+  cond = true,
   opts = {
     scope = 'git', -- also try out "git_branch"
     status = false,

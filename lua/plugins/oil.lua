@@ -1,5 +1,6 @@
 return {
   'stevearc/oil.nvim',
+  cond = true,
   tag = 'v2.8.0', -- BUG: Remove when [Issue](https://github.com/stevearc/oil.nvim/issues/355) has been resolved.
   config = function()
     require('oil').setup {
