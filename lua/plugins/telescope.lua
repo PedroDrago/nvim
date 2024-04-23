@@ -31,6 +31,7 @@ return {
         },
       },
       pickers = {
+        colorscheme = { enable_preview = true },
         find_files = {
           find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
         },

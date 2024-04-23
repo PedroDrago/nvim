@@ -28,6 +28,8 @@ vim.keymap.set('n', '<leader>t', '<cmd>vsplit | set nonumber | set norelativenum
 vim.keymap.set('n', '<leader>T', '<cmd>botright split | horizontal resize -10 | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Horizontal Terminal' })
 
 -- Misc
+vim.keymap.set('n', '<leader>r', '<cmd>cq<CR>', { desc = 'Macro Recording' })
+vim.keymap.set('n', '<F1>', '<cmd>Alpha<CR>', { desc = 'Macro Recording' })
 vim.keymap.set('n', 'qq', 'q', { desc = 'Macro Recording' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
