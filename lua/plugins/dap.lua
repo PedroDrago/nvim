@@ -70,6 +70,11 @@ return {
 
     dap.listeners.after.event_initialized['dapui_config'] = function()
       dapui.open()
+      --#f70068
+      --#16161E
+      vim.api.nvim_get_hl_id_by_name 'lualine_c_normal' -- TODO: fix dapui buttons bg colo, but this need to stay in the colorscheme init()
+      -- vim.api.nvim_set_hl(0, 'DapUIStop', { bg = 'lualine_c_normal.bg' })
+      vim.api.nvim_set_hl(0, 'DapUIStopNC', { bg = '#16161E' })
       vim.cmd 'wincmd h'
       vim.cmd 'wincmd j'
       vim.cmd 'q'

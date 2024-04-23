@@ -1,6 +1,7 @@
 vim.loader.enable() -- Enable experimental neovim loader (may have better startup time)
 vim.g.mapleader = ' ' -- Set space as leader key
 vim.g.maplocalleader = ' ' -- Set space as leader key
+vim.g.linting = false
 
 vim.opt.linebreak = true
 vim.opt.number = true --Line Numbers

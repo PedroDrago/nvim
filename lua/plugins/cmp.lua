@@ -13,11 +13,11 @@ return {
     local cmp_enabled = true
     vim.api.nvim_create_user_command('CmpToggle', function()
       if cmp_enabled then
-        require('cmp').setup.buffer { enabled = false }
+        require('cmp').setup { enabled = false }
         cmp_enabled = false
         vim.cmd 'echo "Autocomplete Off"'
       else
-        require('cmp').setup.buffer { enabled = true }
+        require('cmp').setup { enabled = true }
         cmp_enabled = true
         vim.cmd 'echo "Autocomplete On"'
       end
@@ -25,8 +25,12 @@ return {
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     local lspkind = require 'lspkind'
-    luasnip.config.setup {}
     cmp.setup {
+      window = {
+        completion = cmp.config.window.bordered {
+          scrollbar = false,
+        },
+      },
       experimental = {
         ghost_text = false,
       },
