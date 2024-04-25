@@ -1,4 +1,5 @@
 vim.loader.enable()
+require 'globals'
 require 'options'
 vim.g.tokyonight = true
 require 'keymaps'

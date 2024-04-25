@@ -1,6 +1,5 @@
 local keymap = vim.keymap.set
 -- Disables
-
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
 keymap('n', 'q', '<nop>', { desc = 'Disable Default Macro Recording' })
 keymap('n', '<C-o>', '<nop>', { desc = 'Disable jump list' })
@@ -40,7 +39,7 @@ keymap('n', 'B', '<C-v>', { desc = 'Visual Block' })
 keymap({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Void Delete' })
 keymap('v', '<Tab>', '>', { desc = 'Indent Right' })
 keymap('v', '<S-Tab>', '<', { desc = 'Indent Left' })
-keymap('n', '<leader>h', '<C-t>', { desc = 'Indent Left' })
+-- keymap('n', '<leader>h', '<C-t>', { desc = 'Indent Left' })
 
 -- Aliases
 vim.cmd 'cabbrev Q q'
