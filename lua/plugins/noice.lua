@@ -17,32 +17,12 @@ return {
         { filter = {
           event = 'msg_show',
           kind = '',
-          find = 'line less',
+          find = '; before',
         }, opts = { skip = true } },
         { filter = {
           event = 'msg_show',
           kind = '',
-          find = 'more line',
-        }, opts = { skip = true } },
-        { filter = {
-          event = 'msg_show',
-          kind = '',
-          find = 'more line',
-        }, opts = { skip = true } },
-        { filter = {
-          event = 'msg_show',
-          kind = '',
-          find = 'yanked',
-        }, opts = { skip = true } },
-        { filter = {
-          event = 'msg_show',
-          kind = '',
-          find = 'fewer lines',
-        }, opts = { skip = true } },
-        { filter = {
-          event = 'msg_show',
-          kind = '',
-          find = 'change',
+          find = '; after',
         }, opts = { skip = true } },
       },
       cmdline = {

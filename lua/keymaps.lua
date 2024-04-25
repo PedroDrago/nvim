@@ -39,6 +39,7 @@ keymap('n', 'B', '<C-v>', { desc = 'Visual Block' })
 keymap({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Void Delete' })
 keymap('v', '<Tab>', '>', { desc = 'Indent Right' })
 keymap('v', '<S-Tab>', '<', { desc = 'Indent Left' })
+keymap('n', '<C-a>', 'ggVG', { desc = 'Select All' })
 -- keymap('n', '<leader>h', '<C-t>', { desc = 'Indent Left' })
 
 -- Aliases
