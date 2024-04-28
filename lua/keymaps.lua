@@ -30,7 +30,8 @@ keymap('n', '<leader>t', '<cmd>vsplit | set nonumber | set norelativenumber | se
 keymap('n', '<leader>T', '<cmd>botright split | horizontal resize -10 | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Horizontal Terminal' })
 
 -- Misc
-keymap('n', '<leader>r', '<cmd>cq<CR>', { desc = 'Macro Recording' })
+keymap('n', '<leader>r', [[:%s/<C-r><C-w>//g<Left><Left>]], { desc = 'Rename Word' })
+keymap('v', '<leader>s', [[:s///g<Left><Left><Left>]], { desc = 'Rename Word In Selected Region' })
 keymap('n', '<F1>', '<cmd>Alpha<CR>', { desc = 'Macro Recording' })
 keymap('n', 'qq', 'q', { desc = 'Macro Recording' })
 keymap('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
@@ -41,7 +42,6 @@ keymap({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Void Delete' })
 keymap('v', '<Tab>', '>', { desc = 'Indent Right' })
 keymap('v', '<S-Tab>', '<', { desc = 'Indent Left' })
 keymap('n', '<C-a>', 'ggVG', { desc = 'Select All' })
--- keymap('n', '<leader>h', '<C-t>', { desc = 'Indent Left' })
 
 -- Aliases
 vim.cmd 'cabbrev Q q'

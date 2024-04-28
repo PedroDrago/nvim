@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', 'gr', require('telescope.builtin').lsp_references, 'References')
     map('n', 'gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
     map('n', 'gS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-    map('n', '<leader>s', vim.lsp.buf.rename, 'Rename') -- vim.cmd '[[:%s/<C-r><C-w>//g<Left><Left>]]' NOTE: Regex alternative.
+    map('n', '<leader>s', vim.lsp.buf.rename, 'Rename')
     map({ 'n', 'v' }, '<leader>c', vim.lsp.buf.code_action, 'Code Action')
     map('n', '<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
     map('n', 'K', vim.lsp.buf.hover, 'Hover Documentation')

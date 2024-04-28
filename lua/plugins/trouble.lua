@@ -6,7 +6,7 @@ return {
     { '<leader>x', '<cmd>TroubleToggle document_diagnostics<CR>', desc = 'Toggle Troubble' },
   },
   opts = {
-    auto_fold = true,
+    auto_fold = false,
     signs = {
       error = '',
       warning = '',
