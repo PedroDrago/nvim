@@ -37,7 +37,6 @@ return {
                 unpack(vim.api.nvim_get_runtime_file('', true)),
               },
             },
-            diagnostics = { disable = { 'missing-fields' } },
           },
         },
       },
@@ -46,7 +45,11 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua',
     })
-    require('mason').setup()
+    require('mason').setup {
+      ui = {
+        border = 'single',
+      },
+    }
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
     require('mason-lspconfig').setup {
       handlers = {
