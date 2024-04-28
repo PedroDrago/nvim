@@ -8,6 +8,8 @@
         "assign-type-mismatch",
         "redundant-parameter",
         "cast-local-type",
-        "missing-parameter"
+        "missing-parameter",
+        "unused-function",
+        "unused-local"
     ]
 }

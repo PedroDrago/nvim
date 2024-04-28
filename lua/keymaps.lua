@@ -5,7 +5,7 @@ keymap('n', 'q', '<nop>', { desc = 'Disable Default Macro Recording' })
 keymap('n', '<C-o>', '<nop>', { desc = 'Disable jump list' })
 keymap('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
 keymap('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keymap' })
-keymap('n', '<C-z>', '<nop>', { desc = 'Disable default block mode keymap' })
+keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
 
 -- Panels
 keymap('n', '<leader>a', '<cmd>vsplit <CR><cmd>set rnu<CR>', { desc = 'Vertical Split' })

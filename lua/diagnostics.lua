@@ -10,7 +10,7 @@ vim.api.nvim_create_user_command('DiagnosticsToggle', function()
     vim.cmd 'echo "Diagnostics On"'
   end
 end, { desc = 'Toggle LSP Diagnostics On/Off' })
-vim.diagnostic.config { -- :h vim.diagnostic.config
+vim.diagnostic.config {
   underline = true,
   update_in_insert = false,
   virtual_text = {

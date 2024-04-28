@@ -1,13 +1,12 @@
-local global = vim.g
+vim.loader.enable()
+local g = vim.g
 
-global.mapleader = ' '
-global.maplocalleader = ' '
-
-global.linting = false
-
-global.tokyonight = false
-global.gruvbox = false
-global.catppuccin = false
-global.rosepine = false
-global.onedark = false
-global.oxocarbon = false
+g.mapleader = ' '
+g.maplocalleader = ' '
+g.linting = false
+g.tokyonight = false
+g.gruvbox = false
+g.catppuccin = false
+g.rosepine = false
+g.onedark = false
+g.oxocarbon = false

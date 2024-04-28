@@ -6,14 +6,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
-  ui = {
-    -- border = 'single',
-  },
   spec = {
     { import = 'plugins' },
     { import = 'plugins.themes' },
-    { import = 'plugins.themes' },
-    { import = 'lsp.config' },
   },
   change_detection = { notify = false },
 }

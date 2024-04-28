@@ -36,6 +36,7 @@ return {
       dashboard.button('d', '  > Config', '<cmd>e $MYVIMRC | cd %:h<CR>'),
       -- dashboard.button('r', '  > Recent', "<cmd>lua require'telescope.builtin'.oldfiles()<CR>"),
       dashboard.button('l', '󰒲  > Lazy', '<cmd>Lazy<CR>'),
+      dashboard.button('t', '󰏫  > Theme', '<cmd>e' .. vim.fn.stdpath 'config' .. '/lua/colorscheme.lua<CR>'),
       dashboard.button('r', '  > Restart', '<cmd>:cq<CR>'),
       dashboard.button('q', '󰗼  > Quit', '<cmd>q!<CR>'),
     }
