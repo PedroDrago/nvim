@@ -23,10 +23,3 @@ opt.hlsearch = true -- Enable Highlight for previous search
 opt.termguicolors = true -- Enable 24-bit color in TUI
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.breakindent = true -- Indent wraped line segment
-
-vim.api.nvim_create_autocmd('TextYankPost', { -- Highlights yanked region
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
