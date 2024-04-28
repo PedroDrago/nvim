@@ -83,7 +83,6 @@ return {
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     require('dap-go').setup()
-    ---@diagnostic disable-next-line: missing-parameter
     require('nvim-dap-virtual-text').setup()
   end,
 }
