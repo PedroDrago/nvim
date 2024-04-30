@@ -25,6 +25,11 @@ create_autocmd({ 'BufEnter', 'FileType' }, {
   command = 'setlocal formatoptions-=c formatoptions-=r formatoptions-=o',
 })
 
+create_autocmd('FileType', {
+  desc = "don't auto comment new line",
+  pattern = 'cpp',
+  command = 'setlocal shiftwidth=4',
+})
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlights yanked region',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),

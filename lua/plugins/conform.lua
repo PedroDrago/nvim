@@ -6,6 +6,8 @@ return {
       notify_on_error = false,
       formatters_by_ft = {
         lua = { 'stylua' },
+        cpp = nil,
+        c = nil,
         -- lua = nil,
         go = { 'gofumpt' },
         markdown = nil, -- explicitly disable conform for filetype
