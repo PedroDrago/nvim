@@ -8,6 +8,7 @@ return {
     keywords = {
       ABOUT = { color = 'test' },
       SECTION = { color = 'test' },
+      DOC = { color = 'info' },
     },
   },
 }
