@@ -36,7 +36,7 @@ ls.add_snippets('cpp', {
     fmt(
       '#ifndef {}\
 #define {}\
-class {}{{\nprivate:\
+class {} {{\nprivate:\
 public:\
 \t{}();\
 \t{}({} &src);\
