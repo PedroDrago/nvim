@@ -36,7 +36,9 @@ ls.add_snippets('cpp', {
     fmt(
       '#ifndef {}\
 #define {}\
-class {} {{\nprivate:\
+class {} {{\
+private:\
+protected:\
 public:\
 \t{}();\
 \t{}({} &src);\
@@ -59,6 +61,33 @@ public:\
   ),
 })
 
+ls.add_snippets('cpp', {
+  snippet(
+    'classp',
+    fmt(
+      '#include "{}.hpp"\
+      \
+{}::{}(){{}};\
+{}::{}({} &src){{}}\
+{} &{}::operator=({} &src){{}}\
+{}::~{}(){{}};\
+',
+      {
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+        text(class_name),
+      }
+    )
+  ),
+})
 -- ls.add_snippets('cpp', {
 --   snippet(
 --     'class',

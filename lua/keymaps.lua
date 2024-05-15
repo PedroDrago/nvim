@@ -2,8 +2,8 @@ local keymap = vim.keymap.set
 -- Disables
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
 keymap('n', 'q', '<nop>', { desc = 'Disable Default Macro Recording' })
-keymap('n', '<C-o>', '<nop>', { desc = 'Disable jump list' })
-keymap('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
+-- keymap('n', '<C-o>', '<nop>', { desc = 'Disable jump list' })
+-- keymap('n', '<C-i>', '<nop>', { desc = 'Disable jump list' })
 keymap('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keymap' })
 keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
 
