@@ -1,7 +1,6 @@
 require 'globals'
 require 'options'
 require 'keymaps'
-require 'lsp_attach'
 require 'diagnostics'
 require 'autocmds'
 require 'colorscheme'

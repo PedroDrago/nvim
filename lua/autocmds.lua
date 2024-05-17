@@ -30,6 +30,7 @@ create_autocmd('FileType', {
   pattern = 'cpp',
   command = 'setlocal shiftwidth=4',
 })
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlights yanked region',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),

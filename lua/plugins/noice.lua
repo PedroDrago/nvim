@@ -4,7 +4,6 @@ return {
   event = 'VeryLazy',
   dependencies = {
     'MunifTanjim/nui.nvim',
-    -- 'rcarriga/nvim-notify',
   },
   config = function()
     require('noice').setup {
@@ -83,3 +82,4 @@ return {
     }
   end,
 }
+-- FIX: the commandline is current disapearing when using find n replace in buffer: https://github.com/folke/noice.nvim/issues/803
