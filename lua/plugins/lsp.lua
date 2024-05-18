@@ -85,6 +85,12 @@ return {
         border = 'single',
       },
     }
+    local lsp = require 'lspconfig'
+    lsp.util.default_config = vim.tbl_extend('force', lsp.util.default_config, { -- NOTE: THIS DISABLES SEMANTIC TOKENS, THIS IS SUPOSED TO SPEED UP LSP, BUT MAY BE IS NOT WORTH
+      on_attach = function(client)
+        client.server_capabilities.semanticTokensProvider = nil
+      end,
+    })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
     require('mason-lspconfig').setup {
       handlers = {

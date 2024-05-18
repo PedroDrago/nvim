@@ -80,6 +80,7 @@ return {
         },
       },
     }
+    vim.keymap.set('n', '<leader>n', '<cmd>Noice<CR>', { desc = 'Notifications', silent = true })
   end,
 }
 -- FIX: the commandline is current disapearing when using find n replace in buffer: https://github.com/folke/noice.nvim/issues/803

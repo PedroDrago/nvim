@@ -23,3 +23,9 @@ opt.hlsearch = true -- Enable Highlight for previous search
 opt.termguicolors = true -- Enable 24-bit color in TUI
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.breakindent = true -- Indent wraped line segment
+
+-- Indentation
+opt.tabstop = 4 -- A TAB character looks like 4 spaces (8 is neovim default)
+opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+opt.shiftwidth = 4 -- Number of spaces inserted when indenting
+opt.softtabstop = 4 -- Number of spaces inserted instead of a TAB character

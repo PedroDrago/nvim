@@ -1,14 +1,7 @@
 local diagnostics_enabled = true
 vim.api.nvim_create_user_command('DiagnosticsToggle', function()
-  if diagnostics_enabled then
-    vim.diagnostic.disable()
-    diagnostics_enabled = false
-    vim.cmd 'echo "Diagnostics Off"'
-  else
-    vim.diagnostic.enable()
-    diagnostics_enabled = true
-    vim.cmd 'echo "Diagnostics On"'
-  end
+  diagnostics_enabled = not diagnostics_enabled
+  vim.diagnostic.enable(diagnostics_enabled)
 end, { desc = 'Toggle LSP Diagnostics On/Off' })
 vim.diagnostic.config {
   underline = true,

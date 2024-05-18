@@ -32,7 +32,7 @@ local header_define = get_header_define()
 
 ls.add_snippets('cpp', {
   snippet(
-    'class',
+    'classh',
     fmt(
       '#ifndef {}\
 #define {}\

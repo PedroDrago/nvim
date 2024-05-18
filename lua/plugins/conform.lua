@@ -2,12 +2,16 @@ return {
   'stevearc/conform.nvim',
   cond = true,
   config = function()
+    local toggle_format_on_save = true
+    vim.api.nvim_create_user_command('ToggleFormat', function()
+      toggle_format_on_save = not toggle_format_on_save
+    end, { desc = 'Toggle Format on Save' })
     require('conform').setup {
       notify_on_error = false,
       formatters_by_ft = {
         lua = { 'stylua' },
-        cpp = nil,
         c = nil,
+        cpp = { 'clang-format' },
         -- lua = nil,
         go = { 'gofumpt' },
         markdown = nil, -- explicitly disable conform for filetype
@@ -17,15 +21,12 @@ return {
     vim.api.nvim_create_autocmd('BufWritePre', {
       pattern = '*',
       callback = function(args)
-        if vim.bo.filetype == '' then -- Disable format on save per filetype
+        if vim.bo.filetype == '' or not toggle_format_on_save then -- Disable format on save per filetype
           return
         end
         local disable_filetypes = { c = true, cpp = true } -- Disable lsp fallback per filetype
         require('conform').format { bufnr = args.buf, lsp_fallback = not disable_filetypes[vim.bo[args.buf].filetype] }
       end,
     })
-    vim.keymap.set('n', '<leader>p', function()
-      require('conform').format { async = true, lsp_fallback = true }
-    end, { desc = 'Format' })
   end,
 }

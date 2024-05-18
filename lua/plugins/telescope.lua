@@ -32,6 +32,12 @@ return {
       },
       pickers = {
         colorscheme = { enable_preview = true },
+        live_grep = {
+          additional_args = { '--fixed-strings' },
+        },
+        -- grep_string = {
+        --   additional_args = { '--fixed-strings' },
+        -- },
         find_files = {
           find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
         },

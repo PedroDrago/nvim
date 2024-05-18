@@ -13,15 +13,8 @@ return {
   config = function()
     local cmp_enabled = true
     vim.api.nvim_create_user_command('CmpToggle', function()
-      if cmp_enabled then
-        require('cmp').setup { enabled = false }
-        cmp_enabled = false
-        vim.cmd 'echo "Autocomplete Off"'
-      else
-        require('cmp').setup { enabled = true }
-        cmp_enabled = true
-        vim.cmd 'echo "Autocomplete On"'
-      end
+      cmp_enabled = not cmp_enabled
+      require('cmp').setup { enabled = cmp_enabled }
     end, { desc = 'Toggle Autocompletion On/Off' })
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
