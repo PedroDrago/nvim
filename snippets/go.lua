@@ -32,7 +32,7 @@ ls.add_snippets('go', {
 })
 
 ls.add_snippets('go', {
-  snipept('m', {
+  snipept('method', {
     text 'func ',
     text '(',
     insert(1, 'Receiver'),

@@ -24,8 +24,8 @@ keymap('n', '<down>', '<cmd>horizontal resize -2<cr>', { desc = 'Decrease Horizo
 
 -- Terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-keymap('n', '<leader>t', '<cmd>vsplit | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Vertical Terminal' })
-keymap('n', '<leader>T', '<cmd>botright split | horizontal resize -10 | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Horizontal Terminal' })
+keymap('n', '<leader>T', '<cmd>vsplit | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Vertical Terminal' })
+keymap('n', '<leader>t', '<cmd>botright split | horizontal resize -10 | set nonumber | set norelativenumber | set scl=no | terminal<CR>a', { desc = 'Horizontal Terminal' })
 
 -- Misc
 keymap('n', '<leader>r', [[:%s/<C-r><C-w>//g<Left><Left>]], { desc = 'Rename Word' })

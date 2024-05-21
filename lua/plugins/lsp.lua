@@ -10,6 +10,7 @@ return {
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
   config = function()
+    vim.lsp.set_log_level 'off' -- INFO: Change this to "debug" when needed
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
       callback = function(event)

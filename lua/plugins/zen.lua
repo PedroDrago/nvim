@@ -16,12 +16,12 @@ return {
       },
     },
     on_open = function(win)
-      vim.diagnostic.disable()
+      vim.diagnostic.enable(false)
       require('cmp').setup { enabled = false }
       vim.cmd 'highlight ZenBg guibg=guidfg' -- BUG: Remove when [Issue](https://github.com/folke/zen-mode.nvim/issues/115) has been resolved.
     end,
     on_close = function()
-      vim.diagnostic.enable()
+      vim.diagnostic.enable(true)
       require('cmp').setup.buffer { enabled = true }
     end,
   },
