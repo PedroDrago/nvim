@@ -1,3 +1,3 @@
 local opt = vim.opt_local
 
-opt.expandtab = false -- Just because NORM
+opt.expandtab = false -- NOTE: Just because NORM (Disable it after cub3d)
