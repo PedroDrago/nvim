@@ -31,7 +31,7 @@ return {
         map('n', '<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
         map('n', 'K', vim.lsp.buf.hover, 'Hover Documentation')
         map('n', 'J', vim.diagnostic.open_float, 'Expand Diagnostic')
-        map('n', 'S', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('n', 'H', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('n', 'gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
@@ -53,10 +53,21 @@ return {
     local servers = {
       clangd = {},
       gopls = {
-        settings = {
+        settings = { -- NOTE: https://github.com/golang/tools/blob/master/gopls/doc/settings.md
           gopls = {
-            hints = { enabled = true },
-            analyses = { unusedparams = true },
+            usePlaceholders = true,
+            hints = {
+              assignVariableTypes = true,
+              compositeLiteralFields = true,
+              compositeLiteralTypes = true,
+              constantValues = true,
+              functionTypeParameters = true,
+              parameterNames = true,
+              rangeVariableTypes = true,
+            },
+            analyses = {
+              unusedparams = false,
+            },
             staticcheck = true,
             gofumpt = true,
           },
@@ -65,7 +76,7 @@ return {
       lua_ls = {
         settings = {
           Lua = {
-            hint = { enabled = true },
+            hint = { enable = true },
             runtime = { version = 'LuaJIT' },
             codelens = { enabled = true },
             workspace = {

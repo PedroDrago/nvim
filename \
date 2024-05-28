@@ -6,10 +6,10 @@ end, { desc = 'Toggle LSP Diagnostics On/Off' })
 vim.diagnostic.config {
   underline = true,
   update_in_insert = false,
-  float = {
-    border = 'rounded',
-  },
   virtual_text = {
+    float = {
+      border = 'rounded',
+    },
     spacing = 4,
     source = vim.g.linting,
     prefix = function(diagnostic)
