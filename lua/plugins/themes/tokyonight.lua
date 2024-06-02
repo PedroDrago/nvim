@@ -11,9 +11,9 @@ return {
         functions = {},
         variables = {},
         sidebars = 'dark', -- dark, transparent or normal
-        floats = 'normal', -- dark, transparent or normal
+        floats = 'dark', -- dark, transparent or normal
       },
-      sidebars = { 'help' },
+      sidebars = { 'help', 'qf', 'terminal' },
       day_brightness = 0.5,
       hide_inactive_statusline = false,
       dim_inactive = false,
@@ -43,12 +43,11 @@ return {
       end,
     }
     local colors = {
-      -- border = 'none' -- NOTE:  No border | bg different than bg
-      -- winhighlight =
-      -- 'Normal:Pmenu,FloatBorder:Normal'
+      border = 'none', -- NOTE:  No border | bg different than bg
+      winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
 
-      border = 'rounded', --  NOTE: No border | bg different than bg
-      winhighlight = 'Normal:Normal',
+      -- border = 'rounded', --  NOTE: No border | bg different than bg
+      -- winhighlight = 'Normal:Normal',
     }
     local cmp = require 'cmp'
     cmp.setup {

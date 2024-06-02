@@ -7,7 +7,7 @@ vim.diagnostic.config {
   underline = true,
   update_in_insert = false,
   float = {
-    border = 'rounded',
+    border = 'none',
   },
   virtual_text = {
     spacing = 4,
