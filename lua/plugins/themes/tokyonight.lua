@@ -6,7 +6,7 @@ return {
   config = function()
     require('tokyonight').setup {
       styles = {
-        comments = { italic = false }, -- any attr-list value for :help nvim_set_hl
+        comments = { italic = true }, -- any attr-list value for :help nvim_set_hl
         keywords = { italic = false },
         functions = {},
         variables = {},

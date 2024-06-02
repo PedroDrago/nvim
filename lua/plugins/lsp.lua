@@ -34,9 +34,7 @@ return {
         map('n', 'K', vim.lsp.buf.hover, 'Hover Documentation')
         map('n', 'J', vim.diagnostic.open_float, 'Expand Diagnostic')
         map('n', 'S', vim.lsp.buf.signature_help, 'Signature Documentation')
-        map('i', '<C-s>', function()
-          vim.lsp.buf.signature_help()
-        end, 'Signature Documentation')
+        map('i', '<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('n', 'gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
