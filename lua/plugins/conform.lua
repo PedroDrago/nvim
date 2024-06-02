@@ -11,6 +11,7 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         c = nil,
+        sql = nil,
         cpp = { 'clang-format' },
         -- lua = nil,
         go = { 'gofumpt' },

@@ -6,7 +6,6 @@ return {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
-    { 'folke/neodev.nvim', opts = {} },
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
   config = function()
@@ -23,6 +22,9 @@ return {
         map('n', 'gd', function()
           require('telescope.builtin').lsp_definitions { reuse_win = false }
         end, 'Go to Definition')
+        map('n', 'ga', function()
+          require('telescope.builtin').lsp_definitions { reuse_win = false, jump_type = 'vsplit' }
+        end, 'Go to Definition in Split')
         map('n', 'gr', require('telescope.builtin').lsp_references, 'References')
         map('n', 'gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
         map('n', 'gS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
@@ -31,7 +33,10 @@ return {
         map('n', '<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
         map('n', 'K', vim.lsp.buf.hover, 'Hover Documentation')
         map('n', 'J', vim.diagnostic.open_float, 'Expand Diagnostic')
-        map('n', 'H', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('n', 'S', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('i', '<C-s>', function()
+          vim.lsp.buf.signature_help()
+        end, 'Signature Documentation')
         map('n', 'gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)

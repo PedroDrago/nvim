@@ -20,7 +20,7 @@ return {
     require('telescope').setup {
       defaults = {
         preview = {
-          treesitter = false,
+          treesitter = true, -- WARN: This lags a lot in large files
         },
         file_ignore_patterns = { '.git/', '.cache', '%.o', '%.a', '%.out', '%.pdf', '%.mkv', '%.mp4', '%.zip', 'node%_modules/.*' },
         selection_caret = ' ',
