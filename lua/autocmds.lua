@@ -38,3 +38,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+create_autocmd('TermOpen', {
+  desc = 'Setup Terminal Options',
+  callback = function()
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+    vim.opt_local.relativenumber = false
+    vim.opt_local.scl = 'no'
+    vim.cmd.startinsert()
+  end,
+})
