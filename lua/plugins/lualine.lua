@@ -10,7 +10,7 @@ return {
         component_separators = '|',
         section_separators = '',
         disabled_filetypes = { 'alpha' },
-        ignore_focus = { 'oil', 'grapple', 'TelescopePrompt' },
+        ignore_focus = { 'oil', 'grapple', 'TelescopePrompt', 'minifiles' },
         refresh = {
           statusline = 1000,
           tabline = 1000,
