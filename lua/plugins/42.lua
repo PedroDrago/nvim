@@ -1,7 +1,7 @@
 return { -- TODO: Remove When finished cub3d
   {
     'PedroDrago/c_formatter_42.vim',
-    cond = true,
+    cond = false,
     event = { 'BufReadPre', 'BufNewFile' },
     vim.api.nvim_create_user_command('Norm', '<cmd>CFormatter42', {}),
   },
