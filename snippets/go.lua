@@ -58,3 +58,40 @@ ls.add_snippets('go', {
     insert(3),
   }),
 })
+
+ls.add_snippets('go', {
+  snipept('timeout', {
+    text 'ctx, cancel := context.WithTimeout(context.Background(), ',
+    insert(1, 'Time'),
+    text { '*time.' },
+    insert(2, 'Unit'),
+    text { ')', '' },
+    text { 'defer cancel()', '' },
+  }),
+})
+
+ls.add_snippets('go', {
+  snipept('switch', {
+    text { 'switch {', '' },
+    text { 'case ' },
+    insert(1, ''),
+    text { ':', '\t' },
+    insert(2, ''),
+    text { '', 'default: ', '\t' },
+    insert(3, ''),
+
+    text { '', '}' },
+  }),
+})
+
+ls.add_snippets('go', {
+  snipept('handler', {
+    text { 'func (' },
+    insert(1, 'receiver'),
+    text { ') ' },
+    insert(2, 'handler'),
+    text { '(writer http.ResponseWriter, req *http.Request) {', '\t' },
+    insert(3, ''),
+    text { '', '}' },
+  }),
+})
