@@ -3,6 +3,9 @@ return {
   cond = vim.g.tokyonight,
   lazy = false,
   priority = 1000,
+  init = function()
+    vim.cmd [[colorscheme tokyonight-night]]
+  end,
   config = function()
     require('tokyonight').setup {
       styles = {
@@ -18,26 +21,26 @@ return {
       hide_inactive_statusline = false,
       dim_inactive = false,
       lualine_bold = false,
-      -----------------------------------
+      --   -----------------------------------
       ---@param colors ColorScheme
       on_colors = function(colors)
-        colors.gitSigns.add = '#B3F6C0'
-        colors.gitSigns.change = '#8CF8F7'
-        colors.gitSigns.delete = '#FFC0B9'
+        colors.git.add = '#B3F6C0'
+        colors.git.change = '#8CF8F7'
+        colors.git.delete = '#FFC0B9'
       end,
       ---@param hl Highlights
       ---@param colors ColorScheme
       on_highlights = function(hl, colors)
         hl.MiniDiffSignAdd = {
-          fg = colors.gitSigns.add,
+          fg = colors.git.add,
           bg = '',
         }
         hl.MiniDiffSignChange = {
-          fg = colors.gitSigns.change,
+          fg = colors.git.change,
           bg = '',
         }
         hl.MiniDiffSignDelete = {
-          fg = colors.gitSigns.delete,
+          fg = colors.git.delete,
           bg = '',
         }
       end,
@@ -63,9 +66,5 @@ return {
         },
       },
     }
-  end,
-  init = function()
-    vim.cmd.colorscheme 'tokyonight-night'
-    -- vim.cmd.colorscheme 'tokyonight-storm'
   end,
 }
