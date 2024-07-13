@@ -21,15 +21,11 @@ return {
       hide_inactive_statusline = false,
       dim_inactive = false,
       lualine_bold = false,
-      --   -----------------------------------
-      ---@param colors ColorScheme
       on_colors = function(colors)
         colors.git.add = '#B3F6C0'
         colors.git.change = '#8CF8F7'
         colors.git.delete = '#FFC0B9'
       end,
-      ---@param hl Highlights
-      ---@param colors ColorScheme
       on_highlights = function(hl, colors)
         hl.MiniDiffSignAdd = {
           fg = colors.git.add,

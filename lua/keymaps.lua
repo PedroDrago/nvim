@@ -2,7 +2,6 @@ local keymap = vim.keymap.set
 -- Disables
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
 keymap('n', 'q', '<nop>', { desc = 'Disable Default Macro Recording' })
-keymap('n', '<C-q>', '<nop>', { desc = 'Disable default block mode keymap' })
 keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
 
 -- Panels
@@ -35,7 +34,6 @@ keymap('n', 'qq', 'q', { desc = 'Macro Recording' })
 keymap('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 keymap('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
 keymap('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
-keymap('n', 'B', '<C-v>', { desc = 'Visual Block' })
 keymap({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Void Delete' })
 keymap('v', '<Tab>', '>', { desc = 'Indent Right' })
 keymap('v', '<S-Tab>', '<', { desc = 'Indent Left' })

@@ -2,6 +2,9 @@ return {
   'nvim-lualine/lualine.nvim',
   cond = true,
   opts = {},
+  dependencies = {
+    'AndreM222/copilot-lualine',
+  },
   config = function()
     require('lualine').setup {
       options = {
@@ -20,9 +23,8 @@ return {
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        -- lualine_c = { 'filename', },
-        lualine_c = { 'filename', { require('noice').api.statusline.mode.get, cond = require('noice').api.statusline.mode.has, color = { fg = '#ff9e64' } } },
-        lualine_x = { 'grapple', 'filetype' },
+        lualine_c = { 'filename' },
+        lualine_x = { 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
       },
