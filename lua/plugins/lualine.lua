@@ -2,10 +2,14 @@ return {
   'nvim-lualine/lualine.nvim',
   cond = true,
   opts = {},
-  dependencies = {
-    'AndreM222/copilot-lualine',
-  },
   config = function()
+    local function copilot()
+      local client = vim.lsp.get_active_clients({ name = 'copilot' })[1]
+      if client == nil then
+        return ' '
+      end
+      return ' '
+    end
     require('lualine').setup {
       options = {
         icons_enabled = true,
@@ -24,7 +28,7 @@ return {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = { 'filename' },
-        lualine_x = { 'filetype' },
+        lualine_x = { copilot, 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
       },
