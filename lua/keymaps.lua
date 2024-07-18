@@ -8,10 +8,10 @@ keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
 keymap('n', '<leader>a', '<cmd>vsplit <CR><cmd>set rnu<CR>', { desc = 'Vertical Split' })
 keymap('n', '<leader>A', '<cmd>split <CR><cmd>set rnu<CR>', { desc = 'Horizontal Split' })
 keymap('n', '<leader>q', '<cmd>q<CR>', { desc = 'Close Buffer' })
-keymap('n', '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
-keymap('n', '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
-keymap('n', '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
-keymap('n', '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
+keymap({ 'n', 'i' }, '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
+keymap({ 'n', 'i' }, '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
+keymap({ 'n', 'i' }, '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
+keymap({ 'n', 'i' }, '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 keymap('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Panels' })
 keymap('n', '<leader>v', '<cmd>wincmd J<CR>', { desc = 'Verticalize Panels' })
 keymap('n', '<leader>V', '<cmd>wincmd L<CR>', { desc = 'Horizontalize Panels' })
@@ -59,3 +59,5 @@ vim.cmd 'cabbrev gcm Git commit -m '
 vim.cmd 'cabbrev gl Git log'
 vim.cmd 'cabbrev gp Git push'
 vim.cmd 'cabbrev gpl Git pull'
+
+vim.cmd 'cabbrev copilot Copilot'

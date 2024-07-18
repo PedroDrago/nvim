@@ -31,6 +31,7 @@ return {
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',
+          symbol_map = { Copilot = '' },
           menu = {
             nvim_lsp = '',
             luasnip = '',
@@ -69,6 +70,7 @@ return {
         end, { 'i', 's' }),
       },
       sources = {
+        { name = 'copilot' },
         { name = 'nvim_lsp', max_item_count = 30 },
         { name = 'luasnip' },
         { name = 'path' },

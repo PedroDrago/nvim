@@ -27,6 +27,9 @@ return {
         colors.git.delete = '#FFC0B9'
       end,
       on_highlights = function(hl, colors)
+        hl.LineNr = {
+          fg = colors.orange,
+        }
         hl.MiniDiffSignAdd = {
           fg = colors.git.add,
           bg = '',
@@ -42,11 +45,11 @@ return {
       end,
     }
     local colors = {
-      border = 'none', -- NOTE:  No border | bg different than bg
-      winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
+      -- border = 'none', -- NOTE:  Unbordered Dark bg
+      -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
 
-      -- border = 'rounded', --  NOTE: No border | bg different than bg
-      -- winhighlight = 'Normal:Normal',
+      border = 'rounded', --  NOTE: Bordered Dark bg
+      winhighlight = 'Normal:Pmenu',
     }
     local cmp = require 'cmp'
     cmp.setup {
