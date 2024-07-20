@@ -31,7 +31,7 @@ return {
       formatting = {
         format = lspkind.cmp_format {
           mode = 'symbol_text',
-          symbol_map = { Copilot = '' },
+          symbol_map = { Copilot = '', Supermaven = '' },
           menu = {
             nvim_lsp = '',
             luasnip = '',
@@ -70,11 +70,13 @@ return {
         end, { 'i', 's' }),
       },
       sources = {
+        { name = 'supermaven' },
         { name = 'copilot' },
         { name = 'nvim_lsp', max_item_count = 30 },
         { name = 'luasnip' },
         { name = 'path' },
       },
     }
+    vim.api.nvim_set_hl(0, 'CmpItemKindSupermaven', { fg = '#6CC644' })
   end,
 }
