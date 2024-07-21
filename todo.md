@@ -1,1 +1,1 @@
-- [ ] Curent problems is
+- [ ] Curent problems is bigfiles (i've tried a couple bigfile plugins but couldn't got neither to work). Biggest issue seems to be treesitter in large files.
