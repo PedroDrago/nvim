@@ -70,8 +70,8 @@ return {
         end, { 'i', 's' }),
       },
       sources = {
-        { name = 'supermaven' },
-        { name = 'copilot' },
+        -- { name = 'supermaven' },
+        -- { name = 'copilot' },
         { name = 'nvim_lsp', max_item_count = 30 },
         { name = 'luasnip' },
         { name = 'path' },
