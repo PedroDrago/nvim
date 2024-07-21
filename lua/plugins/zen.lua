@@ -18,7 +18,7 @@ return {
     on_open = function(win)
       vim.diagnostic.enable(false)
       require('cmp').setup { enabled = false }
-      vim.cmd 'highlight ZenBg guibg=guidfg' -- BUG: Remove when [Issue](https://github.com/folke/zen-mode.nvim/issues/115) has been resolved.
+      -- TODO: Maybe disable supermaven
     end,
     on_close = function()
       vim.diagnostic.enable(true)

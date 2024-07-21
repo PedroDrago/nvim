@@ -4,6 +4,7 @@ return {
     cond = true,
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
+      require('mini.hipatterns').setup { highlighters = { require('mini.hipatterns').gen_highlighter.hex_color() } }
       require('mini.git').setup { n_lines = 500 }
       require('mini.ai').setup { n_lines = 500 }
       require('mini.surround').setup()
