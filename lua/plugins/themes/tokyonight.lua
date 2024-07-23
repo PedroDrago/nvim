@@ -45,10 +45,10 @@ return {
       end,
     }
     local colors = {
-      -- border = 'none', -- NOTE:  Unbordered Dark bg
+      border = 'none', -- NOTE:  Unbordered Dark bg
       -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
 
-      border = 'rounded', --  NOTE: Bordered Dark bg
+      -- border = 'rounded', --  NOTE: Bordered Dark bg
       winhighlight = 'Normal:Pmenu',
     }
     local cmp = require 'cmp'
