@@ -1,4 +1,5 @@
 return {
+  -- TODO: Configure the plugin
   enabled = false,
   'MeanderingProgrammer/markdown.nvim',
   main = 'render-markdown',
