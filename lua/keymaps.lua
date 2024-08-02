@@ -42,6 +42,9 @@ keymap('v', '>', '>gv', { noremap = true, silent = true })
 keymap('v', '<Tab>', '>gv', { desc = 'Indent Right' })
 keymap('v', '<S-Tab>', '<gv', { desc = 'Indent Left' })
 keymap('x', 'p', [[<Cmd>silent! normal! "_dP<CR>]], { noremap = true, silent = true }) -- NOTE: QOL keymap for pasting in visual mode
+
+keymap('n', 'j', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']], { expr = true, desc = 'Add jumps to jumplist' })
+keymap('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr = true, desc = 'Add jumps to jumplist' })
 -- Aliases
 vim.cmd 'cabbrev Q q'
 vim.cmd 'cabbrev Qa qa'
