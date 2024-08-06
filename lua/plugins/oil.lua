@@ -45,7 +45,7 @@ return {
       },
     }
   end,
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  -- dependencies = { 'nvim-tree/nvim-web-devicons' },
   vim.keymap.set('n', '<leader>e', function()
     require('oil').toggle_float()
   end, { desc = 'Oil Float' }),

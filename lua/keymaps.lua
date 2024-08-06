@@ -30,7 +30,7 @@ keymap('n', '<leader>t', '<cmd>botright split | horizontal resize -10 | terminal
 keymap('n', '<leader>r', [[:%s/<C-r><C-w>//g<Left><Left>]], { desc = 'Rename Word' })
 keymap('v', '<leader>s', [[:s///g<Left><Left><Left>]], { desc = 'Rename Word In Selected Region' })
 keymap('n', '<F1>', '<cmd>Alpha<CR>', { desc = 'Macro Recording' })
-keymap('n', 'qq', 'q', { desc = 'Macro Recording' })
+-- keymap('n', 'qq', 'q', { desc = 'Macro Recording' })
 keymap('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 keymap('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
 keymap('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
