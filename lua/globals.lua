@@ -10,3 +10,6 @@ g.catppuccin = false
 g.rosepine = false
 g.onedark = false
 g.oxocarbon = false
+-- TODO: Remove below when cub3d is finished
+g.mail42 = 'pdrago@student.42.rio'
+g.user42 = 'pdrago'

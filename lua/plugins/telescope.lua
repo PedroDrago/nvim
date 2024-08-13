@@ -35,12 +35,10 @@ return {
       },
       pickers = {
         colorscheme = { enable_preview = true },
-        live_grep = {
+        live_grep = { -- TODO: Sizing is shit, fix it (more width)
           additional_args = { '--fixed-strings' },
+          theme = 'dropdown',
         },
-        -- grep_string = {
-        --   additional_args = { '--fixed-strings' },
-        -- },
         find_files = {
           find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
         },
@@ -66,14 +64,9 @@ return {
     vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Search Files' })
     vim.keymap.set('n', '<leader>g', builtin.grep_string, { desc = 'Search Word' })
     vim.keymap.set('n', '<leader>?', builtin.builtin, { desc = 'Search Pickers' })
-    vim.keymap.set('n', '<leader>/', function()
-      builtin.live_grep {
-        prompt_title = 'Grep',
-      }
-    end, { desc = 'Live Grep' })
+    vim.keymap.set('n', '<leader>/', builtin.live_grep, { desc = 'Live Grep' })
     vim.keymap.set('n', '<leader>b', function()
       builtin.buffers(require('telescope.themes').get_dropdown {
-        -- winblend = 10,
         previewer = false,
       })
     end, { desc = 'Search Buffers' })

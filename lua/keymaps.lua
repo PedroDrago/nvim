@@ -67,3 +67,6 @@ vim.cmd 'cabbrev gp Git push'
 vim.cmd 'cabbrev gpl Git pull'
 
 vim.cmd 'cabbrev copilot Copilot'
+
+vim.cmd 'cabbrev neck NoNeckPain'
+vim.cmd 'cabbrev nec NoNeckPain'
