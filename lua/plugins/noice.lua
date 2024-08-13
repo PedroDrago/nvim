@@ -79,6 +79,6 @@ return {
         },
       },
     }
-    vim.keymap.set('n', '<leader>n', '<cmd>Noice<CR>', { desc = 'Notifications', silent = true })
+    -- vim.keymap.set('n', '<leader>n', '<cmd>Noice<CR>', { desc = 'Notifications', silent = true })
   end,
 }

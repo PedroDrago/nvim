@@ -3,12 +3,12 @@ return {
   main = 'ibl',
   config = function()
     require('ibl').setup {
-      scope = { enabled = true },
-      enabled = true,
+      enabled = false,
       indent = {
         char = '│',
         tab_char = '│',
       },
+      scope = { enabled = false },
       exclude = {
         filetypes = {
           'help',
