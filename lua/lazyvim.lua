@@ -9,6 +9,7 @@ require('lazy').setup {
   spec = {
     { import = 'plugins' },
     { import = 'plugins.themes' },
+    { import = 'plugins.langs' },
   },
   change_detection = { notify = false },
 }
