@@ -4,7 +4,7 @@ return {
   priority = 1000,
   config = true,
   opts = function()
-    vim.g.gruvbox_material_foreground = 'mix' -- material, original, mix
+    vim.g.gruvbox_material_foreground = 'original' -- material, original, mix
     vim.g.gruvbox_material_background = 'medium' -- hard, medium, soft
     vim.g.gruvbox_material_ui_contrast = 'high' -- low, high
     vim.g.gruvbox_material_diagnostic_virtual_text = 'highlighted' -- grey, colored, highlighted
@@ -28,10 +28,11 @@ return {
     -- vim.g.gruvbox_material_enable_italic = '0' -- '0', '1'
     -- vim.g.gruvbox_material_enable_bold = '0' -- '0', '1'
     -- vim.g.gruvbox_material_disable_italic_comment = '0' -- '0', '1'
+  end,
+  init = function()
     local colors = {
-      -- border = 'none' --  NOTE: No border | bg different than bg
-      -- winhighlight =
-      -- 'Normal:NormalFloat,FloatBorder:NormalFloat'
+      -- border = 'none', --  NOTE: No border | bg different than bg
+      -- winhighlight = 'Normal:Pmenu',
 
       border = 'rounded', --  NOTE: thin border | bg equal to bg.
       winhighlight = 'Normal:Normal,FloatBorder:Normal',
@@ -50,13 +51,10 @@ return {
         },
       },
     }
-  end,
-  init = function()
     vim.cmd.colorscheme 'gruvbox-material'
     -- TODO: The foreground is reseting. Learn to change only bg for hilight group instad of whole group
-    -- vim.cmd [[hi NormalFloat bg = '']]
     vim.cmd [[hi FloatBorder guibg = Normal]]
-    vim.cmd [[hi NormalFloat guibg = Normal]]
+    -- vim.cmd [[hi NormalFloat guibg = Normal]] -- NOTE: lsp.hover | bg equal to bg
     vim.cmd [[hi FloatTitle guibg = Normal]]
     -- vim.api.nvim_set_hl(0, 'NormalFloat', {})
     -- vim.api.nvim_set_hl(0, 'FloatBorder', {})
