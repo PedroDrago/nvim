@@ -53,6 +53,7 @@ return {
     }
     vim.cmd.colorscheme 'gruvbox-material'
     -- TODO: The foreground is reseting. Learn to change only bg for hilight group instad of whole group
+    -- TODO: Find some way to change the color of the line number only for the current line (hilight LineNr, CursorLineNr, etc.)
     vim.cmd [[hi FloatBorder guibg = Normal]]
     -- vim.cmd [[hi NormalFloat guibg = Normal]] -- NOTE: lsp.hover | bg equal to bg
     vim.cmd [[hi FloatTitle guibg = Normal]]
