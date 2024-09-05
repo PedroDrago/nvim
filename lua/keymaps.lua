@@ -1,7 +1,6 @@
 local keymap = vim.keymap.set
 -- Disables
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
-keymap('n', 'q', '<nop>', { desc = 'Disable Default Macro Recording' })
 keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
 
 -- Panels

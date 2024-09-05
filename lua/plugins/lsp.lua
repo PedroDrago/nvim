@@ -32,7 +32,7 @@ return {
         map({ 'n', 'v' }, '<leader>c', vim.lsp.buf.code_action, 'Code Action')
         map('n', '<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
         map('n', 'K', vim.lsp.buf.hover, 'Hover Documentation')
-        map('n', 'J', vim.diagnostic.open_float, 'Expand Diagnostic')
+        map('n', 'H', vim.diagnostic.open_float, 'Expand Diagnostic')
         map('n', 'S', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('i', '<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
         map('n', 'gD', vim.lsp.buf.declaration, 'Goto Declaration')

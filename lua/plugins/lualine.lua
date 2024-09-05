@@ -27,11 +27,18 @@ return {
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = { 'filename' },
+        lualine_c = {
+          'filename',
+          {
+            require('noice').api.status.mode.get,
+            cond = require('noice').api.status.mode.has,
+            color = { fg = '#ff9e64' },
+          },
+        },
         lualine_x = { 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' },
       },
+      lualine_y = { 'progress' },
+      lualine_z = { 'location' },
     }
   end,
 }
