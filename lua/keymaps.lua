@@ -34,7 +34,7 @@ keymap('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 keymap('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
 keymap('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Quit Search' })
 keymap({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Void Delete' })
-keymap('n', '<C-a>', 'ggVG', { desc = 'Select All' })
+-- keymap('n', '<C-a>', 'ggVG', { desc = 'Select All' })
 
 keymap('v', '<', '<gv', { noremap = true, silent = true })
 keymap('v', '>', '>gv', { noremap = true, silent = true })
