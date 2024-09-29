@@ -1,1 +1,1 @@
-vim.g.gruvbox = true
+vim.g.tokyonight = true
