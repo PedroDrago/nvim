@@ -3,7 +3,6 @@ return {
   cond = true,
   keys = {
     { '<leader>S', '<cmd>lua require("spectre").toggle()<cr><cmd>lua require("spectre").change_view()<CR>', desc = 'Spectre' },
-    -- { '<leader>SW', '<cmd>lua require("spectre").open_visual({select_word=true})<CR><cmd>lua require("spectre").change_view()<CR>', desc = 'Spectre Word', silent = true },
   },
   opts = {
     is_block_ui_break = true,
@@ -19,8 +18,5 @@ return {
         desc = 'replace all',
       },
     },
-    -- vim.keymap.set('v', '<leader>SW', '<esc><cmd>lua require("spectre").open_visual()<CR><cmd>lua require("spectre").change_view()<CR>', {
-    --   desc = 'Spectre Word',
-    -- }),
   },
 }

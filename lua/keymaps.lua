@@ -15,10 +15,10 @@ keymap('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Panels' })
 keymap('n', '<leader>v', '<cmd>wincmd J<CR>', { desc = 'Verticalize Panels' })
 keymap('n', '<leader>V', '<cmd>wincmd L<CR>', { desc = 'Horizontalize Panels' })
 keymap('n', '<leader>=', '<C-w><C-=>', { desc = 'Equalize Panels' })
-keymap('n', '<left>', '<cmd>vertical resize +5<cr>', { desc = 'Increase Vertical Split size' })
-keymap('n', '<right>', '<cmd>vertical resize -5<cr>', { desc = 'Decrease Vertical Split size' })
-keymap('n', '<up>', '<cmd>horizontal resize +2<cr>', { desc = 'Increase Horizontal Split size' })
-keymap('n', '<down>', '<cmd>horizontal resize -2<cr>', { desc = 'Decrease Horizontal Split size' })
+-- keymap('n', '<left>', '<cmd>vertical resize +5<cr>', { desc = 'Increase Vertical Split size' })
+-- keymap('n', '<right>', '<cmd>vertical resize -5<cr>', { desc = 'Decrease Vertical Split size' })
+-- keymap('n', '<up>', '<cmd>horizontal resize +2<cr>', { desc = 'Increase Horizontal Split size' })
+-- keymap('n', '<down>', '<cmd>horizontal resize -2<cr>', { desc = 'Decrease Horizontal Split size' })
 
 -- Terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
@@ -66,6 +66,3 @@ vim.cmd 'cabbrev gp Git push'
 vim.cmd 'cabbrev gpl Git pull'
 
 vim.cmd 'cabbrev copilot Copilot'
-
-vim.cmd 'cabbrev neck NoNeckPain'
-vim.cmd 'cabbrev nec NoNeckPain'
