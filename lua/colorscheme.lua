@@ -1,1 +1,0 @@
-vim.g.tokyonight = true
