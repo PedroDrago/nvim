@@ -7,6 +7,14 @@ return {
   },
   config = function()
     require('noice').setup {
+      messages = {
+        enabled = true,
+        view = 'notify', -- default view for messages
+        view_error = 'notify', -- view for errors
+        view_warn = 'notify', -- view for warnings
+        view_history = 'messages', -- view for :messages
+        view_search = 'virtualtext', -- view for search count messages. Set to `false` to disable
+      },
       routes = {
         { filter = {
           event = 'msg_show',

@@ -4,7 +4,7 @@ opt.background = 'dark'
 opt.linebreak = true
 opt.number = true --Line Numbers
 opt.relativenumber = true -- Relative line Numbers
-opt.mouse = '' -- Enables mouse on all modes
+opt.mouse = 'ivc' -- Enables mouse on all modes
 opt.showmode = false -- Hide mode since I have a status line
 opt.clipboard = 'unnamedplus' -- Shares clipboard with OS
 opt.undofile = true -- Enable undo files
@@ -24,7 +24,7 @@ opt.termguicolors = true -- Enable 24-bit color in TUI
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.breakindent = true -- Indent wraped line segment
 opt.smoothscroll = true
--- opt.cmdheight = 0 -- set to 0 to hide the command bar (only if noice is disabled)
+opt.cmdheight = 0 -- set to 0 to hide the command bar (only if noice is disabled)
 
 -- Indentation
 opt.tabstop = 4 -- A TAB character looks like 4 spaces (8 is neovim default)

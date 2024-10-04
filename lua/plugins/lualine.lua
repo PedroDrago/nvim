@@ -19,7 +19,7 @@ return {
         disabled_filetypes = { 'alpha' },
         ignore_focus = { 'oil', 'grapple', 'TelescopePrompt', 'minifiles' },
         refresh = {
-          statusline = 1000,
+          statusline = 100,
           tabline = 1000,
           winbar = 1000,
         },
