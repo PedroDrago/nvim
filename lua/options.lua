@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+opt.lazyredraw = false -- Testing if improves performance
 opt.background = 'dark'
 opt.linebreak = true
 opt.number = true --Line Numbers
