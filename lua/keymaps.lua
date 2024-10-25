@@ -1,5 +1,18 @@
 local keymap = vim.keymap.set
 
+keymap('n', 'dd', function()
+  if vim.api.nvim_get_current_line():match '^%s*$' then
+    return '"_dd'
+  else
+    return 'dd'
+  end
+end, { noremap = true, expr = true })
+keymap('i', '<C-BS>', '<C-w>', { noremap = true })
+keymap('c', '<C-BS>', '<C-w>', { noremap = true })
+keymap('x', '/', '<Esc>/\\%V', { noremap = true })
+
+-- NOTE: Above keymaps Inspiration from [https://github.com/Abstract-IDE/abstract-autocmds](abstract-autocmds)
+
 -- Disables
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
 keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
@@ -19,7 +32,7 @@ keymap('n', '<leader>=', '<C-w><C-=>', { desc = 'Equalize Panels' })
 
 -- Terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-keymap('n', '<leader>T', '<cmd>vsplit | setlocal nonumber | setlocal norelativenumber | setlocal scl=no | terminal<CR>a', { desc = 'Vertical Terminal' })
+keymap('n', '<leader>T', '<cmd>vsplit | setlocal nonumber | setlocal norelativenumber | setlocal scl=no | terminal<CR>', { desc = 'Vertical Terminal' })
 keymap('n', '<leader>t', '<cmd>botright split | horizontal resize -10 | terminal<CR>', { desc = 'Horizontal Terminal' })
 
 -- Misc

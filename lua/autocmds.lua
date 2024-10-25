@@ -49,3 +49,9 @@ create_autocmd('TermOpen', {
     vim.cmd.startinsert()
   end,
 })
+
+create_autocmd('BufWinEnter', {
+  desc = 'clear the last used search pattern',
+  pattern = '*',
+  command = "let @/ = ''",
+})

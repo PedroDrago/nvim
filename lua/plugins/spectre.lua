@@ -13,7 +13,7 @@ return {
         desc = 'send all items to quickfix',
       },
       ['run_replace'] = {
-        map = '<leader><CR>',
+        map = '<CR>',
         cmd = "<cmd>lua require('spectre.actions').run_replace()<cr>",
         desc = 'replace all',
       },
