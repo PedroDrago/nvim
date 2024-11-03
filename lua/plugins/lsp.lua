@@ -4,11 +4,12 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
     'williamboman/mason.nvim',
+    'saghen/blink.cmp',
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
-  config = function()
+  config = function(_, opts)
     vim.keymap.set('n', '<leader>i', function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
     end, { desc = 'Toggle Inlay Hints', silent = true })
@@ -52,7 +53,7 @@ return {
       end,
     })
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+    -- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
     local servers = {
       clangd = {},
       gopls = {
@@ -104,11 +105,15 @@ return {
       },
     }
     local lsp = require 'lspconfig'
-    lsp.util.default_config = vim.tbl_extend('force', lsp.util.default_config, { -- NOTE: THIS DISABLES SEMANTIC TOKENS, THIS IS SUPOSED TO SPEED UP LSP, BUT MAY BE IS NOT WORTH
-      on_attach = function(client)
-        client.server_capabilities.semanticTokensProvider = nil
-      end,
-    })
+    -- lsp.util.default_config = vim.tbl_extend('force', lsp.util.default_config, { -- NOTE: THIS DISABLES SEMANTIC TOKENS, THIS IS SUPOSED TO SPEED UP LSP, BUT MAY BE IS NOT WORTH
+    --   on_attach = function(client)
+    --     client.server_capabilities.semanticTokensProvider = nil
+    --   end,
+    -- })
+    for server, config in pairs(servers) do
+      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+      lsp[server].setup(config)
+    end
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
     require('mason-lspconfig').setup {
       handlers = {
