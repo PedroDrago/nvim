@@ -52,6 +52,7 @@ return {
       mapping = cmp.mapping.preset.insert {
         -- TODO: Find ideal mapping for confirming completion (confortable on any setup/keyboard and works on every terminal existent)
         ['<C-y>'] = cmp.mapping.confirm { select = true },
+        ['<C-i>'] = cmp.mapping.confirm { select = true },
         ['<C-Enter>'] = cmp.mapping.confirm { select = true },
         ['<C-CR>'] = cmp.mapping.confirm { select = true },
         ['<C-Return>'] = cmp.mapping.confirm { select = true },
