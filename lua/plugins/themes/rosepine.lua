@@ -1,6 +1,5 @@
 return {
   'rose-pine/neovim',
-  cond = vim.g.rosepine,
   name = 'rose-pine',
   config = function()
     require('rose-pine').setup {
@@ -79,12 +78,5 @@ return {
         scrollbar = false,
       },
     }
-  end,
-
-  init = function()
-    vim.cmd.colorscheme 'rose-pine'
-    vim.cmd [[hi FloatBorder guibg = Normal]]
-    vim.cmd [[hi NormalFloat guibg = Normal]]
-    vim.cmd [[hi FloatTitle guibg = Normal]]
   end,
 }

@@ -61,7 +61,7 @@ return {
     pcall(require('telescope').load_extension, 'ui-select')
 
     local builtin = require 'telescope.builtin'
-    vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Search Files' })
+    vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Telescope Search Files' })
     vim.keymap.set('n', '<leader>g', builtin.grep_string, { desc = 'Search Word' })
     vim.keymap.set('n', '<leader>?', builtin.builtin, { desc = 'Search Pickers' })
     vim.keymap.set('n', '<leader>/', builtin.live_grep, { desc = 'Live Grep' })

@@ -1,6 +1,5 @@
 return {
   'catppuccin/nvim',
-  cond = vim.g.catppuccin,
   name = 'catppuccin',
   priority = 1000,
   config = function()
@@ -62,11 +61,5 @@ return {
         scrollbar = false,
       },
     }
-  end,
-  init = function()
-    vim.cmd.colorscheme 'catppuccin'
-    vim.cmd [[hi FloatBorder guibg = Normal]]
-    vim.cmd [[hi NormalFloat guibg = Normal]]
-    vim.cmd [[hi FloatTitle guibg = Normal]]
   end,
 }

@@ -1,6 +1,5 @@
 return {
   'navarasu/onedark.nvim',
-  cond = vim.g.onedark,
   priority = 1000,
   config = function()
     require('onedark').setup {
@@ -49,11 +48,5 @@ return {
         scrollbar = false,
       },
     }
-  end,
-  init = function()
-    vim.cmd.colorscheme 'onedark'
-    vim.cmd [[hi FloatBorder guibg = Normal]]
-    vim.cmd [[hi NormalFloat guibg = Normal]]
-    vim.cmd [[hi FloatTitle guibg = Normal]]
   end,
 }

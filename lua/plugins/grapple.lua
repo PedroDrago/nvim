@@ -12,10 +12,10 @@ return {
         vim.cmd [[ Grapple toggle ]]
         vim.cmd [[ echo "Grappled" ]]
       end,
-      desc = 'Grapple toggle tag',
+      desc = 'Grapple Tag',
     },
-    { '<leader><Tab>', '<cmd>Grapple toggle_tags<cr>', desc = 'Grapple open tags window' },
-    { '<leader>w', '<cmd>Grapple cycle_tags next<cr>', desc = 'Grapple cycle next tag' },
+    { '<leader><Tab>', '<cmd>Grapple toggle_tags<cr>', desc = 'Grapple Menu' },
+    { '<leader>w', '<cmd>Grapple cycle_tags next<cr>', desc = 'Grapple Cycle' },
     -- { '<leader>p', '<cmd>Grapple cycle_tags prev<cr>', desc = 'Grapple cycle previous tag' },
   },
 }

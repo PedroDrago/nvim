@@ -2,6 +2,9 @@ return {
   'stevearc/conform.nvim',
   cond = true,
   config = function()
+    vim.keymap.set('n', '<leader>=', function()
+      require('conform').format()
+    end)
     local toggle_format_on_save = true
     vim.api.nvim_create_user_command('ToggleFormat', function()
       toggle_format_on_save = not toggle_format_on_save

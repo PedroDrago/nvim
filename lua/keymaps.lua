@@ -28,7 +28,7 @@ keymap({ 'n', 'i' }, '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 keymap('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Panels' })
 keymap('n', '<leader>v', '<cmd>wincmd J<CR>', { desc = 'Verticalize Panels' })
 keymap('n', '<leader>V', '<cmd>wincmd L<CR>', { desc = 'Horizontalize Panels' })
-keymap('n', '<leader>=', '<C-w><C-=>', { desc = 'Equalize Panels' })
+-- keymap('n', '<leader>=', '<C-w><C-=>', { desc = 'Equalize Panels' })
 
 -- Terminal
 keymap('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
@@ -74,3 +74,4 @@ vim.cmd 'cabbrev gl Git log'
 vim.cmd 'cabbrev gp Git push'
 vim.cmd 'cabbrev gpl Git pull'
 vim.cmd 'cabbrev copilot Copilot'
+vim.cmd 'cabbrev theme Theme'

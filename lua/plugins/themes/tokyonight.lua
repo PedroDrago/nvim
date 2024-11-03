@@ -1,11 +1,7 @@
 return {
   'folke/tokyonight.nvim',
-  cond = vim.g.tokyonight,
   lazy = false,
   priority = 1000,
-  init = function()
-    vim.cmd [[colorscheme tokyonight-night]]
-  end,
   config = function()
     require('tokyonight').setup {
       styles = {
@@ -43,27 +39,6 @@ return {
           bg = '',
         }
       end,
-    }
-    local colors = {
-      border = 'none', -- NOTE:  Unbordered Dark bg
-      -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
-
-      -- border = 'rounded', --  NOTE: Bordered Dark bg
-      winhighlight = 'Normal:Pmenu',
-    }
-    local cmp = require 'cmp'
-    cmp.setup {
-      window = {
-        documentation = cmp.config.window.bordered {
-          border = colors.border,
-          winhighlight = colors.winhighlight,
-        },
-        completion = cmp.config.window.bordered {
-          border = colors.border,
-          winhighlight = colors.winhighlight,
-          scrollbar = false,
-        },
-      },
     }
   end,
 }
