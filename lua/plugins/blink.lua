@@ -12,6 +12,10 @@ return {
   lazy = false, -- lazy loading handled internally
   -- optional: provides snippets for the snippet source
   -- dependencies = 'rafamadriz/friendly-snippets',
+  -- dependencies = {
+
+  -- 'hrsh7th/nvim-cmp',
+  -- },
 
   -- use a release tag to download pre-built binaries
   version = 'v0.*',
@@ -102,7 +106,24 @@ return {
     --
     --   ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
     --   ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
-    keymap = 'default',
+    keymap = {
+      -- 'default',
+      ['<C-y>'] = { 'select_and_accept' },
+      ['<C-i>'] = { 'select_and_accept' },
+      ['<C-CR>'] = { 'select_and_accept' },
+      ['<C-Enter>'] = { 'select_and_accept' },
+      ['<C-Return>'] = { 'select_and_accept' },
+
+      ['<C-p>'] = { 'select_prev', 'fallback' },
+      ['<C-k>'] = { 'select_prev', 'fallback' },
+      ['<C-n>'] = { 'select_next', 'fallback' },
+      ['<C-j>'] = { 'select_next', 'fallback' },
+
+      ['<C-space>'] = { 'show_documentation', 'hide_documentation' },
+
+      ['<C-l>'] = { 'snippet_forward', 'fallback' },
+      ['<C-h>'] = { 'snippet_backward', 'fallback' },
+    },
 
     accept = {
       create_undo_point = true,
@@ -298,9 +319,9 @@ return {
           autocomplete_south = { 'e', 'w', 's', 'n' },
         },
         -- Controls whether the documentation window will automatically show when selecting a completion item
-        auto_show = false,
-        auto_show_delay_ms = 500,
-        update_delay_ms = 50,
+        auto_show = true,
+        auto_show_delay_ms = 0,
+        update_delay_ms = 0,
       },
       signature_help = {
         min_width = 1,

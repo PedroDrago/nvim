@@ -51,15 +51,15 @@ return {
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
       },
     }
-    local colors = {
-      border = 'rounded', --  NOTE: thin border | bg equal to bg.
-    }
-    local cmp = require 'cmp'
-    cmp.setup {
-      window = {
-        documentation = cmp.config.window.bordered { border = colors.border },
-        scrollbar = false,
-      },
-    }
+    -- local colors = {
+    --   border = 'rounded', --  NOTE: thin border | bg equal to bg.
+    -- }
+    -- local cmp = require 'cmp'
+    -- cmp.setup {
+    --   window = {
+    --     documentation = cmp.config.window.bordered { border = colors.border },
+    --     scrollbar = false,
+    --   },
+    -- }
   end,
 }

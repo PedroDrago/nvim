@@ -1,5 +1,12 @@
 local keymap = vim.keymap.set
 
+keymap('n', '<C-b>', '<C-v>', { desc = 'Move left ' })
+
+keymap('i', '<C-h>', '<nop>', { desc = 'Move left ' })
+keymap('i', '<C-l>', '<nop>', { desc = 'Move right ' })
+keymap('i', '<C-j>', '<nop>', { desc = 'Move down' })
+keymap('i', '<C-k>', '<nop>', { desc = 'Move up' })
+
 keymap('n', 'dd', function()
   if vim.api.nvim_get_current_line():match '^%s*$' then
     return '"_dd'
@@ -21,10 +28,10 @@ keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
 keymap('n', '<leader>a', '<cmd>vsplit <CR><cmd>set rnu<CR>', { desc = 'Vertical Split' })
 keymap('n', '<leader>A', '<cmd>split <CR><cmd>set rnu<CR>', { desc = 'Horizontal Split' })
 keymap('n', '<leader>q', '<cmd>q<CR>', { desc = 'Close Buffer' })
-keymap({ 'n', 'i' }, '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
-keymap({ 'n', 'i' }, '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
-keymap({ 'n', 'i' }, '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
-keymap({ 'n', 'i' }, '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
+keymap({ 'n' }, '<C-h>', '<C-w><C-h>', { desc = 'Move left ' })
+keymap({ 'n' }, '<C-l>', '<C-w><C-l>', { desc = 'Move right ' })
+keymap({ 'n' }, '<C-j>', '<C-w><C-j>', { desc = 'Move down' })
+keymap({ 'n' }, '<C-k>', '<C-w><C-k>', { desc = 'Move up' })
 keymap('n', '<leader>j', '<C-w><C-r>', { desc = 'Rotate Panels' })
 keymap('n', '<leader>v', '<cmd>wincmd J<CR>', { desc = 'Verticalize Panels' })
 keymap('n', '<leader>V', '<cmd>wincmd L<CR>', { desc = 'Horizontalize Panels' })

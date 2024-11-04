@@ -11,56 +11,56 @@ return {
         {
           name = 'Tokyonight Night',
           colorscheme = 'tokyonight-night',
-          before = [[
-            local colors = {
-              border = 'none', -- NOTE:  Unbordered Dark bg
-              -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
-
-              -- border = 'rounded', --  NOTE: Bordered Dark bg
-              winhighlight = 'Normal:Pmenu',
-            }
-            local cmp = require 'cmp'
-            cmp.setup {
-              window = {
-                documentation = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                },
-                completion = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                  scrollbar = false,
-                },
-              },
-            }
-          ]],
+          -- before = [[
+          --   local colors = {
+          --     border = 'none', -- NOTE:  Unbordered Dark bg
+          --     -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
+          --
+          --     -- border = 'rounded', --  NOTE: Bordered Dark bg
+          --     winhighlight = 'Normal:Pmenu',
+          --   }
+          --   local cmp = require 'cmp'
+          --   cmp.setup {
+          --     window = {
+          --       documentation = cmp.config.window.bordered {
+          --         border = colors.border,
+          --         winhighlight = colors.winhighlight,
+          --       },
+          --       completion = cmp.config.window.bordered {
+          --         border = colors.border,
+          --         winhighlight = colors.winhighlight,
+          --         scrollbar = false,
+          --       },
+          --     },
+          --   }
+          -- ]],
         },
         {
           name = 'Tokyonight Storm',
           colorscheme = 'tokyonight-storm',
-          before = [[
-            local colors = {
-              border = 'none', -- NOTE:  Unbordered Dark bg
-              -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
-
-              -- border = 'rounded', --  NOTE: Bordered Dark bg
-              winhighlight = 'Normal:Pmenu',
-            }
-            local cmp = require 'cmp'
-            cmp.setup {
-              window = {
-                documentation = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                },
-                completion = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                  scrollbar = false,
-                },
-              },
-            }
-          ]],
+          -- before = [[
+          --   local colors = {
+          --     border = 'none', -- NOTE:  Unbordered Dark bg
+          --     -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
+          --
+          --     -- border = 'rounded', --  NOTE: Bordered Dark bg
+          --     winhighlight = 'Normal:Pmenu',
+          --   }
+          --   local cmp = require 'cmp'
+          --   cmp.setup {
+          --     window = {
+          --       documentation = cmp.config.window.bordered {
+          --         border = colors.border,
+          --         winhighlight = colors.winhighlight,
+          --       },
+          --       completion = cmp.config.window.bordered {
+          --         border = colors.border,
+          --         winhighlight = colors.winhighlight,
+          --         scrollbar = false,
+          --       },
+          --     },
+          --   }
+          -- ]],
         },
         {
           name = 'Gruvbox',
@@ -109,29 +109,29 @@ return {
         {
           name = 'Catppuccin Frappe',
           colorscheme = 'catppuccin-frappe',
-          after = [[
-            vim.cmd 'hi FloatBorder guibg = Normal'
-            vim.cmd 'hi NormalFloat guibg = Normal'
-            vim.cmd 'hi FloatTitle guibg = Normal'
-          ]],
+          -- after = [[
+          --   vim.cmd 'hi FloatBorder guibg = Normal'
+          --   vim.cmd 'hi NormalFloat guibg = Normal'
+          --   vim.cmd 'hi FloatTitle guibg = Normal'
+          -- ]],
         },
         {
           name = 'Catppuccin macchiato',
           colorscheme = 'catppuccin-macchiato',
-          after = [[
-            vim.cmd 'hi FloatBorder guibg = Normal'
-            vim.cmd 'hi NormalFloat guibg = Normal'
-            vim.cmd 'hi FloatTitle guibg = Normal'
-          ]],
+          -- after = [[
+          --   vim.cmd 'hi FloatBorder guibg = Normal'
+          --   vim.cmd 'hi NormalFloat guibg = Normal'
+          --   vim.cmd 'hi FloatTitle guibg = Normal'
+          -- ]],
         },
         {
           name = 'Catppuccin mocha',
           colorscheme = 'catppuccin-mocha',
-          after = [[
-            vim.cmd 'hi FloatBorder guibg = Normal'
-            vim.cmd 'hi NormalFloat guibg = Normal'
-            vim.cmd 'hi FloatTitle guibg = Normal'
-          ]],
+          -- after = [[
+          --   vim.cmd 'hi FloatBorder guibg = Normal'
+          --   vim.cmd 'hi NormalFloat guibg = Normal'
+          --   vim.cmd 'hi FloatTitle guibg = Normal'
+          -- ]],
         },
         {
           name = 'Rosepine',

@@ -52,8 +52,6 @@ return {
         end
       end,
     })
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    -- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
     local servers = {
       clangd = {},
       gopls = {
@@ -104,12 +102,9 @@ return {
         border = 'single',
       },
     }
+    -- NOTE: This blink/lsp config is a mix of my old nvim.cmp config from kickstart.nvim with the recommended blink.cmp config. May cause issues, have to test if my servers configs are being correctly loaded or ignored.
     local lsp = require 'lspconfig'
-    -- lsp.util.default_config = vim.tbl_extend('force', lsp.util.default_config, { -- NOTE: THIS DISABLES SEMANTIC TOKENS, THIS IS SUPOSED TO SPEED UP LSP, BUT MAY BE IS NOT WORTH
-    --   on_attach = function(client)
-    --     client.server_capabilities.semanticTokensProvider = nil
-    --   end,
-    -- })
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
     for server, config in pairs(servers) do
       config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
       lsp[server].setup(config)
