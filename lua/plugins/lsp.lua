@@ -55,6 +55,7 @@ return {
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
     local servers = {
       clangd = {},
+      rust_analyzer = {},
       gopls = {
         settings = { -- NOTE: https://github.com/golang/tools/blob/master/gopls/doc/settings.md
           gopls = {

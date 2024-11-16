@@ -13,6 +13,7 @@ return {
       notify_on_error = false,
       formatters_by_ft = {
         lua = { 'stylua' },
+        python = nil,
         c = nil,
         sql = nil,
         cpp = { 'clang-format' },
@@ -25,10 +26,10 @@ return {
     vim.api.nvim_create_autocmd('BufWritePre', {
       pattern = '*',
       callback = function(args)
-        if vim.bo.filetype == '' or not toggle_format_on_save then -- Disable format on save per filetype
+        if vim.bo.filetype == 'py' or not toggle_format_on_save then -- Disable format on save per filetype
           return
         end
-        local disable_filetypes = { c = true, cpp = true } -- Disable lsp fallback per filetype
+        local disable_filetypes = { c = true, cpp = true, python = true } -- Disable lsp fallback per filetype
         require('conform').format { bufnr = args.buf, lsp_fallback = not disable_filetypes[vim.bo[args.buf].filetype] }
       end,
     })
