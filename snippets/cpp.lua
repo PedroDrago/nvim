@@ -11,6 +11,7 @@ local fmt = require('luasnip.extras.fmt').fmt
 local lambda = extras.lambda
 -- DOC: https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md
 
+-- FIX: Make this filename stuff works dinamically when changing directories and not to only evaluate on loading the first file.
 local ret_filename = function()
   return vim.fn.expand '%'
 end
