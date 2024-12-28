@@ -20,6 +20,7 @@ keymap('x', '/', '<Esc>/\\%V', { noremap = true })
 -- Disables
 keymap({ 'n', 'v' }, '<Space>', '<Nop>', { desc = 'Reset Space' })
 keymap('n', '<C-z>', '<nop>', { desc = 'Disable suspending Vim' })
+keymap('i', '<C-c>', '<nop>', { desc = 'Disable suspending Vim' })
 
 -- Panels
 keymap('n', '<leader>a', '<cmd>vsplit <CR><cmd>set rnu<CR>', { desc = 'Vertical Split' })

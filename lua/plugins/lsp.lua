@@ -6,6 +6,7 @@ return {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
+    'saghen/blink.cmp',
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
   },
   config = function()
@@ -52,7 +53,7 @@ return {
       end,
     })
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+    -- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
     local servers = {
       clangd = {},
       rust_analyzer = {},
@@ -99,6 +100,13 @@ return {
       'stylua',
       -- 'clangd',
     })
+    local lspconfig = require 'lspconfig'
+    for server, config in pairs(servers) do
+      -- passing config.capabilities to blink.cmp merges with the capabilities in your
+      -- `opts[server].capabilities, if you've defined it
+      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+      lspconfig[server].setup(config)
+    end
     require('mason').setup {
       ui = {
         border = 'single',
