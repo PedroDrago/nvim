@@ -11,9 +11,9 @@ return {
         auto_show = true,
       },
       menu = {
-        auto_show = function(ctx)
-          return ctx.mode ~= 'cmdline'
-        end,
+        -- auto_show = function(ctx)
+        -- return ctx.mode ~= 'cmdline'
+        -- end,
         draw = {
           columns = { { 'item_idx' }, { 'kind_icon' }, { 'label', 'label_description', gap = 1 } },
           components = {
@@ -28,7 +28,7 @@ return {
       },
     },
     keymap = {
-      preset = 'none',
+      preset = 'default',
       ['<C-j>'] = { 'select_next' },
       ['<C-n>'] = { 'select_next' },
       ['<C-k>'] = { 'select_prev' },
@@ -40,6 +40,7 @@ return {
       ['<C-h>'] = { 'snippet_backward' },
       ['<C-l>'] = { 'snippet_forward' },
       ['<C-x>'] = { 'hide_documentation' },
+      ['<Tab>'] = {},
       ['<C-z>'] = { 'show_documentation' },
       ['<C-1>'] = {
         function(cmp)

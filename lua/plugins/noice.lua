@@ -1,6 +1,6 @@
 return {
   'folke/noice.nvim',
-  cond = true,
+  cond = false,
   event = 'VeryLazy',
   dependencies = {
     'MunifTanjim/nui.nvim',
@@ -33,7 +33,7 @@ return {
         }, opts = { skip = true } },
       },
       cmdline = {
-        enabled = true,
+        enabled = false,
         view = 'cmdline_popup',
         opts = {},
         format = {

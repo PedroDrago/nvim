@@ -29,11 +29,11 @@ return {
         lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = {
           'filename',
-          {
-            require('noice').api.status.mode.get,
-            cond = require('noice').api.status.mode.has,
-            color = { fg = '#ff9e64' },
-          },
+          -- {
+          --   require('noice').api.status.mode.get,
+          --   cond = require('noice').api.status.mode.has,
+          --   color = { fg = '#ff9e64' },
+          -- },
         },
         lualine_x = { 'filetype' },
       },
