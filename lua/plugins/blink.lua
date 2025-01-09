@@ -1,8 +1,8 @@
 return {
   -- DOC: https://cmp.saghen.dev/
   'saghen/blink.cmp',
-  dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
   version = '*',
+  dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
@@ -98,6 +98,8 @@ return {
       nerd_font_variant = 'mono',
     },
     snippets = {
+      preset = 'luasnip',
+
       expand = function(snippet)
         require('luasnip').lsp_expand(snippet)
       end,
@@ -112,7 +114,7 @@ return {
       end,
     },
     sources = {
-      default = { 'lsp', 'path', 'luasnip', 'buffer' },
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
   },
   opts_extend = { 'sources.default' },
