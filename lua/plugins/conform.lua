@@ -26,7 +26,7 @@ return {
     vim.api.nvim_create_autocmd('BufWritePre', {
       pattern = '*',
       callback = function(args)
-        if vim.bo.filetype == 'py' or not toggle_format_on_save then -- Disable format on save per filetype
+        if vim.bo.filetype == 'py' or vim.bo.filetype == 'cpp' or not toggle_format_on_save then -- Disable format on save per filetype
           return
         end
         local disable_filetypes = { c = true, cpp = true, python = true } -- Disable lsp fallback per filetype
