@@ -148,3 +148,13 @@ ls.add_snippets('cpp', {
     text { ');' },
   }),
 })
+
+ls.add_snippets('cpp', {
+  snippet('try', {
+    text { 'try {', '\t' },
+    insert(1),
+    text { '', '} catch (std::exception &e) {', '\t' },
+    insert(2),
+    text { '', '}', '' },
+  }),
+})
