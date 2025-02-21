@@ -138,3 +138,13 @@ ls.add_snippets('cpp', {
     text { 'std::endl;' },
   }),
 })
+
+ls.add_snippets('cpp', {
+  snippet('op', {
+    text { 'std::ostream &operator' },
+    insert(1),
+    text { '(std::ostream &stream, ' },
+    insert(2),
+    text { ');' },
+  }),
+})
