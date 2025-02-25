@@ -150,10 +150,10 @@ ls.add_snippets('cpp', {
 })
 
 ls.add_snippets('cpp', {
-  snippet('try', {
+  snippet('trycatch', {
     text { 'try {', '\t' },
     insert(1),
-    text { '', '} catch (std::exception &e) {', '\t' },
+    text { '', '} catch (std::exception &e) {', '\tstd::cout << e.what() << std::endl;' },
     insert(2),
     text { '', '}', '' },
   }),

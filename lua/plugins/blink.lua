@@ -28,19 +28,18 @@ return {
       },
     },
     keymap = {
-      preset = 'default',
+      preset = 'none',
+      -- BUG: ['<C-i>'] = { 'accept' }, <- this makes tab become an accept key idk why
       ['<C-j>'] = { 'select_next' },
       ['<C-n>'] = { 'select_next' },
       ['<C-k>'] = { 'select_prev' },
       ['<C-p>'] = { 'select_prev' },
       ['<C-y>'] = { 'accept' },
-      ['<C-i>'] = { 'accept' },
       ['<C-CR>'] = { 'accept' },
       ['<C-c>'] = { 'hide' },
       ['<C-h>'] = { 'snippet_backward' },
       ['<C-l>'] = { 'snippet_forward' },
       ['<C-x>'] = { 'hide_documentation' },
-      ['<Tab>'] = {},
       ['<C-z>'] = { 'show_documentation' },
       ['<C-1>'] = {
         function(cmp)
