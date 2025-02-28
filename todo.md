@@ -1,1 +1,4 @@
 - [ ] Curent problems is bigfiles (i've tried a couple bigfile plugins but couldn't got neither to work). Biggest issue seems to be treesitter in large files.
+- [ ] Organize mini plugins (mini vs snacks? which)
+- [ ] Go deeper in blink config.
+    - [ ] Blink + Noice has a problem with cmdline, menu is shown in the wrong position (bottom instead of center of screen).
