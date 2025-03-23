@@ -9,27 +9,21 @@ local func = ls.function_node
 local rep = extras.rep
 local fmt = require('luasnip.extras.fmt').fmt
 local lambda = extras.lambda
--- DOC: https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md
 
--- FIX: Make this filename stuff works dinamically when changing directories and not to only evaluate on loading the first file.
-local ret_filename = function()
-  return vim.fn.expand '%'
+local function ret_filename()
+  return vim.fn.expand '%:t'
 end
 
-local get_header_define = function()
+local function get_header_define()
   local str = ret_filename()
-  return str.upper(str:gsub('%.', '_'))
+  return str:upper():gsub('%.', '_')
 end
 
-local get_class_name = function()
+local function get_class_name()
   local str = ret_filename()
-  local trimmed_str = str.match(str, '(.-)%.') or str
-  local capitalized = trimmed_str:gsub('^%l', string.upper) or str
-  return capitalized
+  local trimmed_str = str:match '(.-)%.' or str
+  return trimmed_str:gsub('^%l', string.upper) or str
 end
-
-local class_name = get_class_name()
-local header_define = get_header_define()
 
 ls.add_snippets('cpp', {
   snippet(
@@ -48,15 +42,15 @@ public:\
 }};\
 #endif',
       {
-        text(header_define),
-        text(header_define),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
+        func(get_header_define, {}),
+        func(get_header_define, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
       }
     )
   ),
@@ -74,44 +68,21 @@ ls.add_snippets('cpp', {
 {}::~{}(){{}};\
 ',
       {
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
-        text(class_name),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
+        func(get_class_name, {}),
       }
     )
   ),
 })
--- ls.add_snippets('cpp', {
---   snippet(
---     'class',
---     fmt(
---       '#ifndef {upper}_HPP\
--- #define {upper}_HPP\
--- class {}{{\nprivate:\
--- public:\
--- \t{capitalized}();\
--- \t{capitalized}({capitalized} &src);\
--- \t{capitalized} &operator = ({capitalized} &src);\
--- \t~{capitalized}();\
--- }};\
--- #endif',
---       {
---         insert(1, 'Name'),
---         upper = lambda(lambda._1:upper(), 1), -- NOTE: setter = l(l._1:sub(1,1):upper() .. l._1:sub(2,-1)))
---         -- lower = l(l._1:lower(), 1), -- NOTE: setter = l(l._1:sub(1,1):upper() .. l._1:sub(2,-1)))
---         capitalized = lambda(lambda._1:sub(1, 1):upper() .. lambda._1:sub(2, -1), 1),
---       }
---     )
---   ),
--- })
 
 ls.add_snippets('cpp', {
   snippet('mainn', {
