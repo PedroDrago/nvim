@@ -129,3 +129,18 @@ ls.add_snippets('cpp', {
     text { '', '}', '' },
   }),
 })
+
+ls.add_snippets('cpp', {
+  snippet('exc', {
+    text { 'class ' },
+    insert(1),
+    text { ' : public std::exception {', '' },
+    text { '\tpublic: ', '' },
+    text { '\t\tvirtual const char* what() const throw() {', '' },
+    text { '\t\t\treturn ' },
+    insert(2),
+    text { ';', '' },
+    text { '\t\t}', '' },
+    text { '};' },
+  }),
+})
