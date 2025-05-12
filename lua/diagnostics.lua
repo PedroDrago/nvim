@@ -11,7 +11,8 @@ vim.diagnostic.config {
   },
   virtual_text = {
     spacing = 4,
-    source = vim.g.linting,
+    -- source = vim.g.linting,
+    source = true,
     prefix = function(diagnostic)
       if diagnostic.severity == vim.diagnostic.severity.ERROR then
         return ' '
