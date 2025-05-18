@@ -3,8 +3,8 @@ return {
   cond = true,
   event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
+    { 'williamboman/mason.nvim', version = '^1.0.0' },
+    { 'williamboman/mason-lspconfig.nvim', version = '^1.0.0' },
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     'saghen/blink.cmp',
     { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
