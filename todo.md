@@ -2,3 +2,6 @@
 - [ ] Organize mini plugins (mini vs snacks? which)
 - [ ] Go deeper in blink config.
     - [ ] Blink + Noice has a problem with cmdline, menu is shown in the wrong position (bottom instead of center of screen).
+- [ ] test Avante setup
+- [ ] upgrade to 0.11
+    - lspconfig has breaking changes, it got builtin or something
