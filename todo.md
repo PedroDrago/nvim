@@ -5,3 +5,4 @@
 - [ ] test Avante setup
 - [ ] upgrade to 0.11
     - lspconfig has breaking changes, it got builtin or something
+- [ ] start using git with tpopes git plugin, fugitive i gues
