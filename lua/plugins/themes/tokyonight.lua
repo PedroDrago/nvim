@@ -4,6 +4,7 @@ return {
   priority = 1000,
   config = function()
     require('tokyonight').setup {
+      transparent = true,
       styles = {
         comments = { italic = true }, -- any attr-list value for :help nvim_set_hl
         keywords = { italic = false },

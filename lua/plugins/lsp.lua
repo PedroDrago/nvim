@@ -7,7 +7,7 @@ return {
     { 'williamboman/mason-lspconfig.nvim', version = '^1.0.0' },
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     'saghen/blink.cmp',
-    { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } } } },
+    { 'j-hui/fidget.nvim', opts = { progress = { display = { done_ttl = 7 } }, notification = { window = { winblend = 0 } } } },
   },
   config = function()
     vim.keymap.set('n', '<leader>i', function()
