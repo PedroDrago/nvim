@@ -4,7 +4,7 @@ return {
   priority = 1000,
   config = function()
     require('tokyonight').setup {
-      transparent = true,
+      transparent = vim.g.transparent,
       styles = {
         comments = { italic = true }, -- any attr-list value for :help nvim_set_hl
         keywords = { italic = false },
@@ -39,6 +39,14 @@ return {
           fg = colors.git.delete,
           bg = '',
         }
+        if vim.g.transparent then
+          hl.TelescopeNormal = {
+            fg = colors.fg_dark,
+          }
+          hl.TelescopeBorder = {
+            fg = colors.bg_dark,
+          }
+        end
       end,
     }
   end,

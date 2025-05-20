@@ -1,3 +1,4 @@
+vim.g.transparent = false
 require 'globals'
 require 'options'
 require 'keymaps'
