@@ -4,6 +4,6 @@
     - [ ] Blink + Noice has a problem with cmdline, menu is shown in the wrong position (bottom instead of center of screen).
 - [ ] upgrade to 0.11
     - lspconfig has breaking changes, it got builtin or something
-- [ ] start using git with tpopes git plugin, (fugitive?)
+- [ ] start using git in neovim. Compare tpopes fugitive with mini.git
 - [ ] tinker with avante.
 - [ ] Fix styling for transparent option, some telescope stuff is a little weird.
