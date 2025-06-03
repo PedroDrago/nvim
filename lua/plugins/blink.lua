@@ -2,7 +2,7 @@ return {
   -- DOC: https://cmp.saghen.dev/
   'saghen/blink.cmp',
   version = '*',
-  dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
+  dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*', 'Kaiser-Yang/blink-cmp-avante' },
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
@@ -113,7 +113,17 @@ return {
       end,
     },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'avante', 'lsp', 'path', 'snippets', 'buffer' },
+      providers = {
+        avante = {
+          module = 'blink-cmp-avante',
+          name = 'Avante',
+          opts = {
+            -- options for blink-cmp-avante
+            -- http://github.com/Kaiser-Yang/blink-cmp-avante
+          },
+        },
+      },
     },
   },
   opts_extend = { 'sources.default' },

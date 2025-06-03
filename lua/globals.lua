@@ -4,6 +4,7 @@ local g = vim.g
 g.mapleader = ' '
 g.maplocalleader = ' '
 g.linting = false
+g.ai = true
 
 local function transparent()
   local path = vim.fn.stdpath 'config' .. '/TRANSPARENT.env'

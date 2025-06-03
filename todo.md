@@ -1,8 +1,9 @@
-- [ ] Curent problems is bigfiles (i've tried a couple bigfile plugins but couldn't got neither to work). Biggest issue seems to be treesitter in large files.
+- [ ] fix big files problem
 - [ ] Organize mini plugins (mini vs snacks? which)
 - [ ] Go deeper in blink config.
     - [ ] Blink + Noice has a problem with cmdline, menu is shown in the wrong position (bottom instead of center of screen).
-- [ ] test Avante setup
 - [ ] upgrade to 0.11
     - lspconfig has breaking changes, it got builtin or something
-- [ ] start using git with tpopes git plugin, fugitive i gues
+- [ ] start using git with tpopes git plugin, (fugitive?)
+- [ ] tinker with avante.
+- [ ] Fix styling for transparent option, some telescope stuff is a little weird.
