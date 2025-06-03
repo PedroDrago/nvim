@@ -1,6 +1,7 @@
 return {
   -- DOC: https://cmp.saghen.dev/
   'saghen/blink.cmp',
+  event = 'InsertEnter',
   version = '*',
   dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*', 'Kaiser-Yang/blink-cmp-avante' },
   ---@module 'blink.cmp'
