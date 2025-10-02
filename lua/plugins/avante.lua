@@ -1,6 +1,6 @@
 return {
   'yetone/avante.nvim',
-  cond = true,
+  cond = false,
   enabled = vim.g.ai,
   event = 'VeryLazy',
   version = false, -- Never set this value to "*"! Never!

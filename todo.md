@@ -1,3 +1,5 @@
+- [ ]    Warn  06:24:49 PM notify.warn nvim-lspconfig support for Nvim 0.10 or older is deprecated, use Nvim 0.11+ instead.
+Feature will be removed in nvim-lspconfig v3.0.0
 - [ ] fix big files problem
 - [ ] Organize mini plugins (mini vs snacks? which)
 - [ ] Go deeper in blink config.
