@@ -13,6 +13,8 @@ return {
       notify_on_error = false,
       formatters_by_ft = {
         lua = { 'stylua' },
+        ts = { 'prettier' },
+        js = { 'prettier' },
         python = nil,
         c = nil,
         sql = nil,

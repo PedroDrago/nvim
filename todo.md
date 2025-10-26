@@ -1,11 +1,10 @@
-- [ ]    Warn  06:24:49 PM notify.warn nvim-lspconfig support for Nvim 0.10 or older is deprecated, use Nvim 0.11+ instead.
-Feature will be removed in nvim-lspconfig v3.0.0
 - [ ] fix big files problem
 - [ ] Organize mini plugins (mini vs snacks? which)
 - [ ] Go deeper in blink config.
     - [ ] Blink + Noice has a problem with cmdline, menu is shown in the wrong position (bottom instead of center of screen).
-- [ ] upgrade to 0.11
-    - lspconfig has breaking changes, it got builtin or something
 - [ ] start using git in neovim. Compare tpopes fugitive with mini.git
-- [ ] tinker with avante.
+- [ ] solve AI setup
+    - [ ] test folke's sidekick.
 - [ ] Fix styling for transparent option, some telescope stuff is a little weird.
+- [ ] refact config
+    - [ ] see kickstart updates
