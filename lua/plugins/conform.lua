@@ -2,38 +2,57 @@ return {
   'stevearc/conform.nvim',
   cond = true,
   config = function()
+    local format_on_save = true
+
     vim.keymap.set('n', '<leader>=', function()
-      require('conform').format()
-    end)
-    local toggle_format_on_save = true
+      require('conform').format { async = true, lsp_format = 'fallback' }
+    end, { desc = 'Format Buffer' })
+
     vim.api.nvim_create_user_command('ToggleFormat', function()
-      toggle_format_on_save = not toggle_format_on_save
+      format_on_save = not format_on_save
     end, { desc = 'Toggle Format on Save' })
+
     require('conform').setup {
       notify_on_error = false,
+      default_format_opts = {
+        lsp_format = 'fallback',
+      },
       formatters_by_ft = {
         lua = { 'stylua' },
-        ts = { 'prettier' },
-        js = { 'prettier' },
+        javascript = { 'prettier' },
+        javascriptreact = { 'prettier' },
+        typescript = { 'prettier' },
+        typescriptreact = { 'prettier' },
         python = nil,
         c = nil,
         sql = nil,
         cpp = { 'clang-format' },
-        -- lua = nil,
         go = { 'gofumpt' },
         markdown = nil, -- explicitly disable conform for filetype
         md = nil,
       },
-    }
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      pattern = '*',
-      callback = function(args)
-        if vim.bo.filetype == 'py' or vim.bo.filetype == 'cpp' or not toggle_format_on_save then -- Disable format on save per filetype
-          return
+      format_on_save = function(bufnr)
+        if not format_on_save then
+          return nil
         end
-        local disable_filetypes = { c = true, cpp = true, python = true } -- Disable lsp fallback per filetype
-        require('conform').format { bufnr = args.buf, lsp_fallback = not disable_filetypes[vim.bo[args.buf].filetype] }
+
+        local filetype = vim.bo[bufnr].filetype
+        if filetype == 'python' or filetype == 'cpp' then
+          return nil
+        end
+
+        local disable_lsp_fallback = {
+          c = true,
+          cpp = true,
+          python = true,
+        }
+
+        return {
+          bufnr = bufnr,
+          timeout_ms = 500,
+          lsp_format = disable_lsp_fallback[filetype] and 'never' or 'fallback',
+        }
       end,
-    })
+    }
   end,
 }

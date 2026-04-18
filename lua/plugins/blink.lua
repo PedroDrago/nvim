@@ -97,6 +97,9 @@ return {
       use_nvim_cmp_as_default = true,
       nerd_font_variant = 'mono',
     },
+    signature = {
+      enabled = true,
+    },
     snippets = {
       preset = 'luasnip',
 
@@ -114,7 +117,7 @@ return {
       end,
     },
     sources = {
-      default = { 'avante', 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lazydev', 'avante', 'lsp', 'path', 'snippets', 'buffer' },
       providers = {
         avante = {
           module = 'blink-cmp-avante',

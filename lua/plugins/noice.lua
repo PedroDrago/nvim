@@ -100,14 +100,22 @@ return {
   },
   config = function()
     require('noice').setup {
+      messages = {
+        enabled = true,
+        view = 'mini',
+        view_error = 'mini',
+        view_warn = 'mini',
+        view_history = 'messages',
+        view_search = false,
+      },
       cmdline = {
         enabled = true,
-        view = 'cmdline_popup',
+        view = 'cmdline',
         opts = {},
         format = {
           cmdline = { pattern = '^:', icon = '', lang = 'vim' },
-          search_down = { kind = 'search', pattern = '^/', icon = ' ', lang = 'regex' },
-          search_up = { kind = 'search', pattern = '^%?', icon = ' ', lang = 'regex' },
+          search_down = { kind = 'search', pattern = '^/', icon = ' ', lang = 'regex' },
+          search_up = { kind = 'search', pattern = '^%?', icon = ' ', lang = 'regex' },
           filter = { pattern = '^:%s*!', icon = '$', lang = 'bash' },
           lua = {
             pattern = {
@@ -122,8 +130,21 @@ return {
           input = {},
         },
       },
+      popupmenu = {
+        enabled = false,
+      },
+      routes = {
+        {
+          filter = {
+            event = 'msg_show',
+            kind = '',
+            find = 'written',
+          },
+          opts = { skip = true },
+        },
+      },
       presets = {
-        bottom_search = false,
+        bottom_search = true,
         command_palette = false,
         long_message_to_split = true,
         inc_rename = false,
@@ -134,7 +155,6 @@ return {
         override = {
           ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
           ['vim.lsp.util.stylize_markdown'] = true,
-          ['cmp.entry.get_documentation'] = true,
         },
         hover = {
           enabled = true,

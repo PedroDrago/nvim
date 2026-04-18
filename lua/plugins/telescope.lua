@@ -1,5 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
+  enabled = false,
   cond = true,
   event = { 'BufReadPre', 'BufNewFile' },
   branch = '0.1.x',

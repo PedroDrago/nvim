@@ -1,44 +1,22 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
   cond = true,
-  event = 'VeryLazy',
+  lazy = false,
   build = ':TSUpdate',
   config = function()
-    require('nvim-treesitter.configs').setup {
-      auto_install = true,
-      ensure_installed = {
-        'bash',
-        'git_config',
-        'git_rebase',
-        'http',
-        'json',
-        'xml',
-        'gitattributes',
-        'gitcommit',
-        'gitignore',
-        'c',
-        'diff',
-        'cpp',
-        'html',
-        'lua',
-        'markdown',
-        'markdown_inline',
-        'vim',
-        'vimdoc',
-        'go',
-        'javascript',
-        'typescript',
-      },
-      highlight = {
-        enable = true,
-      },
-      indent = {
-        enable = false,
-        disable = { --[[ 'ruby' ]]
-        },
-      },
-      autotag = { enable = true },
+    local ts = require 'nvim-treesitter'
+
+    ts.setup {
+      install_dir = vim.fn.stdpath 'data' .. '/site',
     }
-    -- TODO: Learn how to properly configure nvim-treesitter-text-objects in order to have loops, paragraphs, classes and more usefull text objects.
+
+    local group = vim.api.nvim_create_augroup('dotfiles_treesitter_start', { clear = true })
+    vim.api.nvim_create_autocmd('FileType', {
+      group = group,
+      callback = function(args)
+        pcall(vim.treesitter.start, args.buf, args.match)
+      end,
+    })
   end,
 }
