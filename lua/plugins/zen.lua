@@ -17,12 +17,14 @@ return {
     },
     on_open = function(win)
       vim.diagnostic.enable(false)
-      require('cmp').setup { enabled = false }
-      -- TODO: Maybe disable supermaven
+      vim.b[vim.api.nvim_get_current_buf()].zen_disable_blink = true
+      pcall(function()
+        require('blink.cmp').hide()
+      end)
     end,
     on_close = function()
       vim.diagnostic.enable(true)
-      require('cmp').setup.buffer { enabled = true }
+      vim.b[vim.api.nvim_get_current_buf()].zen_disable_blink = false
     end,
   },
 }

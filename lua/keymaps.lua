@@ -15,6 +15,11 @@ keymap('i', '<C-BS>', '<C-w>', { noremap = true })
 keymap('c', '<C-BS>', '<C-w>', { noremap = true })
 keymap('x', '/', '<Esc>/\\%V', { noremap = true })
 
+local function toggle_builtin_undotree()
+  vim.cmd.packadd 'nvim.undotree'
+  require('undotree').open { command = '40vnew' }
+end
+
 -- NOTE: Above keymaps Inspiration from [https://github.com/Abstract-IDE/abstract-autocmds](abstract-autocmds)
 
 -- Disables
@@ -44,6 +49,7 @@ keymap('n', '<leader>t', '<cmd>botright split | horizontal resize -10 | terminal
 keymap('n', '<leader>r', [[:%s/<C-r><C-w>//g<Left><Left>]], { desc = 'Rename Word' })
 keymap('v', '<leader>s', [[:s///g<Left><Left><Left>]], { desc = 'Rename Word In Selected Region' })
 keymap('n', '<F1>', '<cmd>Alpha<CR>', { desc = 'Macro Recording' })
+keymap('n', '<leader>u', toggle_builtin_undotree, { desc = 'Undo Tree' })
 -- keymap('n', 'qq', 'q', { desc = 'Macro Recording' })
 keymap('n', '<C-d>', '<C-d>zz', { desc = 'Center when Scroll Page' })
 keymap('n', '<C-u>', '<C-u>zz', { desc = 'Center when Scroll Page' })
@@ -81,3 +87,5 @@ vim.cmd 'cabbrev gpl Git pull'
 vim.cmd 'cabbrev copilot Copilot'
 vim.cmd 'cabbrev theme Theme'
 vim.cmd 'cabbrev tree Tree'
+
+vim.api.nvim_create_user_command('UndotreeToggle', toggle_builtin_undotree, { desc = 'Undo Tree' })

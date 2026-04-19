@@ -2,11 +2,14 @@ return {
   -- DOC: https://cmp.saghen.dev/
   'saghen/blink.cmp',
   event = 'InsertEnter',
-  version = '*',
+  version = '1.*',
   dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*', 'Kaiser-Yang/blink-cmp-avante' },
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
+    enabled = function()
+      return vim.b.zen_disable_blink ~= true
+    end,
     completion = {
       documentation = {
         auto_show = true,
