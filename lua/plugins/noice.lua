@@ -110,7 +110,7 @@ return {
       },
       cmdline = {
         enabled = true,
-        view = 'cmdline',
+        view = 'cmdline_popup',
         opts = {},
         format = {
           cmdline = { pattern = '^:', icon = '', lang = 'vim' },
@@ -144,7 +144,7 @@ return {
         },
       },
       presets = {
-        bottom_search = true,
+        bottom_search = false,
         command_palette = false,
         long_message_to_split = true,
         inc_rename = false,
