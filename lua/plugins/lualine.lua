@@ -6,7 +6,7 @@ return {
     local ok_noice, noice = pcall(require, 'noice')
 
     local function copilot()
-      local client = vim.lsp.get_active_clients({ name = 'copilot' })[1]
+      local client = vim.lsp.get_clients({ name = 'copilot', bufnr = 0 })[1]
       if client == nil then
         return ' '
       end
@@ -40,10 +40,10 @@ return {
           end
           return sections
         end)(),
-        lualine_x = { 'filetype' },
+        lualine_x = { copilot, 'filetype' },
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' },
       },
-      lualine_y = { 'progress' },
-      lualine_z = { 'location' },
     }
   end,
 }
