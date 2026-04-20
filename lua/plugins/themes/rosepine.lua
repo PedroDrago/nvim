@@ -68,15 +68,5 @@ return {
         -- end
       end,
     }
-    local colors = {
-      border = 'rounded',
-    }
-    local cmp = require 'cmp'
-    cmp.setup {
-      window = {
-        documentation = cmp.config.window.bordered { border = colors.border },
-        scrollbar = false,
-      },
-    }
   end,
 }

@@ -29,9 +29,25 @@ return {
           text_change = 100, -- 200 was the default
         },
       }
+      require('mini.files').setup {
+        options = {
+          use_as_default_explorer = false,
+        },
+        windows = {
+          preview = true,
+          width_preview = 50,
+        },
+      }
+
       vim.keymap.set('n', '<leader>df', function()
         MiniDiff.toggle_overlay(0)
       end, { desc = 'Diff View' })
+      vim.keymap.set('n', '<leader>m', function()
+        MiniFiles.open(vim.api.nvim_buf_get_name(0), true)
+      end, { desc = 'Mini Files (Buffer Dir)' })
+      vim.keymap.set('n', '<leader>M', function()
+        MiniFiles.open(vim.uv.cwd(), true)
+      end, { desc = 'Mini Files (Cwd)' })
     end,
   },
   {

@@ -12,82 +12,25 @@ return {
           name = 'Tokyonight Night',
           colorscheme = 'tokyonight-night',
           before = [[
-            local colors = {
-              border = 'none', -- NOTE:  Unbordered Dark bg
-              -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
-
-              -- border = 'rounded', --  NOTE: Bordered Dark bg
-              winhighlight = 'Normal:Pmenu',
-            }
-            local cmp = require 'cmp'
-            cmp.setup {
-              window = {
-                documentation = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                },
-                completion = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                  scrollbar = false,
-                },
-              },
-            }
+            vim.cmd 'hi FloatBorder guibg = Normal'
+            vim.cmd 'hi FloatTitle guibg = Normal'
           ]],
         },
         {
           name = 'Tokyonight Storm',
           colorscheme = 'tokyonight-storm',
           before = [[
-            local colors = {
-              border = 'none', -- NOTE:  Unbordered Dark bg
-              -- winhighlight = 'Normal:Pmenu,FloatBorder:Normal',
-
-              -- border = 'rounded', --  NOTE: Bordered Dark bg
-              winhighlight = 'Normal:Pmenu',
-            }
-            local cmp = require 'cmp'
-            cmp.setup {
-              window = {
-                documentation = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                },
-                completion = cmp.config.window.bordered {
-                  border = colors.border,
-                  winhighlight = colors.winhighlight,
-                  scrollbar = false,
-                },
-              },
-            }
+            vim.cmd 'hi FloatBorder guibg = Normal'
+            vim.cmd 'hi FloatTitle guibg = Normal'
           ]],
         },
         {
           name = 'Gruvbox',
           colorscheme = 'gruvbox-material',
-          before = [[ 
-          local colors = {
-            -- border = 'none', --  NOTE: No border | bg different than bg
-            -- winhighlight = 'Normal:Pmenu',
-
-            border = 'rounded', --  NOTE: thin border | bg equal to bg.
-            winhighlight = 'Normal:Normal,FloatBorder:Normal',
-          }
-          local cmp = require 'cmp'
-          cmp.setup {
-            window = {
-              documentation = cmp.config.window.bordered {
-                border = colors.border,
-                winhighlight = colors.winhighlight,
-              },
-              completion = cmp.config.window.bordered {
-                border = colors.border,
-                winhighlight = colors.winhighlight,
-                scrollbar = false,
-              },
-            },
-          }
-        ]],
+          before = [[
+            vim.cmd 'hi FloatBorder guibg = Normal'
+            vim.cmd 'hi FloatTitle guibg = Normal'
+          ]],
           after = [[ 
           vim.cmd 'hi FloatBorder guibg = Normal'
           vim.cmd 'hi FloatTitle guibg = Normal'
